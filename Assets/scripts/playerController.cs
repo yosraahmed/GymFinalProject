@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
+    public GameObject particleBlue;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,13 @@ public class playerController : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag== "BlueHit")
+        {
+            Destroy(other.gameObject);
+            Instantiate(particleBlue, transform.position, transform.rotation);
+        }
     }
 }
