@@ -19,7 +19,7 @@ public class VRInputModule : BaseInputModule
     }
     public override void Process()
     {
-        
+
         // Reset data, set camera
         m_Data.Reset();
         m_Data.position = new Vector2(m_Camera.pixelWidth / 2, m_Camera.pixelWidth / 2);
@@ -32,13 +32,13 @@ public class VRInputModule : BaseInputModule
         //Hover
         HandlePointerExitAndEnter(m_Data, m_CurrentObject);
         //Press
-        if (m_ClickAction.GetStateDown(m_TargetSouce) || Input.GetKeyDown(KeyCode.Space))
+        if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             print("Downnn");
             ProcessPress(m_Data);
         }
         //Release
-        if (m_ClickAction.GetStateUp(m_TargetSouce) || Input.GetKeyUp(KeyCode.Space))
+        if (/*m_ClickAction.GetStateUp(m_TargetSouce) ||*/ Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             print("Upppppppp");
             ProcessRelease(m_Data);
