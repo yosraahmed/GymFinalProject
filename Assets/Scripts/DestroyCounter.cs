@@ -2,27 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroy : MonoBehaviour
+public class DestroyCounter : MonoBehaviour
 {
+    float timer =3;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "BlueHit")
+        timer -= Time.deltaTime;
+        if (timer<=0)
         {
-            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
+
+   
 
 
 }

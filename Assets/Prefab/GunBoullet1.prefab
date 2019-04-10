@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6499230986383420329}
   m_Layer: 0
   m_Name: GunBoullet1
-  m_TagString: insersect
+  m_TagString: BlueHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
