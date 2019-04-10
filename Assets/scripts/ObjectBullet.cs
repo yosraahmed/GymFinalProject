@@ -8,7 +8,7 @@ public class ObjectBullet : MonoBehaviour
     //public float BulletSpeed = 20;
     void Start()
     {
-        
+        //Smoke = FindObjectOfType<ParticleSystem>();
     }
 
     void Update()

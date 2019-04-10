@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         {
             Vector3 position = new Vector3(
                 Random.Range(transform.position.x + Width, transform.position.x- Width ),
-                Random.Range(transform.position.y + Hight, transform.position.y ),
+                Random.Range(transform.position.y + Hight, transform.position.y),
                 transform.position.z);
 
             int Bullettype = Random.Range(1, 4);
