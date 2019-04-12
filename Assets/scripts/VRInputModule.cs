@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Valve.VR;
+//sing Valve.VR;
 
 public class VRInputModule : BaseInputModule
 {
     public Camera m_Camera;
-    public SteamVR_Input_Sources m_TargetSouce;
-    public SteamVR_Action_Boolean m_ClickAction;
+    //public SteamVR_Input_Sources m_TargetSouce;
+    //public SteamVR_Action_Boolean m_ClickAction;
     private GameObject m_CurrentObject = null;
     private PointerEventData m_Data = null;
 
@@ -32,13 +32,13 @@ public class VRInputModule : BaseInputModule
         //Hover
         HandlePointerExitAndEnter(m_Data, m_CurrentObject);
         //Press
-        if (m_ClickAction.GetStateDown(m_TargetSouce) || Input.GetKeyDown(KeyCode.Space))
+        if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space))
         {
             print("Downnn");
             ProcessPress(m_Data);
         }
         //Release
-        if (m_ClickAction.GetStateUp(m_TargetSouce) || Input.GetKeyUp(KeyCode.Space))
+        if (/*m_ClickAction.GetStateUp(m_TargetSouce) ||*/ Input.GetKeyUp(KeyCode.Space))
         {
             print("Upppppppp");
             ProcessRelease(m_Data);
