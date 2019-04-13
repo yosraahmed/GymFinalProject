@@ -10,6 +10,7 @@ TagManager:
   - FxTemporaire
   - insersect
   - ColorHit
+  - Moves
   layers:
   - Default
   - TransparentFX
