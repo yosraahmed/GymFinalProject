@@ -6,6 +6,10 @@ TagManager:
   tags:
   - BlueHit
   - RedHit
+  - projectile
+  - FxTemporaire
+  - insersect
+  - ColorHit
   layers:
   - Default
   - TransparentFX
