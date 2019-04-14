@@ -23,12 +23,42 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389313069222411063}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2588191, w: 0.9659258}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: -0.046666667, y: 0.20147185, z: -1.0464399}
   m_LocalScale: {x: 1.5780349, y: 0.26158568, z: 4.6539874}
   m_Children: []
   m_Father: {fileID: 1931709074506935859}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
+--- !u!1 &1819245208532561150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6689152772515286060}
+  m_Layer: 0
+  m_Name: SquatsPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6689152772515286060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819245208532561150}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.39038083, z: 0.563444}
+  m_LocalScale: {x: 1, y: 0.18890893, z: 4.9100337}
+  m_Children: []
+  m_Father: {fileID: 1931709074506935859}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1931709073854050701
 GameObject:
@@ -154,6 +184,8 @@ Transform:
   m_Children:
   - {fileID: 1931709074678069630}
   - {fileID: 5018928102357194896}
+  - {fileID: 6689152772515286060}
+  - {fileID: 5085780793907590526}
   m_Father: {fileID: 5630056678635188849}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -291,6 +323,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SquatsPoint1: {fileID: 5018928102357194896}
   Squat1: {fileID: 939855950654161268, guid: e68b85a423779a14dbc4bc623ce4b941, type: 3}
+  SquatsPoint2: {fileID: 6689152772515286060}
+  Squat2: {fileID: 3978426730765813437, guid: 5602670b47849e945b612020007821e4, type: 3}
+  SquatsPoint3: {fileID: 5085780793907590526}
   Bullet1: {fileID: 100004, guid: 10f424bb44ce7b04da04108b2a884922, type: 3}
   Bullet2: {fileID: 699365641085189933, guid: 393d0be5a57d421498f9fdf615ada99b, type: 3}
   Bullet3: {fileID: 5212959898013178294, guid: fc07fd32840414f49928abb05ef206c8, type: 3}
@@ -516,6 +551,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7266057635289014799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5085780793907590526}
+  m_Layer: 0
+  m_Name: SquatsPoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5085780793907590526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7266057635289014799}
+  m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
+  m_LocalPosition: {x: 0.12, y: 0.21, z: -1.0464399}
+  m_LocalScale: {x: 1.5780349, y: 0.26158568, z: 4.6539874}
+  m_Children: []
+  m_Father: {fileID: 1931709074506935859}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
 --- !u!1001 &1931709074204045729
 PrefabInstance:
   m_ObjectHideFlags: 0
