@@ -11,6 +11,7 @@ TagManager:
   - insersect
   - ColorHit
   - Moves
+  - Squat1Hit
   layers:
   - Default
   - TransparentFX
