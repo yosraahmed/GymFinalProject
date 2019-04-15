@@ -101,4 +101,9 @@ public class uiManager : MonoBehaviour
         levelMenu.SetActive(true);
     }
 
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
