@@ -10,7 +10,7 @@ public class VRInputModule : BaseInputModule
     //public SteamVR_Input_Sources m_TargetSouce;
     //public SteamVR_Action_Boolean m_ClickAction;
     private GameObject m_CurrentObject = null;
-    private PointerEventData m_Data = null;
+    protected PointerEventData m_Data = null;
 
     protected override void Awake()
     {
@@ -57,7 +57,7 @@ public class VRInputModule : BaseInputModule
     {
         return  m_Data;
     }
-    private void ProcessPress(PointerEventData data)
+    protected void ProcessPress(PointerEventData data)
     {
         
         //set raycast
@@ -75,7 +75,7 @@ public class VRInputModule : BaseInputModule
         data.rawPointerPress = m_CurrentObject;
 
     }
-    private void ProcessRelease(PointerEventData data)
+    protected void ProcessRelease(PointerEventData data)
     {
         // Execute pointer up
         ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);
