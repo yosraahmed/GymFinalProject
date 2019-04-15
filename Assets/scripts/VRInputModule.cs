@@ -35,7 +35,7 @@ public class VRInputModule : BaseInputModule
 
         if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space))
 
-        if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) )
 
         {
             print("Downnn");
