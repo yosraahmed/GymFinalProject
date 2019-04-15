@@ -2,16 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Valve.VR;
+
+//using Valve.VR;
 
 public class VRInputModule : BaseInputModule
 {
+    public OVRInput.Controller m_Source = OVRInput.Controller.RTrackedRemote;
+    public OVRInput.Button m_Click = OVRInput.Button.Any;
     public Camera m_Camera;
-    public SteamVR_Input_Sources m_TargetSouce;
-    public SteamVR_Action_Boolean m_ClickAction;
+    //public SteamVR_Input_Sources m_TargetSouce;
+    //public SteamVR_Action_Boolean m_ClickAction;
     private GameObject m_CurrentObject = null;
     private PointerEventData m_Data = null;
-
+    private void Update()
+    {
+        if (OVRInput.GetDown(OVRInput.Button.Four))
+        {
+            print("test11");
+        }
+    }
     protected override void Awake()
     {
         base.Awake();
@@ -32,13 +41,13 @@ public class VRInputModule : BaseInputModule
         //Hover
         HandlePointerExitAndEnter(m_Data, m_CurrentObject);
         //Press
-        if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || OVRInput.GetDown(OVRInput.Button.One))
         {
             print("Downnn");
             ProcessPress(m_Data);
         }
         //Release
-        if (/*m_ClickAction.GetStateUp(m_TargetSouce) ||*/ Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
+        if (/*m_ClickAction.GetStateUp(m_TargetSouce) ||*/ Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0) || OVRInput.GetUp(OVRInput.Button.One))
         {
             print("Upppppppp");
             ProcessRelease(m_Data);

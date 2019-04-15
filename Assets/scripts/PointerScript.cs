@@ -16,6 +16,7 @@ public class PointerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         UpdateLine();
     }
     public void UpdateLine()
@@ -32,6 +33,7 @@ public class PointerScript : MonoBehaviour
         {
             endPosition = hit.point;
         }
+        
         //set position of the dot
         m_Dot.transform.position = endPosition;
         //set linerenderer

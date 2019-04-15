@@ -413,6 +413,23 @@ PrefabInstance:
       propertyPath: ScourText
       value: 
       objectReference: {fileID: 888274306}
+    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
+        type: 3}
+      propertyPath: Bullet1
+      value: 
+      objectReference: {fileID: 100004, guid: 10f424bb44ce7b04da04108b2a884922, type: 3}
+    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
+        type: 3}
+      propertyPath: Bullet2
+      value: 
+      objectReference: {fileID: 699365641085189933, guid: 393d0be5a57d421498f9fdf615ada99b,
+        type: 3}
+    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
+        type: 3}
+      propertyPath: Bullet3
+      value: 
+      objectReference: {fileID: 5212959898013178294, guid: fc07fd32840414f49928abb05ef206c8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
 --- !u!1001 &8250668700738831448
