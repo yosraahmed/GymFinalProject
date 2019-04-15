@@ -60,7 +60,7 @@ public class uiManager : MonoBehaviour
             timeCounter -= Time.deltaTime;
             if (timeCounter <= 0)
             {
-                SceneManager.LoadScene("gameScene");
+                SceneManager.LoadScene("gameScene2");
                 timeCounter = 1;
             }
 
