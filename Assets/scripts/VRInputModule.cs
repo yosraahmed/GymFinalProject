@@ -33,7 +33,7 @@ public class VRInputModule : BaseInputModule
         HandlePointerExitAndEnter(m_Data, m_CurrentObject);
         //Press
 
-        if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space))
+        //if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space))
 
         if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || OVRInput.GetDown(OVRInput.Button.Four))
 
@@ -43,7 +43,7 @@ public class VRInputModule : BaseInputModule
         }
         //Release
 
-        if (/*m_ClickAction.GetStateUp(m_TargetSouce) ||*/ Input.GetKeyUp(KeyCode.Space))
+       // if (/*m_ClickAction.GetStateUp(m_TargetSouce) ||*/ Input.GetKeyUp(KeyCode.Space))
 
         if (/*m_ClickAction.GetStateUp(m_TargetSouce) ||*/ Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0) || OVRInput.GetUp(OVRInput.Button.Four))
 
