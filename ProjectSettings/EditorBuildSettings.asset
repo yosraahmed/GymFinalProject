@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu for test.unity
-    guid: edded9c68aa6b5a4d9269792e6b19a8f
+    path: Assets/Scenes/MainMenuTestWithOculus.unity
+    guid: da765896cca75994786ea5c2c1655779
   - enabled: 1
     path: Assets/Scenes/gameScene2.unity
     guid: b6a357b9999da754c98c2842c21e0594
