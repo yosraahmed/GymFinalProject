@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class gameManager : MonoBehaviour
 
 {
     public GameObject Bullet1;
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
 
 
-    public static GameManager instance;
+    public static gameManager instance;
     float timer;
     float BulletsNum; //Number of Bullets Greating
 
