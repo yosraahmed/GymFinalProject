@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Valve.VR;
+//using Valve.VR;
 
 public class VRInputModule : BaseInputModule
 {
     public Camera m_Camera;
-    public SteamVR_Input_Sources m_TargetSouce;
-    public SteamVR_Action_Boolean m_ClickAction;
+    //public SteamVR_Input_Sources m_TargetSouce;
+    //public SteamVR_Action_Boolean m_ClickAction;
     private GameObject m_CurrentObject = null;
     private PointerEventData m_Data = null;
 
