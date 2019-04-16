@@ -1,20 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class soundManager : MonoBehaviour
 {
 
-    public AudioClip workout;
+    public AudioSource effect;
+    public AudioSource gameMusic;
+    public AudioSource startMusic;
+    public AudioSource cubeSound;
+    public AudioSource ballSound;
+
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
         
+      
+        
+    }
+
+    public void effectSound()
+    {
+        effect.Play();
+    }
+  
+    public void gameSound()
+    {
+        gameMusic.Play();
+    }
+
+    public void startSound()
+    {
+        startMusic.Play();
     }
 }

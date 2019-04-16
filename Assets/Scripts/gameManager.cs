@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 
 {
-    public Transform SquatsPoint1;
-    public GameObject Squat1;
-    public Transform SquatsPoint2;
-    public GameObject Squat2;
-    public Transform SquatsPoint3;
     public GameObject Bullet1;
     public GameObject Bullet2;
     public GameObject Bullet3;
@@ -20,7 +15,7 @@ public class gameManager : MonoBehaviour
 
 
 
-    public static gameManager instance;
+    public static GameManager instance;
     float timer;
     float BulletsNum; //Number of Bullets Greating
 
@@ -45,7 +40,7 @@ public class gameManager : MonoBehaviour
                 Random.Range(transform.position.y + Hight, transform.position.y),
                 transform.position.z);
                 
-            int Bullettype = Random.Range(1, 7);
+            int Bullettype = Random.Range(1, 4);
             if (Bullettype == 1)
             {
                 Instantiate(Bullet1, position, transform.rotation);
@@ -57,18 +52,6 @@ public class gameManager : MonoBehaviour
             else if (Bullettype == 3)
             {
                 Instantiate(Bullet3, position, transform.rotation);
-            }
-            else if (Bullettype == 4)
-            {
-                Instantiate(Squat1, SquatsPoint1.transform.position, SquatsPoint1.transform.rotation);
-            }
-            else if (Bullettype == 5)
-            {
-                Instantiate(Squat2, SquatsPoint2.transform.position, SquatsPoint2.transform.rotation);
-            }
-            else if (Bullettype == 6)
-            {
-                Instantiate(Squat1, SquatsPoint3.transform.position, SquatsPoint3.transform.rotation);
             }
 
 

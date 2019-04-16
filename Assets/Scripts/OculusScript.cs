@@ -12,11 +12,11 @@ public class OculusScript : VRInputModule
         //press
         if (OVRInput.GetDown(m_Click, m_Source))
         {
-            ProcessPress(m_Data);
+           // ProcessPress(m_Data);
         }
         if (OVRInput.GetUp(m_Click, m_Source))
         {
-            ProcessRelease(m_Data);
+            //ProcessRelease(m_Data);
         }
     }
 }
