@@ -18,13 +18,14 @@ public class gameScript : MonoBehaviour
         minutes = 59;
         second = 59;
         sound = GetComponent<soundManager>();
+        sound.gameSound();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        //sound.gameSound();
+     
 
         if (minutes == 0 && hr >= 1)
             {

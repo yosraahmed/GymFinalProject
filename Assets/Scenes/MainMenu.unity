@@ -789,6 +789,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &910220630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910220632}
+  - component: {fileID: 910220631}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &910220631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910220630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f45b20b0bae03f044bc218f86d68d5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 1531507289}
+  gameMusic: {fileID: 0}
+  startMusic: {fileID: 1202741989}
+  cubeSound: {fileID: 0}
+  ballSound: {fileID: 0}
+--- !u!4 &910220632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910220630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.8299999, z: -0.92114353}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1068259745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1365,7 +1413,8 @@ MonoBehaviour:
   effect: {fileID: 1531507289}
   gameMusic: {fileID: 0}
   startMusic: {fileID: 1202741989}
-  crashMusic: {fileID: 0}
+  cubeSound: {fileID: 0}
+  ballSound: {fileID: 0}
 --- !u!1 &1913375358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3363764966867246700, guid: 7023f435a8bcc1347aaaede571e648ad,
@@ -1404,7 +1453,8 @@ MonoBehaviour:
   effect: {fileID: 0}
   gameMusic: {fileID: 724479214}
   startMusic: {fileID: 1202741989}
-  crashMusic: {fileID: 0}
+  cubeSound: {fileID: 0}
+  ballSound: {fileID: 0}
 --- !u!4 &2034508322
 Transform:
   m_ObjectHideFlags: 0
