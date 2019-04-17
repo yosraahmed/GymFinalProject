@@ -27,9 +27,9 @@ public class soundManager : MonoBehaviour
     }
     void Start()
     {
-        
-      
-        
+
+       
+
     }
 
     public void effectSound()
@@ -57,21 +57,28 @@ public class soundManager : MonoBehaviour
     }
      void Update()
     {
+        
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
         if (sceneName == "MainMenuTestWithOculus")
         {
-            print("play");
-            gamePlayMusic.Stop();
-            startSound();
-
+            if (!startManuMusic.isPlaying)
+            {
+                gamePlayMusic.Stop();
+                startManuMusic.Play();
+            }
         }
-       
+
         else if (sceneName == "gameScene2")
         {
-            startManuMusic.Stop();
-            gameSound();
+            if (!gamePlayMusic.isPlaying)
+            {
+                startManuMusic.Stop();
+                gamePlayMusic.Play();
+            }
+          
         }
+       
     }
 }
