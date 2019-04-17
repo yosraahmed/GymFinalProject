@@ -45,7 +45,7 @@ public class gameScript : MonoBehaviour
         
         if(hr == 0 && minutes == 0 && second == 0)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("MainMenuTestWithOculus");
         }
 
       

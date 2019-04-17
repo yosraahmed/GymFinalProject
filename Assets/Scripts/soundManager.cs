@@ -62,6 +62,7 @@ public class soundManager : MonoBehaviour
 
         if (sceneName == "MainMenuTestWithOculus")
         {
+            print("play");
             gamePlayMusic.Stop();
             startSound();
 
