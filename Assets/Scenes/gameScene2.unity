@@ -471,18 +471,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.22500001, y: 0, z: 0}
---- !u!4 &537147012 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6689152772515286060, guid: 3f5625bbfc27e734b8dfe57daee40304,
-    type: 3}
-  m_PrefabInstance: {fileID: 1846255962}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &858047012 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5085780793907590526, guid: 3f5625bbfc27e734b8dfe57daee40304,
-    type: 3}
-  m_PrefabInstance: {fileID: 1846255962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &888274306 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8250668700521806298, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
@@ -495,12 +483,6 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &911874547 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5018928102357194896, guid: 3f5625bbfc27e734b8dfe57daee40304,
-    type: 3}
-  m_PrefabInstance: {fileID: 1846255962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1234359760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6408194275762339923, guid: d5dac242f66c82c409d38de6397c6331,
@@ -599,50 +581,6 @@ PrefabInstance:
       propertyPath: ScourText
       value: 
       objectReference: {fileID: 888274306}
-    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: SquatsPoint1
-      value: 
-      objectReference: {fileID: 911874547}
-    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: SquatsPoint2
-      value: 
-      objectReference: {fileID: 537147012}
-    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: SquatsPoint3
-      value: 
-      objectReference: {fileID: 858047012}
-    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: Squat1
-      value: 
-      objectReference: {fileID: 939855950654161268, guid: e68b85a423779a14dbc4bc623ce4b941,
-        type: 3}
-    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: Squat2
-      value: 
-      objectReference: {fileID: 3978426730765813437, guid: 5602670b47849e945b612020007821e4,
-        type: 3}
-    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: Bullet1
-      value: 
-      objectReference: {fileID: 100004, guid: 10f424bb44ce7b04da04108b2a884922, type: 3}
-    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: Bullet2
-      value: 
-      objectReference: {fileID: 699365641085189933, guid: 393d0be5a57d421498f9fdf615ada99b,
-        type: 3}
-    - target: {fileID: 1931709074678069631, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: Bullet3
-      value: 
-      objectReference: {fileID: 5212959898013178294, guid: fc07fd32840414f49928abb05ef206c8,
-        type: 3}
     - target: {fileID: 5630056678635188849, guid: 3f5625bbfc27e734b8dfe57daee40304,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,11 +636,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6689152772515286060, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.85
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
 --- !u!114 &1874669133 stripped
@@ -729,6 +662,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRPlayerController
       objectReference: {fileID: 0}
+    - target: {fileID: 6408194275762339923, guid: d5dac242f66c82c409d38de6397c6331,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 233706234144685303, guid: d5dac242f66c82c409d38de6397c6331,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.139
+      objectReference: {fileID: 0}
     - target: {fileID: 233706234144685299, guid: d5dac242f66c82c409d38de6397c6331,
         type: 3}
       propertyPath: ScourText
@@ -743,11 +686,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 233706234144685303, guid: d5dac242f66c82c409d38de6397c6331,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.139
       objectReference: {fileID: 0}
     - target: {fileID: 971549246506724893, guid: d5dac242f66c82c409d38de6397c6331,
         type: 3}
@@ -809,11 +747,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6408194275762339923, guid: d5dac242f66c82c409d38de6397c6331,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.12
-      objectReference: {fileID: 0}
     - target: {fileID: 6408194275762339927, guid: d5dac242f66c82c409d38de6397c6331,
         type: 3}
       propertyPath: ScourText
@@ -833,6 +766,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+        type: 3}
+      propertyPath: m_Name
+      value: GamePlay Score Screen
+      objectReference: {fileID: 0}
     - target: {fileID: 8250668701035971866, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -937,11 +875,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
-        type: 3}
-      propertyPath: m_Name
-      value: GamePlay Score Screen
       objectReference: {fileID: 0}
     - target: {fileID: 8250668701035971867, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
