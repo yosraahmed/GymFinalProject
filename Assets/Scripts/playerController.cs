@@ -13,13 +13,12 @@ public class playerController : MonoBehaviour
     int bluHit = 0;
     int redHit = 0;
     int colorHit = 0;
-
-
+ 
     // Start is called before the first frame update
     void Start()
     {
         PlayerPrefs.SetInt("scorText", zero);
-
+       
 
     }
 
@@ -33,21 +32,25 @@ public class playerController : MonoBehaviour
     {
         if (other.tag== "BlueHit")
         {
+            soundManager.instance.CubeCrashSound();
             bluHit += 1;
+            Instantiate(particleBlue, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
-            Instantiate(particleBlue, transform.position, transform.rotation);
+            
         }
         if (other.tag == "RedHit")
         {
+            soundManager.instance.CubeCrashSound();
             redHit += 1;
+            Instantiate(particleRed, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
-            Instantiate(particleRed, transform.position, transform.rotation);
         }
         if (other.tag == "ColorHit")
         {
+            soundManager.instance.CubeCrashSound();
             colorHit += 1;
+            Instantiate(particleColor, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
-            Instantiate(particleColor, transform.position, transform.rotation);
         }
     }
 }

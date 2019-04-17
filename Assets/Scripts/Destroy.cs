@@ -22,18 +22,6 @@ public class Destroy : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
-        if (other.tag == "RedHit")
-        {
-            Destroy(other.gameObject);
-        }
-        if (other.tag == "ColorHit")
-        {
-            Destroy(other.gameObject);
-        }
-        if (other.tag == "Squat1Hit")
-        {
-            Destroy(other.gameObject);
-        }
     }
 
 
