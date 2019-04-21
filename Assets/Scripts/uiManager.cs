@@ -9,6 +9,7 @@ public class uiManager : MonoBehaviour
     public GameObject mainmenu;
     public GameObject levelMenu;
     public GameObject startMenu;
+    public GameObject setting;
     public int counter = 4;
     public float timeCounter = 1;
     public Text counterText;
@@ -35,6 +36,7 @@ public class uiManager : MonoBehaviour
         mainmenu.SetActive(true);
         levelMenu.SetActive(false);
         startMenu.SetActive(false);
+        setting.SetActive(false);
         counter = 4;
         timeCounter = 1;
         //sounds = GetComponent<soundManager>();
@@ -81,8 +83,6 @@ public class uiManager : MonoBehaviour
                 timeCounter = 1;
                 //soundManager.instance.gameSound();
 
- 
- 
             }
             else if (timeCounter <= 0 && PlayerPrefs.GetInt("isBoxing", 0) == 3)
             {
@@ -97,7 +97,16 @@ public class uiManager : MonoBehaviour
         }
 
     }
-
+    public void Settings()
+    {
+        mainmenu.SetActive(false);
+        setting.SetActive(true);
+    }
+    public void SettingsExit()
+    {
+        mainmenu.SetActive(true);
+        setting.SetActive(false);
+    }
 
     public void exericeseTypeSquats()
     {
