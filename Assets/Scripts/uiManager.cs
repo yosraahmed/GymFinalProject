@@ -15,23 +15,15 @@ public class uiManager : MonoBehaviour
     public int counter = 4;
     public float timeCounter = 1;
     public Text counterText;
- 
- 
- 
+
     public bool isBoxing;
     public bool isSquats; 
 
-    
-
     //public soundManager sounds;
 
     //public soundManager sounds;
  
- 
     //public soundManager sounds;
- 
-  
-
 
     void Start()
     {
@@ -42,12 +34,10 @@ public class uiManager : MonoBehaviour
         counter = 4;
         timeCounter = 1;
         //sounds = GetComponent<soundManager>();
-
     }
 
     public void Update()
     { 
-
         counterText.text = counter.ToString();
 
         if(counter == 3)
@@ -59,8 +49,6 @@ public class uiManager : MonoBehaviour
                 counter = 2;
                 timeCounter = 1;
             }
-           
-
         }
         if(counter == 2)
         {
@@ -70,9 +58,7 @@ public class uiManager : MonoBehaviour
             {
                 counter = 1;
                 timeCounter = 1;
-               
             }
-
         }
         if (counter == 1)
         {
@@ -84,20 +70,14 @@ public class uiManager : MonoBehaviour
                 SceneManager.LoadScene("gameScene2");
                 timeCounter = 1;
                 //soundManager.instance.gameSound();
-
             }
             else if (timeCounter <= 0 && PlayerPrefs.GetInt("isBoxing", 0) == 3)
             {
                 print("BOXING");
                 SceneManager.LoadScene("boxingScene");
                 timeCounter = 1;
- 
- 
- 
             }
-
         }
-
     }
     public void MusicOnOff()
     {
@@ -139,7 +119,6 @@ public class uiManager : MonoBehaviour
 
     }
 
-
     public void exericeseTypeBoxing()
     {
         // sounds.startSound();
@@ -179,11 +158,6 @@ public class uiManager : MonoBehaviour
         mainmenu.SetActive(false);
         levelMenu.SetActive(true);
     }
-
- 
- 
- 
-   
 
     public void RestartScene()
     {
