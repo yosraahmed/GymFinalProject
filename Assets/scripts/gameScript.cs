@@ -9,22 +9,25 @@ public class gameScript : MonoBehaviour
     public int hr = 1;
     public int minutes;
     public int second = 0;
-    public float timeRemain;
     public Text gameTimerText;
+   // public soundManager sound;
     // Start is called before the first frame update
     void Start()
     {
         hr = 1;
         minutes = 59;
         second = 59;
+        //sound = GetComponent<soundManager>();
+        //sound.gameSound();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        
-            if (minutes == 0 && hr >= 1)
+
+     
+
+        if (minutes == 0 && hr >= 1)
             {
                 hr--;
                 minutes = 59;
@@ -42,13 +45,10 @@ public class gameScript : MonoBehaviour
         
         if(hr == 0 && minutes == 0 && second == 0)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("MainMenuTestWithOculus");
         }
 
-        //if (hr <= 0)
-        //{
-        //    gameTimerText.text = "STOP!";
-        //}
+      
 
     }
 }

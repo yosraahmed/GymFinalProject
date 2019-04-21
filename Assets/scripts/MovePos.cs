@@ -40,11 +40,11 @@ public class MovePos : MonoBehaviour
             moveTime ++;
         }
 
-        if ( moveTime > 0 && Input.GetKey(KeyCode.Space))
+        if ( moveTime > 0 && OVRInput.GetDown(OVRInput.Button.One) /*Input.GetKey(KeyCode.Space)*/)
         {
             currentState = Movement.Walk;
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (OVRInput.GetUp(OVRInput.Button.One) /*Input.GetKeyUp(KeyCode.Space)*/)
         {
             currentState = Movement.Idle;
         }
