@@ -9,10 +9,27 @@ public class uiManager : MonoBehaviour
     public GameObject mainmenu;
     public GameObject levelMenu;
     public GameObject startMenu;
+    public GameObject setting;
+    public GameObject musicOn;
+    public GameObject musicOff;
     public int counter = 4;
     public float timeCounter = 1;
     public Text counterText;
+ 
+ 
+ 
+    public bool isBoxing;
+    public bool isSquats; 
+
+    
+
     //public soundManager sounds;
+
+    //public soundManager sounds;
+ 
+ 
+    //public soundManager sounds;
+ 
   
 
 
@@ -21,16 +38,16 @@ public class uiManager : MonoBehaviour
         mainmenu.SetActive(true);
         levelMenu.SetActive(false);
         startMenu.SetActive(false);
+        setting.SetActive(false);
         counter = 4;
         timeCounter = 1;
         //sounds = GetComponent<soundManager>();
 
-        
     }
 
     public void Update()
-    {
-       
+    { 
+
         counterText.text = counter.ToString();
 
         if(counter == 3)
@@ -61,31 +78,82 @@ public class uiManager : MonoBehaviour
         {
           //  sounds.startSound();
             timeCounter -= Time.deltaTime;
-            if (timeCounter <= 0)
+            if (timeCounter <= 0 && PlayerPrefs.GetInt("isSquats", 0) == 1)
             {
+                print("SQUAT");
                 SceneManager.LoadScene("gameScene2");
                 timeCounter = 1;
                 //soundManager.instance.gameSound();
 
             }
+            else if (timeCounter <= 0 && PlayerPrefs.GetInt("isBoxing", 0) == 3)
+            {
+                print("BOXING");
+                SceneManager.LoadScene("boxingScene");
+                timeCounter = 1;
+ 
+ 
+ 
+            }
 
         }
-       
+
+    }
+    public void MusicOnOff()
+    {
+        if (PlayerPrefs.GetInt("SoundMusic", 0) == 0)
+        {
+            PlayerPrefs.SetInt("SoundMusic", 1);
+            musicOn.SetActive(true);
+            musicOff.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("SoundMusic", 0) == 1)
+        {
+            PlayerPrefs.SetInt("SoundMusic", 0);
+            musicOn.SetActive(false);
+            musicOff.SetActive(true);
+        }
+    }
+    public void SoundOn()
+    {
+        mainmenu.SetActive(false);
+        setting.SetActive(true);
+    }
+    public void Settings()
+    {
+        mainmenu.SetActive(false);
+        setting.SetActive(true);
+    }
+    public void SettingsExit()
+    {
+        mainmenu.SetActive(true);
+        setting.SetActive(false);
+    }
+
+    public void exericeseTypeSquats()
+    {
+        mainmenu.SetActive(false);
+        levelMenu.SetActive(true);
+        PlayerPrefs.SetInt("isSquats", 1);
+        PlayerPrefs.SetInt("isBoxing", 0);
+
     }
 
 
-    public void exericeseType()
+    public void exericeseTypeBoxing()
     {
         // sounds.startSound();
-        soundManager.instance.effectSound();
+        //soundManager.instance.effectSound();
         mainmenu.SetActive(false);
         levelMenu.SetActive(true);
+        PlayerPrefs.SetInt("isBoxing", 3);
+        PlayerPrefs.SetInt("isSquats", 0);
     }
 
     public void levelButtons()
     {
         // sounds.startSound();
-        soundManager.instance.effectSound();
+        //soundManager.instance.effectSound();
         mainmenu.SetActive(false);
         levelMenu.SetActive(false);
         startMenu.SetActive(true);
@@ -93,7 +161,7 @@ public class uiManager : MonoBehaviour
 
     public void startGame() 
     {
-        soundManager.instance.effectSound();
+        //soundManager.instance.effectSound();
         counter = 3;
     }
 
@@ -112,4 +180,14 @@ public class uiManager : MonoBehaviour
         levelMenu.SetActive(true);
     }
 
+ 
+ 
+ 
+   
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+ 
 }

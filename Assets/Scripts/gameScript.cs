@@ -10,7 +10,20 @@ public class gameScript : MonoBehaviour
     public int minutes;
     public int second = 0;
     public Text gameTimerText;
+
    // public soundManager sound;
+
+    public uiManager back;
+ 
+   // public soundManager sound;
+ 
+ 
+   // public soundManager sound;
+ 
+ 
+   // public soundManager sound;
+ 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,4 +64,14 @@ public class gameScript : MonoBehaviour
       
 
     }
+    public void StopButton()
+    {
+        Time.timeScale = 0;
+        //back.backToMain();
+        SceneManager.LoadScene("MainMenu");
+        
+    }
+
 }
+
+
