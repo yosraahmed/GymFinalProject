@@ -52,5 +52,12 @@ public class playerController : MonoBehaviour
             Instantiate(particleColor, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
+        if (other.tag == "Squat1Hit")
+        {
+            soundManager.instance.CubeCrashSound();
+            colorHit -= 1;
+            
+            Destroy(other.gameObject);
+        }
     }
 }
