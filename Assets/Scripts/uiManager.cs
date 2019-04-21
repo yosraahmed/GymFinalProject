@@ -10,6 +10,8 @@ public class uiManager : MonoBehaviour
     public GameObject levelMenu;
     public GameObject startMenu;
     public GameObject setting;
+    public GameObject musicOn;
+    public GameObject musicOff;
     public int counter = 4;
     public float timeCounter = 1;
     public Text counterText;
@@ -96,6 +98,26 @@ public class uiManager : MonoBehaviour
 
         }
 
+    }
+    public void MusicOnOff()
+    {
+        if (PlayerPrefs.GetInt("SoundMusic", 0) == 0)
+        {
+            PlayerPrefs.SetInt("SoundMusic", 1);
+            musicOn.SetActive(true);
+            musicOff.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("SoundMusic", 0) == 1)
+        {
+            PlayerPrefs.SetInt("SoundMusic", 0);
+            musicOn.SetActive(false);
+            musicOff.SetActive(true);
+        }
+    }
+    public void SoundOn()
+    {
+        mainmenu.SetActive(false);
+        setting.SetActive(true);
     }
     public void Settings()
     {

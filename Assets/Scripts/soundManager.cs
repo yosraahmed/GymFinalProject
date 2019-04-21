@@ -61,24 +61,40 @@ public class soundManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
-        if (sceneName == "MainMenuTestWithOculus")
+        if (sceneName == "MainMenuTestWithOculus" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
             if (!startManuMusic.isPlaying)
             {
                 gamePlayMusic.Stop();
                 startManuMusic.Play();
             }
+           
         }
-
-        else if (sceneName == "gameScene2")
+        else if (sceneName == "gameScene2" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
-            if (!gamePlayMusic.isPlaying)
+            if (!gamePlayMusic.isPlaying )
             {
                 startManuMusic.Stop();
                 gamePlayMusic.Play();
             }
-          
+           
         }
-       
+        else if (PlayerPrefs.GetInt("SoundMusic", 0) == 0)
+        {
+            startManuMusic.Stop();
+            gamePlayMusic.Stop();
+        }
+
+    }
+    public void soundMute()
+    {
+        if (PlayerPrefs.GetInt("SoundMusic",0)==1)
+        {
+            PlayerPrefs.SetInt("SoundMusic", 0);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("SoundMusic", 1);
+        }
     }
 }
