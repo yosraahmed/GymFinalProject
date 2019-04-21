@@ -30,14 +30,15 @@ public class playerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag== "BlueHit")
-        {
-            soundManager.instance.CubeCrashSound();
-            bluHit += 1;
-            Instantiate(particleBlue, other.transform.position, other.transform.rotation);
-            Destroy(other.gameObject);
+        //if (other.tag== "BlueHit")
+        //{
+        //    soundManager.instance.CubeCrashSound();
+        //    bluHit += 1;
+        //    Instantiate(particleBlue, other.transform.position, other.transform.rotation);
+        //    Destroy(other.gameObject);
             
-        }
+
+        //}
         if (other.tag == "RedHit")
         {
             soundManager.instance.CubeCrashSound();
@@ -59,5 +60,22 @@ public class playerController : MonoBehaviour
             
             Destroy(other.gameObject);
         }
+
+        //}
+        //if (other.tag == "RedHit")
+        //{
+        //    soundManager.instance.CubeCrashSound();
+        //    redHit += 1;
+        //    Instantiate(particleRed, other.transform.position, other.transform.rotation);
+        //    Destroy(other.gameObject);
+        //}
+        //if (other.tag == "ColorHit")
+        //{
+        //    soundManager.instance.CubeCrashSound();
+        //    colorHit += 1;
+        //    Instantiate(particleColor, other.transform.position, other.transform.rotation);
+        //    Destroy(other.gameObject);
+        //}
+
     }
 }

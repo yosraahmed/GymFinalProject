@@ -636,6 +636,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1931709075756583198, guid: 3f5625bbfc27e734b8dfe57daee40304,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -121.76
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
 --- !u!1001 &1567025750771071898
@@ -754,11 +759,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
-        type: 3}
-      propertyPath: m_Name
-      value: GamePlay Score Screen
-      objectReference: {fileID: 0}
     - target: {fileID: 8250668701035971866, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -863,6 +863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+        type: 3}
+      propertyPath: m_Name
+      value: GamePlay Score Screen
       objectReference: {fileID: 0}
     - target: {fileID: 8250668701035971867, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
