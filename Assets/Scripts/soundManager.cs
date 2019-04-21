@@ -28,7 +28,7 @@ public class soundManager : MonoBehaviour
     void Start()
     {
 
-       
+        PlayerPrefs.SetInt("SoundMusic", 1);
 
     }
 

@@ -62,9 +62,9 @@ public class gameScript : MonoBehaviour
     }
     public void StopButton()
     {
-        Time.timeScale = 0;
+       // Time.timeScale = 0;
         //back.backToMain();
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenuTestWithOculus");
         
     }
 
