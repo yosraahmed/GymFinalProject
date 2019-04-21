@@ -10,15 +10,16 @@ public class gameScript : MonoBehaviour
     public int minutes;
     public int second = 0;
     public Text gameTimerText;
-<<<<<<< HEAD
-<<<<<<< HEAD
     public uiManager back;
-=======
+ 
    // public soundManager sound;
->>>>>>> 54d173f8970a9a24af1bd17922fa905db8c52c59
-=======
+ 
+ 
    // public soundManager sound;
->>>>>>> 54d173f8970a9a24af1bd17922fa905db8c52c59
+ 
+ 
+   // public soundManager sound;
+ 
     // Start is called before the first frame update
     void Start()
     {

@@ -12,18 +12,21 @@ public class uiManager : MonoBehaviour
     public int counter = 4;
     public float timeCounter = 1;
     public Text counterText;
-<<<<<<< HEAD
-<<<<<<< HEAD
+ 
+ 
+ 
     public bool isBoxing;
     public bool isSquats; 
 
     
-=======
+
     //public soundManager sounds;
->>>>>>> 54d173f8970a9a24af1bd17922fa905db8c52c59
-=======
+
     //public soundManager sounds;
->>>>>>> 54d173f8970a9a24af1bd17922fa905db8c52c59
+ 
+ 
+    //public soundManager sounds;
+ 
   
 
 
@@ -78,15 +81,17 @@ public class uiManager : MonoBehaviour
                 timeCounter = 1;
                 //soundManager.instance.gameSound();
 
-<<<<<<< HEAD
+ 
+ 
             }
             else if (timeCounter <= 0 && PlayerPrefs.GetInt("isBoxing", 0) == 3)
             {
                 print("BOXING");
                 SceneManager.LoadScene("boxingScene");
                 timeCounter = 1;
-=======
->>>>>>> 54d173f8970a9a24af1bd17922fa905db8c52c59
+ 
+ 
+ 
             }
 
         }
@@ -107,7 +112,7 @@ public class uiManager : MonoBehaviour
     public void exericeseTypeBoxing()
     {
         // sounds.startSound();
-        soundManager.instance.effectSound();
+        //soundManager.instance.effectSound();
         mainmenu.SetActive(false);
         levelMenu.SetActive(true);
         PlayerPrefs.SetInt("isBoxing", 3);
@@ -117,7 +122,7 @@ public class uiManager : MonoBehaviour
     public void levelButtons()
     {
         // sounds.startSound();
-        soundManager.instance.effectSound();
+        //soundManager.instance.effectSound();
         mainmenu.SetActive(false);
         levelMenu.SetActive(false);
         startMenu.SetActive(true);
@@ -125,7 +130,7 @@ public class uiManager : MonoBehaviour
 
     public void startGame() 
     {
-        soundManager.instance.effectSound();
+        //soundManager.instance.effectSound();
         counter = 3;
     }
 
@@ -144,16 +149,14 @@ public class uiManager : MonoBehaviour
         levelMenu.SetActive(true);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+ 
+ 
+ 
    
 
     public void RestartScene()
     {
         SceneManager.LoadScene(0);
     }
-=======
->>>>>>> 54d173f8970a9a24af1bd17922fa905db8c52c59
-=======
->>>>>>> 54d173f8970a9a24af1bd17922fa905db8c52c59
+ 
 }
