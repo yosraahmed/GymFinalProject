@@ -366,8 +366,8 @@ MonoBehaviour:
   Bullet3: {fileID: 4868862223597777667, guid: 5f2e1a11a702ed049a5869209d0dfd4d, type: 3}
   BulletSpeed: 20
   Bullettimer: 2
-  Width: 0.5
-  Hight: 0.5
+  Width: 1
+  Hight: 1
 --- !u!1 &1931709075270115909
 GameObject:
   m_ObjectHideFlags: 0
