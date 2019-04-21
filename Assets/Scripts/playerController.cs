@@ -60,7 +60,6 @@ public class playerController : MonoBehaviour
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) - 1);
             //colorHit -= 1;
-
             Destroy(other.gameObject);
         }
 
