@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7816967603426834250}
   - component: {fileID: 3829410356046381259}
   - component: {fileID: 3747185916212647953}
-  - component: {fileID: 59320499542252757}
+  - component: {fileID: 708444156121099426}
   m_Layer: 0
   m_Name: GunBoullet3
   m_TagString: BlueHit
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9ca9fb59a4de5489c862c8b5f93103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &59320499542252757
+--- !u!54 &708444156121099426
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

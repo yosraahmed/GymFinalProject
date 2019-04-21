@@ -363,7 +363,7 @@ MonoBehaviour:
   SquatsPoint33: {fileID: 2722324309448419328}
   Bullet1: {fileID: 100004, guid: 10f424bb44ce7b04da04108b2a884922, type: 3}
   Bullet2: {fileID: 699365641085189933, guid: 393d0be5a57d421498f9fdf615ada99b, type: 3}
-  Bullet3: {fileID: 5212959898013178294, guid: fc07fd32840414f49928abb05ef206c8, type: 3}
+  Bullet3: {fileID: 4868862223597777667, guid: 5f2e1a11a702ed049a5869209d0dfd4d, type: 3}
   BulletSpeed: 20
   Bullettimer: 2
   Width: 0.5
@@ -505,7 +505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931709075756583196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1699357, y: 0.16, z: -117.8}
+  m_LocalPosition: {x: 0.1699357, y: 0.16, z: -121.76}
   m_LocalScale: {x: 14.2, y: 15.7, z: 4.43}
   m_Children: []
   m_Father: {fileID: 5630056678635188849}
