@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5178123262892564456}
   - component: {fileID: 8990156107123052552}
   - component: {fileID: 472238061490527974}
-  - component: {fileID: 67826568196852632}
+  - component: {fileID: 8273491053424235490}
   m_Layer: 0
   m_Name: GunBoullet2
   m_TagString: RedHit
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9ca9fb59a4de5489c862c8b5f93103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &67826568196852632
+--- !u!54 &8273491053424235490
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

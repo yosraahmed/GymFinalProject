@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-//sing Valve.VR;
+//using Valve.VR;
 
 public class VRInputModule : BaseInputModule
 {
@@ -10,7 +10,7 @@ public class VRInputModule : BaseInputModule
     //public SteamVR_Input_Sources m_TargetSouce;
     //public SteamVR_Action_Boolean m_ClickAction;
     private GameObject m_CurrentObject = null;
-    protected PointerEventData m_Data = null;
+    private PointerEventData m_Data = null;
 
     protected override void Awake()
     {
@@ -32,21 +32,13 @@ public class VRInputModule : BaseInputModule
         //Hover
         HandlePointerExitAndEnter(m_Data, m_CurrentObject);
         //Press
-
-        //if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space))
-
-        if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || OVRInput.GetDown(OVRInput.Button.One))
-
+        if (/*m_ClickAction.GetStateDown(m_TargetSouce) ||*/ Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)|| OVRInput.GetDown(OVRInput.Button.One))
         {
             print("Downnn");
             ProcessPress(m_Data);
         }
         //Release
-
-       // if (/*m_ClickAction.GetStateUp(m_TargetSouce) ||*/ Input.GetKeyUp(KeyCode.Space))
-
         if (/*m_ClickAction.GetStateUp(m_TargetSouce) ||*/ Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0) || OVRInput.GetUp(OVRInput.Button.One))
-
         {
             print("Upppppppp");
             ProcessRelease(m_Data);
@@ -57,7 +49,7 @@ public class VRInputModule : BaseInputModule
     {
         return  m_Data;
     }
-    protected void ProcessPress(PointerEventData data)
+    private void ProcessPress(PointerEventData data)
     {
         
         //set raycast
@@ -75,7 +67,7 @@ public class VRInputModule : BaseInputModule
         data.rawPointerPress = m_CurrentObject;
 
     }
-    protected void ProcessRelease(PointerEventData data)
+    private void ProcessRelease(PointerEventData data)
     {
         // Execute pointer up
         ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);

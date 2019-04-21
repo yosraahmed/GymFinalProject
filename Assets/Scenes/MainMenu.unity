@@ -646,6 +646,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PR_VRInputModule
       objectReference: {fileID: 0}
+    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1781895230}
     - target: {fileID: 82390747759672476, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -701,11 +706,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1781895230}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1a30d1e8ae0bfe44ab6bbca57b326be, type: 3}
 --- !u!1 &1755612622 stripped
@@ -758,6 +758,8 @@ MonoBehaviour:
   counter: 3
   timeCounter: 1
   counterText: {fileID: 739788969}
+  isBoxing: 1
+  isSquats: 0
 --- !u!114 &1858435380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,31 +977,61 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1858435379}
+    - target: {fileID: 3363764965530454255, guid: 7023f435a8bcc1347aaaede571e648ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: exericeseTypeSquats
+      objectReference: {fileID: 0}
     - target: {fileID: 3363764965966262474, guid: 7023f435a8bcc1347aaaede571e648ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1858435379}
+    - target: {fileID: 3363764965966262474, guid: 7023f435a8bcc1347aaaede571e648ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: exericeseTypeBoxing
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363764966805281986, guid: 7023f435a8bcc1347aaaede571e648ad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1858435379}
     - target: {fileID: 3363764966805281986, guid: 7023f435a8bcc1347aaaede571e648ad,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363764966191005945, guid: 7023f435a8bcc1347aaaede571e648ad,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1858435379}
     - target: {fileID: 3363764966191005945, guid: 7023f435a8bcc1347aaaede571e648ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: levelButtons
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363764966450298238, guid: 7023f435a8bcc1347aaaede571e648ad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1858435379}
     - target: {fileID: 3363764966450298238, guid: 7023f435a8bcc1347aaaede571e648ad,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1858435379}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: levelButtons
+      objectReference: {fileID: 0}
     - target: {fileID: 3363764967374567068, guid: 7023f435a8bcc1347aaaede571e648ad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1858435379}
+    - target: {fileID: 3363764967374567068, guid: 7023f435a8bcc1347aaaede571e648ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: levelButtons
+      objectReference: {fileID: 0}
     - target: {fileID: 3363764965586965281, guid: 7023f435a8bcc1347aaaede571e648ad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1070,6 +1102,8 @@ MonoBehaviour:
   counter: 3
   timeCounter: 1
   counterText: {fileID: 0}
+  isBoxing: 1
+  isSquats: 0
 --- !u!114 &3624727157985378524
 MonoBehaviour:
   m_ObjectHideFlags: 0

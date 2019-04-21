@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6769679019138293656}
   - component: {fileID: 5138601211090437527}
   - component: {fileID: 6977769630664023684}
-  - component: {fileID: 7180066009165964951}
+  - component: {fileID: 1078742321815121889}
   m_Layer: 0
   m_Name: Squats1
   m_TagString: Squat1Hit
@@ -105,7 +105,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7180066009165964951
+--- !u!54 &1078742321815121889
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,5 +119,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
