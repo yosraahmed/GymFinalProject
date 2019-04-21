@@ -94,11 +94,7 @@ public class uiManager : MonoBehaviour
             musicOff.SetActive(true);
         }
     }
-    public void SoundOn()
-    {
-        mainmenu.SetActive(false);
-        setting.SetActive(true);
-    }
+ 
     public void Settings()
     {
         mainmenu.SetActive(false);
