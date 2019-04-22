@@ -9,7 +9,8 @@ public class soundManager : MonoBehaviour
 {
     public static soundManager instance;
     public AudioSource effect;
-    public AudioSource gamePlayMusic;
+    public AudioSource gamePlayMusicSquat;
+    public AudioSource gamePlayMusicBoxing;
     public AudioSource startManuMusic;
     public AudioSource cubeSound;
     public AudioSource ballSound;
@@ -40,7 +41,7 @@ public class soundManager : MonoBehaviour
   
     public void gameSound()
     {
-        gamePlayMusic.Play();
+        gamePlayMusicSquat.Play();
     }
 
     public void startSound()
@@ -65,24 +66,37 @@ public class soundManager : MonoBehaviour
         {
             if (!startManuMusic.isPlaying)
             {
-                gamePlayMusic.Stop();
+                gamePlayMusicBoxing.Stop();
+                gamePlayMusicSquat.Stop();
                 startManuMusic.Play();
             }
            
         }
         else if (sceneName == "gameScene2" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
-            if (!gamePlayMusic.isPlaying )
+            if (!gamePlayMusicSquat.isPlaying )
             {
+                gamePlayMusicBoxing.Stop();
                 startManuMusic.Stop();
-                gamePlayMusic.Play();
+                gamePlayMusicSquat.Play();
             }
            
+        }
+        else if (sceneName == "boxingScene" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
+        {
+            if (!gamePlayMusicBoxing.isPlaying)
+            {
+                startManuMusic.Stop();
+                gamePlayMusicSquat.Stop();
+                gamePlayMusicBoxing.Play();
+            }
+
         }
         else if (PlayerPrefs.GetInt("SoundMusic", 0) == 0)
         {
             startManuMusic.Stop();
-            gamePlayMusic.Stop();
+            gamePlayMusicSquat.Stop();
+            gamePlayMusicBoxing.Stop();
         }
 
     }

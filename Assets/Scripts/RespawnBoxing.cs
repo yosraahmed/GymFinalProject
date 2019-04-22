@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test1 : MonoBehaviour 
+public class RespawnBoxing : MonoBehaviour 
      
 {
     //private readonly Transform randomBullet;
     public GameObject randomBullet1;
     float randomtimer;
     public GameObject Newobject;
-    float radius =.2f ;
+    float radius =0.1f ;
     int k = 0;
     // Start is called before the first frame update
     void Start()
@@ -52,10 +52,8 @@ public class Test1 : MonoBehaviour
             //Newobject.transform.parent = gameObject.transform;
             //randomtimer = 1;
 
-            print("1+ "+position1.z);
-            if (position1.z < -3.8f)
+            if (position1.z < -4.5f)
             {
-                print("2+ "+position1.z);
                 ExplosionDamage(position1, radius);
                 if (Newobject == null)
                 {
@@ -110,7 +108,7 @@ public class Test1 : MonoBehaviour
         k = 0;
        while (i < hitColliders.Length)
         {
-            if (hitColliders[i].tag == "Location")
+            if (hitColliders[i].tag == "RedHit")
             {
                 k = 1;
             } 

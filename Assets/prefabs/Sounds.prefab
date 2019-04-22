@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 784122834524459526}
   - component: {fileID: 784122834524459527}
   m_Layer: 0
-  m_Name: GamePlay
+  m_Name: GamePlayMusicSquat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 784122834262428848}
-  gamePlayMusic: {fileID: 784122834524459527}
+  gamePlayMusicSquat: {fileID: 784122834524459527}
   startManuMusic: {fileID: 784122834061663244}
   cubeSound: {fileID: 784122834475560184}
   ballSound: {fileID: 7694194952667919762}
