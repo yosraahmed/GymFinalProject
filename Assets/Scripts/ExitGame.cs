@@ -17,19 +17,16 @@ public class ExitGame : MonoBehaviour
     {
         if (OVRInput.Get(OVRInput.Button.Start))
         {
-            
                 pointerOnOff.SetActive(true);
-            
                 inputOnOff.SetActive(true);
-            
         }
-        if (OVRInput.GetUp(OVRInput.Button.Start))
+        else
         {
-
             pointerOnOff.SetActive(false);
-
             inputOnOff.SetActive(false);
-
         }
+        //if (OVRInput.GetUp(OVRInput.Button.Start))
+        //{
+        //}
     }
 }
