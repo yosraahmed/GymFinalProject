@@ -10,7 +10,7 @@ public class gameScript : MonoBehaviour
     public int minutes;
     public int second = 0;
     public Text gameTimerText;
-    public uiManager back;
+    //public uiManager back;
  
    // public soundManager sound;
  
