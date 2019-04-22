@@ -9,7 +9,7 @@ public class Test1 : MonoBehaviour
     public GameObject randomBullet1;
     float randomtimer;
     public GameObject Newobject;
-    float radius =1 ;
+    float radius =.2f ;
     int k = 0;
     // Start is called before the first frame update
     void Start()
@@ -28,9 +28,9 @@ public class Test1 : MonoBehaviour
             Vector3 position = new Vector3(
                 Random.Range(transform.position.x + 0, transform.position.x + 0),
                 Random.Range(
-                    (transform.position.y + (transform.localScale.y - 4)) 
+                    (transform.position.y + (transform.localScale.y - .5f)) 
                     ,
-                    (transform.position.y - (transform.localScale.y - 4)) 
+                    (transform.position.y - (transform.localScale.y - .5f)) 
                     )
                     ,
                     transform.position.z
@@ -48,9 +48,14 @@ public class Test1 : MonoBehaviour
                 ;
 
 
+            //Newobject = Instantiate(randomBullet1, position1, transform.rotation);
+            //Newobject.transform.parent = gameObject.transform;
+            //randomtimer = 1;
 
-            if (position1.z < -4)
+            print("1+ "+position1.z);
+            if (position1.z < -3.8f)
             {
+                print("2+ "+position1.z);
                 ExplosionDamage(position1, radius);
                 if (Newobject == null)
                 {
@@ -58,14 +63,14 @@ public class Test1 : MonoBehaviour
                     Newobject.transform.parent = gameObject.transform;
                     randomtimer = 1;
                 }
-                else 
+                else
                 if (k == 0)
-                    {
-                        Newobject = Instantiate(randomBullet1, position1, transform.rotation);
-                        Newobject.transform.parent = gameObject.transform;
-                        randomtimer = 1;
-                    }
-                
+                {
+                    Newobject = Instantiate(randomBullet1, position1, transform.rotation);
+                    Newobject.transform.parent = gameObject.transform;
+                    randomtimer = 1;
+                }
+
                 else
                 { randomtimer = -1; }
 
@@ -74,7 +79,7 @@ public class Test1 : MonoBehaviour
             { randomtimer = -1; }
 
 
-            
+
 
             //Vector2 randPos = Random.insideUnitCircle * 5;
             //randomBullet1.transform.position += new Vector3(randPos.x, 0, randPos.y);
