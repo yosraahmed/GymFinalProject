@@ -1291,7 +1291,6 @@ MonoBehaviour:
   minutes: 0
   second: 0
   gameTimerText: {fileID: 185231152}
-  back: {fileID: 0}
 --- !u!1 &1749278391
 GameObject:
   m_ObjectHideFlags: 0

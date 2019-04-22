@@ -14,6 +14,8 @@ public class soundManager : MonoBehaviour
     public AudioSource startManuMusic;
     public AudioSource cubeSound;
     public AudioSource ballSound;
+    public AudioSource boxingEffect;
+    
 
     // Start is called before the first frame update
 
@@ -38,7 +40,14 @@ public class soundManager : MonoBehaviour
 
         effect.Play();
     }
-  
+
+
+    public void boxEffect()
+    {
+
+        boxingEffect.Play();
+    }
+
     public void gameSound()
     {
         gamePlayMusicSquat.Play();

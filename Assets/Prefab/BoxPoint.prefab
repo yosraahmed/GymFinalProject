@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 384591815107839120}
   - component: {fileID: 1244286122424058181}
   m_Layer: 0
-  m_Name: Sphere
-  m_TagString: RedHit
+  m_Name: BoxPoint
+  m_TagString: BlueHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

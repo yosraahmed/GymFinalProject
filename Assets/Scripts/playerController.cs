@@ -32,7 +32,7 @@ public class playerController : MonoBehaviour
     {
         if (other.tag == "BlueHit")
         {
-            soundManager.instance.CubeCrashSound();
+            soundManager.instance.boxEffect();
             bluHit += 1;
             Instantiate(particleBlue, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
