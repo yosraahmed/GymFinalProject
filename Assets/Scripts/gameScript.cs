@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class gameScript : MonoBehaviour
 {
+   
     public int hr = 1;
     public int minutes;
     public int second = 0;

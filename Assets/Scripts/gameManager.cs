@@ -16,8 +16,8 @@ public class gameManager : MonoBehaviour
     public GameObject Bullet1;
     public GameObject Bullet2;
     public GameObject Bullet3;
-    public float BulletSpeed = 20;
-    public float Bullettimer = 2;
+    public float BulletSpeed ;
+    public float Bullettimer ;
     public float Width = 0.5f;
     public float Hight = 0.5f;
 
@@ -40,6 +40,21 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerPrefs.GetInt("EasySquat", 0)==1)
+        {
+            BulletSpeed = 20;
+            Bullettimer = 2;
+        }
+        else if (PlayerPrefs.GetInt("NormalSquat", 0) == 1)
+        {
+            BulletSpeed = 30;
+            Bullettimer = 1;
+        }
+        else if (PlayerPrefs.GetInt("HardSquat", 0) == 1)
+        {
+            BulletSpeed = 45;
+            Bullettimer = 0.6f;
+        }
 
         if (timer < 0)
         {

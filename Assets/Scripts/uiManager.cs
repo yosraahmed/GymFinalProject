@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class uiManager : MonoBehaviour
 {
+    public static uiManager instance;
     public GameObject mainmenu;
-    public GameObject levelMenu;
+    public GameObject levelMenuSquats;
+    public GameObject levelMenuBoxing;
     public GameObject startMenu;
     public GameObject setting;
     public GameObject musicOn;
@@ -27,8 +29,14 @@ public class uiManager : MonoBehaviour
 
     void Start()
     {
+        if (instance == null) instance = this;
+        else
+        {
+            Destroy(this);
+        }
         mainmenu.SetActive(true);
-        levelMenu.SetActive(false);
+        levelMenuSquats.SetActive(false);
+        levelMenuBoxing.SetActive(false);
         startMenu.SetActive(false);
         setting.SetActive(false);
         counter = 4;
@@ -109,7 +117,7 @@ public class uiManager : MonoBehaviour
     public void exericeseTypeSquats()
     {
         mainmenu.SetActive(false);
-        levelMenu.SetActive(true);
+        levelMenuSquats.SetActive(true);
         PlayerPrefs.SetInt("isSquats", 1);
         PlayerPrefs.SetInt("isBoxing", 0);
 
@@ -120,17 +128,20 @@ public class uiManager : MonoBehaviour
         // sounds.startSound();
         //soundManager.instance.effectSound();
         mainmenu.SetActive(false);
-        levelMenu.SetActive(true);
+        levelMenuBoxing.SetActive(true);
         PlayerPrefs.SetInt("isBoxing", 3);
         PlayerPrefs.SetInt("isSquats", 0);
     }
 
     public void levelButtons()
     {
+        print("test");
         // sounds.startSound();
         //soundManager.instance.effectSound();
         mainmenu.SetActive(false);
-        levelMenu.SetActive(false);
+        levelMenuBoxing.SetActive(false);
+        levelMenuSquats.SetActive(false);
+        //levelMenu.SetActive(false);
         startMenu.SetActive(true);
     }
 
@@ -144,17 +155,26 @@ public class uiManager : MonoBehaviour
     {
         soundManager.instance.effectSound();
         mainmenu.SetActive(true);
-        levelMenu.SetActive(false);
+        levelMenuSquats.SetActive(false);
+        levelMenuBoxing.SetActive(false);
     }
 
-    public void backToLevel()
+    public void backToMainFirst()
     {
         soundManager.instance.effectSound();
         startMenu.SetActive(false);
-        mainmenu.SetActive(false);
-        levelMenu.SetActive(true);
-    }
+        mainmenu.SetActive(true);
+        levelMenuSquats.SetActive(false);
+        levelMenuBoxing.SetActive(false);
+        PlayerPrefs.SetInt("EasySquat", 0);
+        PlayerPrefs.SetInt("NormalSquat", 0);
+        PlayerPrefs.SetInt("HardSquat", 0);
 
+        PlayerPrefs.SetInt("EasyBoxing", 0);
+        PlayerPrefs.SetInt("NormalBoxing", 0);
+        PlayerPrefs.SetInt("HardBoxing", 0);
+    }
+    
     public void RestartScene()
     {
         SceneManager.LoadScene(0);
