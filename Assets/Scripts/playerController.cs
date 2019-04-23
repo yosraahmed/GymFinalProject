@@ -33,7 +33,8 @@ public class playerController : MonoBehaviour
         if (other.tag == "BlueHit")
         {
             soundManager.instance.boxEffect();
-            bluHit += 1;
+            PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
+            //bluHit += 1;
             Instantiate(particleBlue, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
 

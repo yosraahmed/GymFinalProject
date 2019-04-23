@@ -9,14 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuTestWithOculus.unity
     guid: da765896cca75994786ea5c2c1655779
   - enabled: 1
-    path: Assets/Scenes/TEstScenes.unity
-    guid: fce8c13137aba714b8fc62498a6c4af3
-  - enabled: 1
     path: Assets/Scenes/boxingScene.unity
     guid: 35e14528c048cdd43b6cb5a1adb9a2cf
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 3bb7c0416215464489f6c2085253f9cb
   - enabled: 1
     path: Assets/Scenes/gameScene2.unity
     guid: b6a357b9999da754c98c2842c21e0594
