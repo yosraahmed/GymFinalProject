@@ -7,19 +7,32 @@ public class RespawnBoxing : MonoBehaviour
 {
     //private readonly Transform randomBullet;
     public GameObject randomBullet1;
-    float randomtimer;
+    public float randomtimer;
     public GameObject Newobject;
     float radius =0.1f ;
     int k = 0;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
-        randomtimer = -1;
+        randomtimer = -speed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (PlayerPrefs.GetInt("EasyBoxing", 0) == 1)
+        {
+            speed = 1f;
+        }
+        else if (PlayerPrefs.GetInt("NormalBoxing", 0) == 1)
+        {
+            speed = 0.5f;
+        }
+        else if (PlayerPrefs.GetInt("HardBoxing", 0) == 1)
+        {
+            speed = 0.1f;
+        }
 
 
         if (randomtimer < 0)
@@ -59,22 +72,22 @@ public class RespawnBoxing : MonoBehaviour
                 {
                     Newobject = Instantiate(randomBullet1, position1, transform.rotation);
                     Newobject.transform.parent = gameObject.transform;
-                    randomtimer = 1;
+                    randomtimer = speed;
                 }
                 else
                 if (k == 0)
                 {
                     Newobject = Instantiate(randomBullet1, position1, transform.rotation);
                     Newobject.transform.parent = gameObject.transform;
-                    randomtimer = 1;
+                    randomtimer = speed;
                 }
 
                 else
-                { randomtimer = -1; }
+                { randomtimer = -speed; }
 
             }
             else
-            { randomtimer = -1; }
+            { randomtimer = -speed; }
 
 
 
