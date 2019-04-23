@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BlueHit
+  - RedHit
+  - projectile
+  - FxTemporaire
+  - insersect
+  - ColorHit
+  - Moves
+  - Squat1Hit
   layers:
   - Default
   - TransparentFX
