@@ -2385,6 +2385,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 1781895230}
+  m_TargetSouce: 0
+  m_ClickAction:
+    actionPath: 
+    needsReinit: 0
   m_Source: 33554432
   m_Click: -1
 --- !u!114 &818734659
@@ -3758,6 +3762,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1781895230}
+    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
+        type: 3}
+      propertyPath: m_TargetSouce
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 82390747759672476, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
         type: 3}
       propertyPath: m_LocalPosition.x
