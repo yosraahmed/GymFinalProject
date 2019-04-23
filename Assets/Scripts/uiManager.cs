@@ -74,7 +74,7 @@ public class uiManager : MonoBehaviour
             timeCounter -= Time.deltaTime;
             if (timeCounter <= 0 && PlayerPrefs.GetInt("isSquats", 0) == 1)
             {
-                print("SQUAT");
+
                 SceneManager.LoadScene("gameScene2");
                 timeCounter = 1;
                 //soundManager.instance.gameSound();
@@ -135,7 +135,7 @@ public class uiManager : MonoBehaviour
 
     public void levelButtons()
     {
-        print("test");
+
         // sounds.startSound();
         //soundManager.instance.effectSound();
         mainmenu.SetActive(false);
