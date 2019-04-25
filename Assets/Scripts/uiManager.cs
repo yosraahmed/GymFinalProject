@@ -29,10 +29,24 @@ public class uiManager : MonoBehaviour
 
     void Start()
     {
+
         if (instance == null) instance = this;
         else
         {
             Destroy(this);
+        }
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "MainMenuTestWithOculus")
+        {
+            PlayerPrefs.SetInt("EasySquat", 0);
+            PlayerPrefs.SetInt("NormalSquat", 0);
+            PlayerPrefs.SetInt("HardSquat", 0);
+
+            PlayerPrefs.SetInt("EasyBoxing", 0);
+            PlayerPrefs.SetInt("NormalBoxing", 0);
+            PlayerPrefs.SetInt("HardBoxing", 0);
+
         }
         mainmenu.SetActive(true);
         levelMenuSquats.SetActive(false);
@@ -45,7 +59,9 @@ public class uiManager : MonoBehaviour
     }
 
     public void Update()
-    { 
+    {
+
+
         counterText.text = counter.ToString();
 
         if(counter == 3)
@@ -179,5 +195,46 @@ public class uiManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
- 
+    public void levelButtonsSquatEasy()
+    {
+        uiManager.instance.levelButtons();
+        PlayerPrefs.SetInt("EasySquat", 1);
+        PlayerPrefs.SetInt("NormalSquat", 0);
+        PlayerPrefs.SetInt("HardSquat", 0);
+    }
+    public void levelButtonsSquatNormal()
+    {
+        uiManager.instance.levelButtons();
+        PlayerPrefs.SetInt("EasySquat", 0);
+        PlayerPrefs.SetInt("NormalSquat", 1);
+        PlayerPrefs.SetInt("HardSquat", 0);
+    }
+    public void levelButtonsSquatHard()
+    {
+        uiManager.instance.levelButtons();
+        PlayerPrefs.SetInt("EasySquat", 0);
+        PlayerPrefs.SetInt("NormalSquat", 0);
+        PlayerPrefs.SetInt("HardSquat", 1);
+    }
+    public void levelButtonsBoxingEasy()
+    {
+        uiManager.instance.levelButtons();
+        PlayerPrefs.SetInt("EasyBoxing", 1);
+        PlayerPrefs.SetInt("NormalBoxing", 0);
+        PlayerPrefs.SetInt("HardBoxing", 0);
+    }
+    public void levelButtonsBoxingNormal()
+    {
+        uiManager.instance.levelButtons();
+        PlayerPrefs.SetInt("EasyBoxing", 0);
+        PlayerPrefs.SetInt("NormalBoxing", 1);
+        PlayerPrefs.SetInt("HardBoxing", 0);
+    }
+    public void levelButtonsBoxingHard()
+    {
+        uiManager.instance.levelButtons();
+        PlayerPrefs.SetInt("EasyBoxing", 0);
+        PlayerPrefs.SetInt("NormalBoxing", 0);
+        PlayerPrefs.SetInt("HardBoxing", 1);
+    }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectBullet : MonoBehaviour
+public class ObjectRotation : MonoBehaviour
 {
     
     //public float BulletSpeed = 20;
