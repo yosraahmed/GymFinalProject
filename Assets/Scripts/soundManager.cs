@@ -15,7 +15,7 @@ public class soundManager : MonoBehaviour
     public AudioSource cubeSound;
     public AudioSource ballSound;
     public AudioSource boxingEffect;
-    
+    public AudioSource wrongballSound;
 
     // Start is called before the first frame update
 
@@ -30,21 +30,17 @@ public class soundManager : MonoBehaviour
     }
     void Start()
     {
-
         PlayerPrefs.SetInt("SoundMusic", 1);
-
     }
 
     public void effectSound()
     {
-
         effect.Play();
     }
 
 
     public void boxEffect()
     {
-
         boxingEffect.Play();
     }
 
@@ -65,9 +61,12 @@ public class soundManager : MonoBehaviour
     {
         ballSound.Play();
     }
-     void Update()
+    public void wrongBallCrashSound()
     {
-        
+        wrongballSound.Play();
+    }
+    void Update()
+    {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
@@ -79,7 +78,6 @@ public class soundManager : MonoBehaviour
                 gamePlayMusicSquat.Stop();
                 startManuMusic.Play();
             }
-           
         }
         else if (sceneName == "gameScene2" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
@@ -89,7 +87,6 @@ public class soundManager : MonoBehaviour
                 startManuMusic.Stop();
                 gamePlayMusicSquat.Play();
             }
-           
         }
         else if (sceneName == "boxingScene" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {

@@ -20,14 +20,11 @@ public class playerController : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("scorText", zero);
-       
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        //PlayerPrefs.SetInt("scorText", bluHit + redHit + colorHit);
         ScourText.text = PlayerPrefs.GetInt("scorText", 0).ToString();
     }
     private void OnTriggerEnter(Collider other)
@@ -37,18 +34,14 @@ public class playerController : MonoBehaviour
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.boxEffect();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
-            //bluHit += 1;
             Instantiate(particleBlue, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
-
-
         }
         if (other.tag == "RedHit")
         {
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0)+1);
-            //redHit += 1;
             Instantiate(particleRed, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
@@ -57,35 +50,17 @@ public class playerController : MonoBehaviour
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
-            //colorHit += 1;
             Instantiate(particleColor, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
         if (other.tag == "Squat1Hit")
         {
+            soundManager.instance.wrongBallCrashSound();
             Instantiate(wrongCubeEffect, wrongCubeEffectTransform.transform.position, wrongCubeEffectTransform.transform.rotation);
             PlayerPrefs.SetInt("Grade", 0);
-            soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) - 1);
-            //colorHit -= 1;
             Destroy(other.gameObject);
         }
-
-        //}
-        //if (other.tag == "RedHit")
-        //{
-        //    soundManager.instance.CubeCrashSound();
-        //    redHit += 1;
-        //    Instantiate(particleRed, other.transform.position, other.transform.rotation);
-        //    Destroy(other.gameObject);
-        //}
-        //if (other.tag == "ColorHit")
-        //{
-        //    soundManager.instance.CubeCrashSound();
-        //    colorHit += 1;
-        //    Instantiate(particleColor, other.transform.position, other.transform.rotation);
-        //    Destroy(other.gameObject);
-        //}
 
     }
 }

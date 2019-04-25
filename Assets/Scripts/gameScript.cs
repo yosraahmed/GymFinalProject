@@ -11,24 +11,13 @@ public class gameScript : MonoBehaviour
     public int minutes;
     public int second = 0;
     public Text gameTimerText;
-    //public uiManager back;
- 
-   // public soundManager sound;
- 
- 
-   // public soundManager sound;
- 
- 
-   // public soundManager sound;
- 
+
     // Start is called before the first frame update
     void Start()
     {
         hr = 1;
         minutes = 59;
         second = 59;
-        //sound = GetComponent<soundManager>();
-        //sound.gameSound();
     }
 
     // Update is called once per frame
@@ -63,10 +52,7 @@ public class gameScript : MonoBehaviour
     }
     public void StopButton()
     {
-       // Time.timeScale = 0;
-        //back.backToMain();
         SceneManager.LoadScene("MainMenuTestWithOculus");
-        
     }
 
 }

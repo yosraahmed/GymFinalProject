@@ -17,19 +17,11 @@ public class uiManager : MonoBehaviour
     public int counter = 4;
     public float timeCounter = 1;
     public Text counterText;
-
     public bool isBoxing;
     public bool isSquats; 
 
-    //public soundManager sounds;
-
-    //public soundManager sounds;
- 
-    //public soundManager sounds;
-
     void Start()
     {
-
         if (instance == null) instance = this;
         else
         {
@@ -46,7 +38,6 @@ public class uiManager : MonoBehaviour
             PlayerPrefs.SetInt("EasyBoxing", 0);
             PlayerPrefs.SetInt("NormalBoxing", 0);
             PlayerPrefs.SetInt("HardBoxing", 0);
-
         }
         mainmenu.SetActive(true);
         levelMenuSquats.SetActive(false);
@@ -55,18 +46,14 @@ public class uiManager : MonoBehaviour
         setting.SetActive(false);
         counter = 4;
         timeCounter = 1;
-        //sounds = GetComponent<soundManager>();
     }
 
     public void Update()
     {
-
-
         counterText.text = counter.ToString();
 
         if(counter == 3)
         {
-           // sounds.startSound();
             timeCounter -= Time.deltaTime;
             if(timeCounter <= 0)
             {
@@ -76,8 +63,7 @@ public class uiManager : MonoBehaviour
         }
         if(counter == 2)
         {
-           // sounds.startSound();
-            timeCounter -= Time.deltaTime;
+             timeCounter -= Time.deltaTime;
             if (timeCounter <= 0)
             {
                 counter = 1;
@@ -86,14 +72,11 @@ public class uiManager : MonoBehaviour
         }
         if (counter == 1)
         {
-          //  sounds.startSound();
             timeCounter -= Time.deltaTime;
             if (timeCounter <= 0 && PlayerPrefs.GetInt("isSquats", 0) == 1)
             {
-
                 SceneManager.LoadScene("gameScene2");
                 timeCounter = 1;
-                //soundManager.instance.gameSound();
             }
             else if (timeCounter <= 0 && PlayerPrefs.GetInt("isBoxing", 0) == 3)
             {
@@ -141,8 +124,6 @@ public class uiManager : MonoBehaviour
 
     public void exericeseTypeBoxing()
     {
-        // sounds.startSound();
-        //soundManager.instance.effectSound();
         mainmenu.SetActive(false);
         levelMenuBoxing.SetActive(true);
         PlayerPrefs.SetInt("isBoxing", 3);
@@ -151,19 +132,14 @@ public class uiManager : MonoBehaviour
 
     public void levelButtons()
     {
-
-        // sounds.startSound();
-        //soundManager.instance.effectSound();
         mainmenu.SetActive(false);
         levelMenuBoxing.SetActive(false);
         levelMenuSquats.SetActive(false);
-        //levelMenu.SetActive(false);
         startMenu.SetActive(true);
     }
 
     public void startGame() 
     {
-        //soundManager.instance.effectSound();
         counter = 3;
     }
 

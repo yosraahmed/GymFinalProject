@@ -38,7 +38,6 @@ public class Destroy : MonoBehaviour
             Destroy(other.gameObject);
         }
        
-
     }
 
 

@@ -25,8 +25,5 @@ public class PointerActivation : MonoBehaviour
             pointerOnOff.SetActive(false);
             inputOnOff.SetActive(false);
         }
-        //if (OVRInput.GetUp(OVRInput.Button.Start))
-        //{
-        //}
     }
 }

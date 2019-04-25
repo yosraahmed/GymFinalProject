@@ -37,7 +37,6 @@ public class PointerScript : MonoBehaviour
         //set linerenderer
         m_LineRenderer.SetPosition(0, transform.position);
         m_LineRenderer.SetPosition(1, endPosition);
-       
     }
     public RaycastHit CreateRaycast(float length)
     {

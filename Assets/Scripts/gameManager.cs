@@ -21,8 +21,6 @@ public class gameManager : MonoBehaviour
     public float Width = 0.5f;
     public float Hight = 0.5f;
 
-
-
     public static gameManager instance;
     float timer;
     float BulletsNum; //Number of Bullets Greating
@@ -92,12 +90,9 @@ public class gameManager : MonoBehaviour
                 Instantiate(Bullet1, SquatsPoint33.transform.position, SquatsPoint33.transform.rotation);
             }
 
-
             timer = Bullettimer;
             BulletsNum += 1;
         }
-
         timer -= Time.deltaTime;
-
     }
 }
