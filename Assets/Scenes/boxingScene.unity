@@ -286,6 +286,10 @@ PrefabInstance:
       propertyPath: m_inputModule
       value: 
       objectReference: {fileID: 861638625}
+    - target: {fileID: 1251687881, guid: d5dac242f66c82c409d38de6397c6331, type: 3}
+      propertyPath: ScourText
+      value: 
+      objectReference: {fileID: 1136855136}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5dac242f66c82c409d38de6397c6331, type: 3}
 --- !u!1 &518726539 stripped
