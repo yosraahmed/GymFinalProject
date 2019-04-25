@@ -8,6 +8,8 @@ public class playerController : MonoBehaviour
     public GameObject particleBlue;
     public GameObject particleRed;
     public GameObject particleColor;
+    public GameObject wrongCubeEffect;
+    public Transform wrongCubeEffectTransform;
     public Text ScourText;
     int zero = 0;
     int bluHit = 0;
@@ -32,6 +34,7 @@ public class playerController : MonoBehaviour
     {
         if (other.tag == "BlueHit")
         {
+            PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.boxEffect();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
             //bluHit += 1;
@@ -42,6 +45,7 @@ public class playerController : MonoBehaviour
         }
         if (other.tag == "RedHit")
         {
+            PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0)+1);
             //redHit += 1;
@@ -50,6 +54,7 @@ public class playerController : MonoBehaviour
         }
         if (other.tag == "ColorHit")
         {
+            PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
             //colorHit += 1;
@@ -58,6 +63,8 @@ public class playerController : MonoBehaviour
         }
         if (other.tag == "Squat1Hit")
         {
+            Instantiate(wrongCubeEffect, wrongCubeEffectTransform.transform.position, wrongCubeEffectTransform.transform.rotation);
+            PlayerPrefs.SetInt("Grade", 0);
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) - 1);
             //colorHit -= 1;

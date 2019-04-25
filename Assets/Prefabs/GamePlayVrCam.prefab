@@ -61,6 +61,8 @@ MonoBehaviour:
   particleBlue: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
   particleRed: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
   particleColor: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
+  wrongCubeEffect: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
+  wrongCubeEffectTransform: {fileID: 971549246506724887}
   ScourText: {fileID: 0}
 --- !u!54 &1251687883
 Rigidbody:
@@ -891,6 +893,16 @@ PrefabInstance:
       propertyPath: particleColor
       value: 
       objectReference: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: wrongCubeEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: wrongCubeEffectTransform
+      value: 
+      objectReference: {fileID: 971549246506724887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e, type: 3}
 --- !u!4 &233706234144685303 stripped
@@ -1228,6 +1240,16 @@ PrefabInstance:
       propertyPath: particleColor
       value: 
       objectReference: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: wrongCubeEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: wrongCubeEffectTransform
+      value: 
+      objectReference: {fileID: 971549246506724887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e, type: 3}
 --- !u!4 &6408194275762339923 stripped
