@@ -216,11 +216,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRPlayerController
       objectReference: {fileID: 0}
-    - target: {fileID: 2414276955556505490, guid: d5dac242f66c82c409d38de6397c6331,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 971549246506724893, guid: d5dac242f66c82c409d38de6397c6331,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -291,16 +286,6 @@ PrefabInstance:
       propertyPath: m_inputModule
       value: 
       objectReference: {fileID: 861638625}
-    - target: {fileID: 971549246506775417, guid: d5dac242f66c82c409d38de6397c6331,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 971549246506771223, guid: d5dac242f66c82c409d38de6397c6331,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5dac242f66c82c409d38de6397c6331, type: 3}
 --- !u!1 &518726539 stripped
