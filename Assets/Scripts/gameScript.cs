@@ -15,9 +15,9 @@ public class gameScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hr = 1;
-        minutes = 59;
-        second = 59;
+        hr = 0;
+        minutes = 40;
+        second = 0;
     }
 
     // Update is called once per frame
