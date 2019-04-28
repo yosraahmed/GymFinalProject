@@ -23,9 +23,6 @@ public class uiManager : MonoBehaviour
 
     //public soundManager sounds;
 
-    //public soundManager sounds;
- 
-    //public soundManager sounds;
 
     void Start()
     {
