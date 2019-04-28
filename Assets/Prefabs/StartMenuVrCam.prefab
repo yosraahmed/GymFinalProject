@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5492314930037481250}
   - component: {fileID: 5597826573658311300}
   m_Layer: 0
-  m_Name: OVRCameraRig
+  m_Name: StartMenuVrCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,13 +642,29 @@ PrefabInstance:
     - target: {fileID: 5297402960265930476, guid: 811133dcb8c22394284d70c9db67943d,
         type: 3}
       propertyPath: m_DefaultLength
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5297402960265930476, guid: 811133dcb8c22394284d70c9db67943d,
+        type: 3}
+      propertyPath: pinterEffecet
+      value: 
+      objectReference: {fileID: 100000, guid: 3369a2ce82ae9d24da9149d697a27c40, type: 3}
+    - target: {fileID: 5297402960265930476, guid: 811133dcb8c22394284d70c9db67943d,
+        type: 3}
+      propertyPath: pinterEffecetLocation
+      value: 
+      objectReference: {fileID: 3555238158221675796}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 811133dcb8c22394284d70c9db67943d, type: 3}
 --- !u!4 &1096494129526331496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1244624635758264828, guid: 811133dcb8c22394284d70c9db67943d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2193899647291201940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3555238158221675796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3397106505643857024, guid: 811133dcb8c22394284d70c9db67943d,
     type: 3}
   m_PrefabInstance: {fileID: 2193899647291201940}
   m_PrefabAsset: {fileID: 0}

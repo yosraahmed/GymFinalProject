@@ -12,6 +12,7 @@ TagManager:
   - ColorHit
   - Moves
   - Squat1Hit
+  - buttonss
   layers:
   - Default
   - TransparentFX

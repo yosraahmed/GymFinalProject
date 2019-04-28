@@ -347,6 +347,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2073394245464584882}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1355604280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2073394245431687804, guid: 18567cc2126bcf944b96f88b81b9ea25,
+    type: 3}
+  m_PrefabInstance: {fileID: 2073394245464584882}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1355604285
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355604280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 203.32, y: 67.8, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1424692680 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
@@ -653,6 +672,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 935860257}
+    - target: {fileID: 2073394245431687804, guid: 18567cc2126bcf944b96f88b81b9ea25,
+        type: 3}
+      propertyPath: m_TagString
+      value: buttonss
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18567cc2126bcf944b96f88b81b9ea25, type: 3}
 --- !u!1001 &5492314929718011298

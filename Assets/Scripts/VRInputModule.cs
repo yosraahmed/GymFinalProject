@@ -27,6 +27,11 @@ public class VRInputModule : BaseInputModule
         eventSystem.RaycastAll(m_Data, m_RaycastResultCache);
         m_Data.pointerCurrentRaycast = FindFirstRaycast(m_RaycastResultCache);
         m_CurrentObject = m_Data.pointerCurrentRaycast.gameObject;
+        //if (m_Data.pointerCurrentRaycast.gameObject.tag == "buttonss")
+        //{
+        //    print("yesssss");
+        //}
+       
         //Clear
         m_RaycastResultCache.Clear();
         //Hover
@@ -42,6 +47,7 @@ public class VRInputModule : BaseInputModule
         {
             print("Upppppppp");
             ProcessRelease(m_Data);
+
         }
 
     }
@@ -51,7 +57,6 @@ public class VRInputModule : BaseInputModule
     }
     private void ProcessPress(PointerEventData data)
     {
-        
         //set raycast
         data.pointerPressRaycast = data.pointerCurrentRaycast;
         //check for object hit, get the down handler, call
@@ -65,7 +70,7 @@ public class VRInputModule : BaseInputModule
         data.pressPosition = data.position;
         data.pointerPress = newPointerPress;
         data.rawPointerPress = m_CurrentObject;
-
+        
     }
     private void ProcessRelease(PointerEventData data)
     {

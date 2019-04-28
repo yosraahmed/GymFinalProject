@@ -9,6 +9,8 @@ public class PointerScript : MonoBehaviour
     public GameObject m_Dot;
     public VRInputModule m_inputModule;
     private LineRenderer m_LineRenderer = null;
+    public GameObject pinterEffecet;
+    public GameObject pinterEffecetLocation;
     private void Awake()
     {
         m_LineRenderer = GetComponent<LineRenderer>();
@@ -17,14 +19,28 @@ public class PointerScript : MonoBehaviour
     void Update()
     {
         UpdateLine();
+        RaycastHit hit2;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit2))
+        {
+            if (hit2.collider.tag == "buttonss" && Input.GetMouseButtonDown(0) || OVRInput.GetDown(OVRInput.Button.One)&& hit2.collider.tag == "buttonss")
+            {
+                Instantiate(pinterEffecet, pinterEffecetLocation.transform.position, pinterEffecetLocation.transform.rotation);
+                //print("yesssss");
+            }
+        }
+
     }
     public void UpdateLine()
     {
+       
         //use default of distance
         PointerEventData data = m_inputModule.GetData();
+       
         float targetLenth = data.pointerCurrentRaycast.distance == 0 ? m_DefaultLength : data.pointerCurrentRaycast.distance;
         //Raycst
         RaycastHit hit = CreateRaycast(targetLenth);
+       
         //default
         Vector3 endPosition = transform.position + (transform.forward * targetLenth);
         //or based on hit

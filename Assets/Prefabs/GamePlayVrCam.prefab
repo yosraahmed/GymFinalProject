@@ -62,7 +62,7 @@ MonoBehaviour:
   particleRed: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
   particleColor: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
   wrongCubeEffect: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
-  wrongCubeEffectTransform: {fileID: 971549246506724887}
+  wrongCubeEffectTransform: {fileID: 5051991361435384333}
   ScourText: {fileID: 0}
 --- !u!54 &1251687883
 Rigidbody:
@@ -134,7 +134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971549246506426521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.078999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 969755728765128607}
@@ -232,7 +232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971549246506465633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 969470244256621009}
@@ -544,6 +544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1251687880}
+  - {fileID: 5051991361435384333}
   m_Father: {fileID: 971549246506793065}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -791,6 +792,36 @@ Transform:
   m_Father: {fileID: 971549246506775417}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5805055442843691949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5051991361435384333}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5051991361435384333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5805055442843691949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 971549246506724887}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1567025750093096758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -816,7 +847,7 @@ PrefabInstance:
     - target: {fileID: 1621712627733142465, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.139
+      value: 0.293
       objectReference: {fileID: 0}
     - target: {fileID: 1621712627733142465, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
@@ -873,16 +904,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1606308
       objectReference: {fileID: 0}
-    - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: particleRed
@@ -903,6 +924,16 @@ PrefabInstance:
       propertyPath: wrongCubeEffectTransform
       value: 
       objectReference: {fileID: 971549246506724887}
+    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e, type: 3}
 --- !u!4 &233706234144685303 stripped
@@ -1083,7 +1114,7 @@ PrefabInstance:
     - target: {fileID: 1244624635758264828, guid: 811133dcb8c22394284d70c9db67943d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.479
+      value: 0.63300025
       objectReference: {fileID: 0}
     - target: {fileID: 1244624635758264828, guid: 811133dcb8c22394284d70c9db67943d,
         type: 3}
@@ -1163,7 +1194,7 @@ PrefabInstance:
     - target: {fileID: 1621712627733142465, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.12
+      value: 0.27400059
       objectReference: {fileID: 0}
     - target: {fileID: 1621712627733142465, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
@@ -1220,16 +1251,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1606308
       objectReference: {fileID: 0}
-    - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: particleRed
@@ -1250,6 +1271,16 @@ PrefabInstance:
       propertyPath: wrongCubeEffectTransform
       value: 
       objectReference: {fileID: 971549246506724887}
+    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e, type: 3}
 --- !u!4 &6408194275762339923 stripped

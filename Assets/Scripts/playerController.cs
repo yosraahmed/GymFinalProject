@@ -10,6 +10,7 @@ public class playerController : MonoBehaviour
     public GameObject particleColor;
     public GameObject wrongCubeEffect;
     public Transform wrongCubeEffectTransform;
+    
     public Text ScourText;
     int zero = 0;
     int bluHit = 0;
@@ -26,6 +27,7 @@ public class playerController : MonoBehaviour
     void Update()
     {
         ScourText.text = PlayerPrefs.GetInt("scorText", 0).ToString();
+       
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -58,6 +60,10 @@ public class playerController : MonoBehaviour
             soundManager.instance.wrongBallCrashSound();
             Instantiate(wrongCubeEffect, wrongCubeEffectTransform.transform.position, wrongCubeEffectTransform.transform.rotation);
             PlayerPrefs.SetInt("Grade", 0);
+            PlayerPrefs.SetInt("GradeEffect1", 0);
+            PlayerPrefs.SetInt("GradeEffect2", 0);
+            PlayerPrefs.SetInt("GradeEffect3", 0);
+            PlayerPrefs.SetInt("GradeEffect4", 0);
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) - 1);
             Destroy(other.gameObject);
         }
