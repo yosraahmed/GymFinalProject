@@ -15,7 +15,7 @@ public class PointerActivation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.Get(OVRInput.Button.Start))
+        if (/*OVRInput.Get(OVRInput.Button.Start)*/ true)
         {
                 pointerOnOff.SetActive(true);
                 inputOnOff.SetActive(true);

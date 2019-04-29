@@ -5,77 +5,77 @@ using UnityEngine.UI;
 
 public class MovePos : MonoBehaviour
 {
-    public Text timemovetext;
-    public float moveTime;
-    public enum Movement
-    {
-        Idle,
-        Walk,
-    }
-    public Movement currentState;
-    //public bool move = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        moveTime = 0;
-        //currentState = Movement.Walk;
-    }
+    //public Text timemovetext;
+    //public float moveTime;
+    //public enum Movement
+    //{
+    //    Idle,
+    //    Walk,
+    //}
+    //public Movement currentState;
+    ////public bool move = false;
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    moveTime = 0;
+    //    //currentState = Movement.Walk;
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
-        timemovetext.text = moveTime.ToString();
-        if (moveTime>0)
-        {
-            moveTime -= Time.deltaTime;
-        }
-        else if (moveTime < 0)
-        {
-            moveTime = 0;
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    timemovetext.text = moveTime.ToString();
+    //    if (moveTime>0)
+    //    {
+    //        moveTime -= Time.deltaTime;
+    //    }
+    //    else if (moveTime < 0)
+    //    {
+    //        moveTime = 0;
 
-        }
+    //    }
 
-        if (PlayerPrefs.GetInt("moving", 0) == 1 && moveTime < 1 )
-        {
-            moveTime ++;
-        }
+    //    if (PlayerPrefs.GetInt("moving", 0) == 1 && moveTime < 1 )
+    //    {
+    //        moveTime ++;
+    //    }
 
-        if ( moveTime > 0 && OVRInput.GetDown(OVRInput.Button.One) /*Input.GetKey(KeyCode.Space)*/)
-        {
-            currentState = Movement.Walk;
-        }
-        if (OVRInput.GetUp(OVRInput.Button.One) /*Input.GetKeyUp(KeyCode.Space)*/)
-        {
-            currentState = Movement.Idle;
-        }
-        else if (moveTime == 0)
-        {
-            currentState = Movement.Idle;
-        }
-        //else if (PlayerPrefs.GetInt("moving", 0) == 1)
-        //{
+    //    if ( moveTime > 0 && OVRInput.GetDown(OVRInput.Button.One) /*Input.GetKey(KeyCode.Space)*/)
+    //    {
+    //        currentState = Movement.Walk;
+    //    }
+    //    if (OVRInput.GetUp(OVRInput.Button.One) /*Input.GetKeyUp(KeyCode.Space)*/)
+    //    {
+    //        currentState = Movement.Idle;
+    //    }
+    //    else if (moveTime == 0)
+    //    {
+    //        currentState = Movement.Idle;
+    //    }
+    //    //else if (PlayerPrefs.GetInt("moving", 0) == 1)
+    //    //{
             
-        //}
+    //    //}
         
-        switch (currentState)
-        {
-            case Movement.Idle:
-                print("idle");
-                GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+    //    switch (currentState)
+    //    {
+    //        case Movement.Idle:
+    //            print("idle");
+    //            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
                 
-                break;
+    //            break;
 
-            case Movement.Walk:
-                print("walk");
-                GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 5);
+    //        case Movement.Walk:
+    //            print("walk");
+    //            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 5);
                 
-                break;
-            default:
-                break;
+    //            break;
+    //        default:
+    //            break;
 
 
 
-        }
-    }
+    //    }
+    //}
     
 }
