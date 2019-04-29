@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 942387274}
   - component: {fileID: 942387273}
   m_Layer: 5
-  m_Name: Phuse Menu
+  m_Name: Pause Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 1592122813}
   - component: {fileID: 1592122812}
   m_Layer: 0
-  m_Name: Phuse
+  m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
