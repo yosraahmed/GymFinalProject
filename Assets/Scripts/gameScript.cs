@@ -38,7 +38,11 @@ public class gameScript : MonoBehaviour
                 minutes--;
             }
            else if( second >= 1)
+            if (PlayerPrefs.GetInt("Timer", 0)==0)
+            {
                 second--;
+            }
+                
 
             gameTimerText.text = hr + ":" + minutes + ":" + second;
         
@@ -50,11 +54,7 @@ public class gameScript : MonoBehaviour
       
 
     }
-    public void StopButton()
-    {
-        SceneManager.LoadScene("MainMenuTestWithOculus");
-    }
-
+    
 }
 
 
