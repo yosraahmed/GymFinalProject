@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GreatEffect : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class GreatEffect : MonoBehaviour
     public GameObject gradeEffect2;
     public GameObject gradeEffect3;
     public GameObject gradeEffect4;
-    bool aciveEffect;
+    public GameObject x2;
+    public GameObject x3;
+    public GameObject x4;
+    public GameObject x5;
+    public Text comboHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +26,43 @@ public class GreatEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("grade" + PlayerPrefs.GetInt("Grade", 0) );
+        comboHit.text = "Hit " + PlayerPrefs.GetInt("Grade", 0).ToString();
+        if (PlayerPrefs.GetInt("Grade", 0) >= 0 && PlayerPrefs.GetInt("Grade", 0) < 5)
+        {
+            x2.SetActive(false);
+            x3.SetActive(false);
+            x4.SetActive(false);
+            x5.SetActive(false);
+        }
+        if (PlayerPrefs.GetInt("Grade", 0) >= 5 && PlayerPrefs.GetInt("Grade", 0) < 15)
+        {
+            x2.SetActive(true);
+            x3.SetActive(false);
+            x4.SetActive(false);
+            x5.SetActive(false);
+        }
+        if (PlayerPrefs.GetInt("Grade", 0) >= 15 && PlayerPrefs.GetInt("Grade", 0) < 25)
+        {
+            x2.SetActive(false);
+            x3.SetActive(true);
+            x4.SetActive(false);
+            x5.SetActive(false);
+        }
+        if (PlayerPrefs.GetInt("Grade", 0) >= 25 && PlayerPrefs.GetInt("Grade", 0) < 35)
+        {
+            x2.SetActive(false);
+            x3.SetActive(false);
+            x4.SetActive(true);
+            x5.SetActive(false);
+        }
+        if (PlayerPrefs.GetInt("Grade", 0) >= 40 /*&& PlayerPrefs.GetInt("Grade", 0) <= 50*/)
+        {
+            x2.SetActive(false);
+            x3.SetActive(false);
+            x4.SetActive(false);
+            x5.SetActive(true);
+        }
+        //print("grade" + PlayerPrefs.GetInt("Grade", 0) );
         if (PlayerPrefs.GetInt("Grade", 0) == 5 && PlayerPrefs.GetInt("GradeEffect1", 0) == 0)
         {
             Instantiate(gradeEffect1, gradeEffectLocation.transform.position, gradeEffectLocation.transform.rotation);
