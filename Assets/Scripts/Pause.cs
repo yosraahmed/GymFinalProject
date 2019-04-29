@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class Pause : MonoBehaviour
 {
+    public SteamVR_Input_Sources m_TargetSouce;
+    public SteamVR_Action_Boolean m_ClickAction;
     [SerializeField] private GameObject pausePanel;
     void Start()
     {
@@ -12,7 +15,7 @@ public class Pause : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.Y)|| m_ClickAction.GetStateDown(m_TargetSouce))
         {
             if (!pausePanel.activeInHierarchy)
             {
