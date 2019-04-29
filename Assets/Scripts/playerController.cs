@@ -67,6 +67,6 @@ public class playerController : MonoBehaviour
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) - 1);
             Destroy(other.gameObject);
         }
-
+     
     }
 }

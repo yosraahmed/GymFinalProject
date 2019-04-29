@@ -14,14 +14,21 @@ public class uiManager : MonoBehaviour
     public GameObject setting;
     public GameObject musicOn;
     public GameObject musicOff;
+    public GameObject EasyBoxingInstruction;
+    public GameObject MediumBoxingInstruction;
+    public GameObject HardBoxingInstruction;
+    //public int instruction;
     public int counter = 4;
     public float timeCounter = 1;
     public Text counterText;
     public bool isBoxing;
     public bool isSquats; 
 
+
     void Start()
     {
+
+        
         if (instance == null) instance = this;
         else
         {
@@ -38,6 +45,11 @@ public class uiManager : MonoBehaviour
             PlayerPrefs.SetInt("EasyBoxing", 0);
             PlayerPrefs.SetInt("NormalBoxing", 0);
             PlayerPrefs.SetInt("HardBoxing", 0);
+
+
+            //instruction = PlayerPrefs.GetInt("Easy Boxing Instructions");
+            //EasyBoxingInstruction.text = instruction.ToString();
+
         }
         mainmenu.SetActive(true);
         levelMenuSquats.SetActive(false);
@@ -198,6 +210,14 @@ public class uiManager : MonoBehaviour
         PlayerPrefs.SetInt("EasyBoxing", 1);
         PlayerPrefs.SetInt("NormalBoxing", 0);
         PlayerPrefs.SetInt("HardBoxing", 0);
+        EasyBoxingInstruction.SetActive(true);
+        MediumBoxingInstruction.SetActive(false);
+        HardBoxingInstruction.SetActive(false);
+        // PlayerPrefs.GetString("easyBoxingInstruction", EasyBoxingInstruction);
+
+        // PlayerPrefs.SetInt("Easy Boxing Instructions", instruction);
+        //EasyBoxingInstruction.text = instruction.ToString();
+
     }
     public void levelButtonsBoxingNormal()
     {
@@ -205,6 +225,11 @@ public class uiManager : MonoBehaviour
         PlayerPrefs.SetInt("EasyBoxing", 0);
         PlayerPrefs.SetInt("NormalBoxing", 1);
         PlayerPrefs.SetInt("HardBoxing", 0);
+
+        EasyBoxingInstruction.SetActive(false);
+        MediumBoxingInstruction.SetActive(true);
+        HardBoxingInstruction.SetActive(false);
+
     }
     public void levelButtonsBoxingHard()
     {
@@ -212,5 +237,9 @@ public class uiManager : MonoBehaviour
         PlayerPrefs.SetInt("EasyBoxing", 0);
         PlayerPrefs.SetInt("NormalBoxing", 0);
         PlayerPrefs.SetInt("HardBoxing", 1);
+
+        EasyBoxingInstruction.SetActive(false);
+        MediumBoxingInstruction.SetActive(false);
+        HardBoxingInstruction.SetActive(true);
     }
 }
