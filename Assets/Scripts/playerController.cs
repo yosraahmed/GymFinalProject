@@ -11,7 +11,7 @@ public class playerController : MonoBehaviour
     public GameObject wrongCubeEffect;
     public Transform wrongCubeEffectTransform;
     
-    public Text ScourText;
+    //public Text ScourText;
     int zero = 0;
     int bluHit = 0;
     int redHit = 0;
@@ -26,7 +26,7 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScourText.text = PlayerPrefs.GetInt("scorText", 0).ToString();
+        //ScourText.text = PlayerPrefs.GetInt("scorText", 0).ToString();
        
     }
     private void OnTriggerEnter(Collider other)

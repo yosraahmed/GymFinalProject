@@ -23,7 +23,7 @@ public class PointerScript : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out hit2))
         {
-            if (hit2.collider.tag == "buttonss" && Input.GetMouseButtonDown(0) /*|| OVRInput.GetDown(OVRInput.Button.One)&& hit2.collider.tag == "buttonss"*/)
+            if (hit2.collider.tag == "buttonss" && Input.GetMouseButtonDown(0) || OVRInput.GetDown(OVRInput.Button.One) && hit2.collider.tag == "buttonss")
             {
                 Instantiate(pinterEffecet, pinterEffecetLocation.transform.position, pinterEffecetLocation.transform.rotation);
                 //print("yesssss");
