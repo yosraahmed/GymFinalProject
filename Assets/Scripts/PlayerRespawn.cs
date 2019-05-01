@@ -7,10 +7,25 @@ public class PlayerRespawn : MonoBehaviour
 {
     public GameObject player1;
     public Transform player1Location;
+    private void Awake()
+    {
+        if (PlayerPrefs.GetInt("Playerlocation", 0) == 0)
+        {
+            PlayerPrefs.SetInt("Playerlocation", 1);
+            PhotonNetwork.Instantiate(this.player1.name, new Vector3(0f, 7f, 0f), Quaternion.identity, 0);
+        }
+        else
+        {
+            PhotonNetwork.Instantiate(this.player1.name, new Vector3(3f, 7f, 3f), Quaternion.identity, 0);
+            PlayerPrefs.SetInt("Playerlocation", 0);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.Instantiate(player1.gameObject.name, player1Location.transform.position, player1Location.transform.rotation);
+        
+        
+        
     }
 
     // Update is called once per frame
