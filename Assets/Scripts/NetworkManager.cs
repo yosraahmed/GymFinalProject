@@ -23,6 +23,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         if (Instance == null)
             Instance = this;
+        else
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
 
         PhotonNetwork.AutomaticallySyncScene = true;
     }
@@ -45,7 +49,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-       
+        print("Connected To Master");
         ConnectedToMaster = true;
     }
 
@@ -74,7 +78,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        print("Joined");
+        print("Joined Room");
 
         if (PhotonNetwork.CurrentRoom.PlayerCount >= MAXPLAYERCOUNT)
             Invoke("StartGame", 3);
