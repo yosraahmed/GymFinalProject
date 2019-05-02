@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class PhotonController : MonoBehaviourPun, IPunObservable
 {
-    private PhotonView PV;
+    
     private CharacterController myCC;
+    public Camera camFalse;
     public float speeds;
     Vector3 latestPos;
     Quaternion latestRot;
@@ -18,10 +19,14 @@ public class PhotonController : MonoBehaviourPun, IPunObservable
             Destroy(GetComponent<OVRCameraRig>());
             Destroy(GetComponent<OVRManager>());
             Destroy(GetComponent<OVRHeadsetEmulator>());
-            
+            Destroy( GetComponent<CharacterController>());
+            camFalse.enabled=(false);
         }
-        PV = GetComponent<PhotonView>();
-        myCC = GetComponent<CharacterController>();
+        if (photonView.IsMine)
+        {
+            myCC = GetComponent<CharacterController>();
+        }
+        
     }
 
     // Update is called once per frame
@@ -34,7 +39,7 @@ public class PhotonController : MonoBehaviourPun, IPunObservable
             transform.rotation = Quaternion.Lerp(transform.rotation, latestRot, Time.deltaTime * 5);
         }
 
-        if (PV.IsMine)
+        if (photonView.IsMine)
         {
             movment();
         }

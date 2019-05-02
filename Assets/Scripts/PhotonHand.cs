@@ -13,9 +13,9 @@ public class PhotonHand : MonoBehaviourPun, IPunObservable
     {
         if (!photonView.IsMine /*&& GetComponent<OVRCameraRig>() != null*/)
         {
-            Destroy(GetComponent<OVRCameraRig>());
-            Destroy(GetComponent<OVRManager>());
-            Destroy(GetComponent<OVRHeadsetEmulator>());
+            //Destroy(GetComponent<OVRCameraRig>());
+            //Destroy(GetComponent<OVRManager>());
+            //Destroy(GetComponent<OVRHeadsetEmulator>());
             
         }
       
