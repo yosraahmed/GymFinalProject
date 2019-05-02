@@ -87,6 +87,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
     {
+        PlayerPrefs.SetInt("Master", 1);
         print("Player Joined");
 
         if (PhotonNetwork.CurrentRoom.PlayerCount >= MAXPLAYERCOUNT)

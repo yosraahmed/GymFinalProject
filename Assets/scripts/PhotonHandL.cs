@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhotonHand : MonoBehaviourPun, IPunObservable
+public class PhotonHandL : MonoBehaviourPun, IPunObservable
 {
    
-    Vector3 latestPos;
-    Quaternion latestRot;
+    Vector3 latestPosL;
+    Quaternion latestRotL;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +27,8 @@ public class PhotonHand : MonoBehaviourPun, IPunObservable
         if (!photonView.IsMine)
         {
             //Update remote player (smooth this, this looks good, at the cost of some accuracy)
-            transform.position = Vector3.Lerp(transform.position, latestPos, Time.deltaTime * 5);
-            transform.rotation = Quaternion.Lerp(transform.rotation, latestRot, Time.deltaTime * 5);
+            transform.position = Vector3.Lerp(transform.position, latestPosL, Time.deltaTime * 5);
+            transform.rotation = Quaternion.Lerp(transform.rotation, latestRotL, Time.deltaTime * 5);
         }
 
         //if (PV.IsMine)
@@ -50,8 +50,8 @@ public class PhotonHand : MonoBehaviourPun, IPunObservable
         else
         {
             //Network player, receive data
-            latestPos = (Vector3)stream.ReceiveNext();
-            latestRot = (Quaternion)stream.ReceiveNext();
+            latestPosL = (Vector3)stream.ReceiveNext();
+            latestRotL = (Quaternion)stream.ReceiveNext();
         }
     }
 }

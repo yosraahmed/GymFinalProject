@@ -441,6 +441,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 887125709579364964, guid: 3f5625bbfc27e734b8dfe57daee40304,
+        type: 3}
+      propertyPath: ScourText
+      value: 
+      objectReference: {fileID: 888274306}
     - target: {fileID: 3244780830839082636, guid: 3f5625bbfc27e734b8dfe57daee40304,
         type: 3}
       propertyPath: m_Name
@@ -501,11 +506,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 887125709579364964, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: ScourText
-      value: 
-      objectReference: {fileID: 888274306}
     - target: {fileID: 7357232192152601440, guid: 3f5625bbfc27e734b8dfe57daee40304,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -537,10 +537,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+    - target: {fileID: 8250668701035971865, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
-      propertyPath: m_Name
-      value: GamePlay Score Screen
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8250668701035971866, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
@@ -647,10 +647,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8250668701035971865, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
-      propertyPath: m_Camera
-      value: 
+      propertyPath: m_Name
+      value: GamePlay Score Screen
       objectReference: {fileID: 0}
     - target: {fileID: 4369586287115661868, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
@@ -703,3 +703,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 129947710839663685, guid: 19a839c3f7107ff4d8f2d1116abff513, type: 3}
   player1Location: {fileID: 7357232192152601440}
+  player2Location: {fileID: 0}
