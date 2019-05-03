@@ -99,7 +99,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void StartGame()
     {
         print("playing");
-        PhotonNetwork.LoadLevel("multiplayerGame");
+        PhotonNetwork.LoadLevel("gameScene2MultiplayerForTest");
         //Start Game
     }
     #endregion

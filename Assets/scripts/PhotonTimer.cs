@@ -4,10 +4,45 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class DelayStartWaitingRoomController : MonoBehaviourPunCallbacks
+public class PhotonTimer : MonoBehaviourPunCallbacks
 {
+    //bool startTimer = false;
+    //double timerIncrementValue;
+    //double startTime;
+    //[SerializeField] double timer = 20;
+    //ExitGames.Client.Photon.Hashtable CustomeValue;
+
+    //void Start()
+    //{
+    //    if (PhotonNetwork.player.IsMasterClient)
+    //    {
+    //        CustomeValue = new ExitGames.Client.Photon.Hashtable();
+    //        startTime = PhotonNetwork.Time;
+    //        startTimer = true;
+    //        CustomeValue.Add("StartTime", startTime);
+
+    //        PhotonNetwork.room.SetCustomProperties(CustomeValue);
+    //    }
+    //    else
+    //    {
+    //        startTime = double.Parse(PhotonNetwork.room.CustomProperties["StartTime"].ToString());
+    //        startTimer = true;
+    //    }
+    //}
+
+    //void Update()
+    //{
+    //    if (!startTimer) return;
+    //    timerIncrementValue = PhotonNetwork.Time - startTime;
+    //    if (timerIncrementValue >= timer)
+    //    {
+    //        //Timer Completed
+    //        //Do What Ever You What to Do Here
+    //    }
+    //}
+
     /*This object must be attached to an object
-    / in the waiting room scene of your project.*/
+     / in the waiting room scene of your project.*/
 
     // photon view for sending rpc that updates the timer
     private PhotonView myPhotonView;
@@ -31,7 +66,7 @@ public class DelayStartWaitingRoomController : MonoBehaviourPunCallbacks
 
     // bool values for if the timer can count down
     private bool readyToCountDown;
-    private bool readyToStart;
+    //private bool readyToStart;
     private bool startingGame;
     //countdown timer variables
     [SerializeField]
@@ -49,10 +84,12 @@ public class DelayStartWaitingRoomController : MonoBehaviourPunCallbacks
     {
         //initialize variables
         myPhotonView = GetComponent<PhotonView>();
-        fullRoomTimer = maxFullRoomWaitTime;
-        notFullRoomTimer = maxWaitTime;
-        timerToStartGame = maxWaitTime;
-
+        if (PhotonNetwork.IsMasterClient)
+        {
+            fullRoomTimer = maxFullRoomWaitTime;
+            notFullRoomTimer = maxWaitTime;
+            timerToStartGame = maxWaitTime;
+        }
         PlayerCountUpdate();
     }
 
@@ -65,19 +102,19 @@ public class DelayStartWaitingRoomController : MonoBehaviourPunCallbacks
         roomSize = PhotonNetwork.CurrentRoom.MaxPlayers;
         playerCountDisplay.text = playerCount + ":" + roomSize;
 
-        if (playerCount == roomSize)
-        {
-            readyToStart = true;
-        }
-        else if (playerCount >= minPlayersToStart)
+        //if (playerCount == roomSize)
+        //{
+        //    readyToStart = true;
+        //}
+        /*else*/ if (playerCount >= minPlayersToStart)
         {
             readyToCountDown = true;
         }
         else
         {
             readyToCountDown = false;
-            readyToStart = false;
-        } 
+            //readyToStart = false;
+        }
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -85,8 +122,8 @@ public class DelayStartWaitingRoomController : MonoBehaviourPunCallbacks
         //called whenever a new player joins the room
         PlayerCountUpdate();
         //send master clients countdown timer to all other players in order to sync time.
-        if(PhotonNetwork.IsMasterClient)
-            myPhotonView.RPC("RPC_SyncTimer", RpcTarget.Others, timerToStartGame);
+        //if (PhotonNetwork.IsMasterClient)
+        //    myPhotonView.RPC("RPC_SyncTimer", RpcTarget.Others, timerToStartGame);
     }
 
     [PunRPC]
@@ -114,21 +151,28 @@ public class DelayStartWaitingRoomController : MonoBehaviourPunCallbacks
 
     void WaitingForMorePlayers()
     {
+        if (PhotonNetwork.IsMasterClient)
+            myPhotonView.RPC("RPC_SyncTimer", RpcTarget.Others, timerToStartGame);
+
         //If there is only one player in the room the timer will stop and reset
         if (playerCount <= 1)
         {
             ResetTimer();
         }
         // when there is enough players in the room the start timer will begin counting down
-        if (readyToStart)
+        //if (readyToStart)
+        //{
+        //    fullRoomTimer -= Time.deltaTime;
+        //    timerToStartGame = fullRoomTimer;
+        //}
+        /*else */
+        if (PhotonNetwork.IsMasterClient)
         {
-            fullRoomTimer -= Time.deltaTime;
-            timerToStartGame = fullRoomTimer;
-        }
-        else if (readyToCountDown)
-        {
-            notFullRoomTimer -= Time.deltaTime;
-            timerToStartGame = notFullRoomTimer;
+            if (readyToCountDown)
+            {
+                notFullRoomTimer -= Time.deltaTime;
+                timerToStartGame = notFullRoomTimer;
+            }
         }
         // format and display countdown timer
         string tempTimer = string.Format("{0:00}", timerToStartGame);
@@ -167,3 +211,5 @@ public class DelayStartWaitingRoomController : MonoBehaviourPunCallbacks
         SceneManager.LoadScene(menuSceneIndex);
     }
 }
+
+

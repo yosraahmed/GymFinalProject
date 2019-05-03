@@ -20,6 +20,7 @@ public class PhotonControllerMain : MonoBehaviourPun, IPunObservable
     {
         if (!photonView.IsMine /*&& GetComponent<OVRCameraRig>() != null*/)
         {
+            
             OVRHE.enabled = (false);
             //covrManager.enabled = (false);
             rig.enabled = (false);

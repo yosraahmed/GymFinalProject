@@ -206,6 +206,8 @@ namespace Photon.Pun
             }
         }
 
+        public static object Room { get; set; }
+
         /// <summary>
         /// Called when "this client" left a room to clean up.
         /// </summary>

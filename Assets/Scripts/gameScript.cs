@@ -40,7 +40,7 @@ public class gameScript : MonoBehaviour
            else if( second >= 1)
             if (PlayerPrefs.GetInt("Timer", 0)==0)
             {
-                second--;
+                //second--;
             }
                 
 
