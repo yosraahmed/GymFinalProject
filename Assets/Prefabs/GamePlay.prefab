@@ -784,6 +784,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 1963134934774477997, guid: 1813859387ffdfe4b9ff270fc76ec63b, type: 3}
+  oculusPlayer: {fileID: 1963134934774477997, guid: 1813859387ffdfe4b9ff270fc76ec63b,
+    type: 3}
+  vivePlayer: {fileID: 1963134934774477997, guid: c1ce31f7f49f08943a0550a2a7f3f37a,
+    type: 3}
   player1Location: {fileID: 7357232192152601440}
   player2Location: {fileID: 1960603223}
 --- !u!1001 &1931709074204045729
@@ -793,6 +797,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1931709074544506434}
     m_Modifications:
+    - target: {fileID: 1621712627733142470, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Right hand '
+      objectReference: {fileID: 0}
     - target: {fileID: 1621712627733142465, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -863,11 +872,6 @@ PrefabInstance:
       propertyPath: particleColor
       value: 
       objectReference: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
-    - target: {fileID: 1621712627733142470, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_Name
-      value: 'Right hand '
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e, type: 3}
 --- !u!4 &887125709579364960 stripped

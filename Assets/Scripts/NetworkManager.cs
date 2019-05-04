@@ -31,7 +31,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         PhotonNetwork.AutomaticallySyncScene = true;
     }
+    private void Start()
+    {
 
+        
+    }
     public override void OnEnable()
     {
         PhotonNetwork.AddCallbackTarget(this);

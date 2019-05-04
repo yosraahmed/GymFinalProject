@@ -82,8 +82,12 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        //initialize variables
-        myPhotonView = GetComponent<PhotonView>();
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            timerToStartGame = 90;
+        }
+            //initialize variables
+            myPhotonView = GetComponent<PhotonView>();
         if (PhotonNetwork.IsMasterClient)
         {
             fullRoomTimer = maxFullRoomWaitTime;
@@ -155,10 +159,10 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
             myPhotonView.RPC("RPC_SyncTimer", RpcTarget.Others, timerToStartGame);
 
         //If there is only one player in the room the timer will stop and reset
-        if (playerCount <= 1)
-        {
-            ResetTimer();
-        }
+        //if (playerCount <= 1)
+        //{
+        //    ResetTimer();
+        //}
         // when there is enough players in the room the start timer will begin counting down
         //if (readyToStart)
         //{
@@ -180,6 +184,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         // if the countdown timer reaches 0 the game will then start
         if (timerToStartGame <= 0f)
         {
+
             if (startingGame)
                 return;
             StartGame();
@@ -201,6 +206,9 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsMasterClient)
             return;
         PhotonNetwork.CurrentRoom.IsOpen = false;
+        //PhotonNetwork.LeaveRoom();
+        //PhotonNetwork.Disconnect();
+        //SceneManager.LoadScene(menuSceneIndex);
         PhotonNetwork.LoadLevel(multiplayerSceneIndex);
     }
 

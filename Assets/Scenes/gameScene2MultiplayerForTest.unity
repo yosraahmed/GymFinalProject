@@ -916,7 +916,7 @@ MonoBehaviour:
   timerToStartDisplay: {fileID: 464189422}
   timerToStartGame: 0
   fullRoomTimer: 0
-  maxWaitTime: 90
+  maxWaitTime: 20
   maxFullRoomWaitTime: 0
 --- !u!4 &1951371230
 Transform:

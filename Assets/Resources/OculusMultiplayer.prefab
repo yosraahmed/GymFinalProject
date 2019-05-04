@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 2925400583236897532}
   - component: {fileID: 2781621302612214027}
   m_Layer: 0
-  m_Name: GamePlayVrCam
+  m_Name: OculusMultiplayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,6 +1100,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1606308
       objectReference: {fileID: 0}
+    - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: particleRed
@@ -1120,16 +1130,6 @@ PrefabInstance:
       propertyPath: wrongCubeEffectTransform
       value: 
       objectReference: {fileID: 1963134934774442121}
-    - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e, type: 3}
 --- !u!4 &1548003120780147305 stripped
@@ -1653,6 +1653,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1606308
       objectReference: {fileID: 0}
+    - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: particleRed
@@ -1673,16 +1683,6 @@ PrefabInstance:
       propertyPath: wrongCubeEffectTransform
       value: 
       objectReference: {fileID: 1963134934774442121}
-    - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e, type: 3}
 --- !u!4 &5668814273073546957 stripped
