@@ -54,6 +54,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
+        PlayerPrefs.SetInt("JoinRoom", 1);
         print("Connected To Master");
         ConnectedToMaster = true;
     }
