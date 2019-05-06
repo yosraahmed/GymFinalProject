@@ -45,6 +45,10 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
      / in the waiting room scene of your project.*/
 
     // photon view for sending rpc that updates the timer
+    public int hr = 2;
+    public int minutes=59;
+    public int second = 0;
+     Text gameTimerText;
     private PhotonView myPhotonView;
 
     // scene navigation indexes
@@ -71,28 +75,34 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     //countdown timer variables
     [SerializeField]
     private float timerToStartGame;
-    private float notFullRoomTimer;
-    [SerializeField]
-    private float fullRoomTimer;
+    //private float notFullRoomTimer;
+    //[SerializeField]
+    //private float fullRoomTimer;
     //countdown timer reset variables
-    [SerializeField]
-    private float maxWaitTime;
-    [SerializeField]
-    private float maxFullRoomWaitTime;
+    //[SerializeField]
+    //private float maxWaitTime;
+    //[SerializeField]
+    //private float maxFullRoomWaitTime;
 
     private void Start()
     {
         if (!PhotonNetwork.IsMasterClient)
         {
-            timerToStartGame = 90;
+            hr = 2;
+            minutes = 59;
+            second = 0;
+            //timerToStartGame = 90;
         }
             //initialize variables
             myPhotonView = GetComponent<PhotonView>();
         if (PhotonNetwork.IsMasterClient)
         {
-            fullRoomTimer = maxFullRoomWaitTime;
-            notFullRoomTimer = maxWaitTime;
-            timerToStartGame = maxWaitTime;
+            hr = 2;
+            minutes = 59;
+            second = 0;
+            //fullRoomTimer = maxFullRoomWaitTime;
+            //notFullRoomTimer = maxWaitTime;
+            //timerToStartGame = maxWaitTime;
         }
         PlayerCountUpdate();
     }
@@ -131,17 +141,41 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void RPC_SyncTimer(float timeIn)
+    private void RPC_SyncTimer(int timeIn)
     {
         //RPC for syncing the countdown timer to those that join after it has started the countdown
-        timerToStartGame = timeIn;
-        notFullRoomTimer = timeIn;
-        if (timeIn < fullRoomTimer)
-        {
-            fullRoomTimer = timeIn;
-        }
+        hr = timeIn;
+        //timerToStartGame = timeIn;
+        //notFullRoomTimer = timeIn;
+        //if (timeIn < fullRoomTimer)
+        //{
+        //    fullRoomTimer = timeIn;
+        //}
     }
-
+    [PunRPC]
+    private void RPC_SyncTimer1(int timeIn1)
+    {
+        //RPC for syncing the countdown timer to those that join after it has started the countdown
+        minutes = timeIn1;
+        //timerToStartGame = timeIn;
+        //notFullRoomTimer = timeIn;
+        //if (timeIn < fullRoomTimer)
+        //{
+        //    fullRoomTimer = timeIn;
+        //}
+    }
+    [PunRPC]
+    private void RPC_SyncTimer2(int timeIn2)
+    {
+        //RPC for syncing the countdown timer to those that join after it has started the countdown
+        second = timeIn2;
+        //timerToStartGame = timeIn;
+        //notFullRoomTimer = timeIn;
+        //if (timeIn < fullRoomTimer)
+        //{
+        //    fullRoomTimer = timeIn;
+        //}
+    }
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         //called whenever a player leaves the room
@@ -156,7 +190,13 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     void WaitingForMorePlayers()
     {
         if (PhotonNetwork.IsMasterClient)
-            myPhotonView.RPC("RPC_SyncTimer", RpcTarget.Others, timerToStartGame);
+        {
+            myPhotonView.RPC("RPC_SyncTimer", RpcTarget.Others, hr);
+            myPhotonView.RPC("RPC_SyncTimer1", RpcTarget.Others, minutes);
+            myPhotonView.RPC("RPC_SyncTimer2", RpcTarget.Others, second);
+
+            // myPhotonView.RPC("RPC_SyncTimer", RpcTarget.Others, timerToStartGame);
+        }
 
         //If there is only one player in the room the timer will stop and reset
         //if (playerCount <= 1)
@@ -174,15 +214,36 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         {
             if (readyToCountDown)
             {
-                notFullRoomTimer -= Time.deltaTime;
-                timerToStartGame = notFullRoomTimer;
+
+                if (minutes == 0 && hr >= 1)
+                {
+                    hr--;
+                    minutes = 59;
+                }
+
+                if (second == 0 && minutes >= 1)
+                {
+                    second = 59;
+                    minutes--;
+                }
+                else if (second >= 1)
+                    //if (PlayerPrefs.GetInt("Timer", 0)==0)
+                    //{
+                    second--;
+                //}
+                
+
+
+                //notFullRoomTimer -= Time.deltaTime;
+                //timerToStartGame = notFullRoomTimer;
             }
         }
+        timerToStartDisplay.text = "0" + hr + ":" + minutes + ":" + second;
         // format and display countdown timer
-        string tempTimer = string.Format("{0:00}", timerToStartGame);
-        timerToStartDisplay.text = tempTimer;
+        //string tempTimer = string.Format("{0:00}", timerToStartGame);
+        //timerToStartDisplay.text = gameTimerText.text;
         // if the countdown timer reaches 0 the game will then start
-        if (timerToStartGame <= 0f)
+        if (/*timerToStartGame <= 0f*/hr == 0 && minutes == 0 && second == 0)
         {
 
             if (startingGame)
@@ -194,9 +255,9 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     void ResetTimer()
     {
         //resets the count down timer
-        timerToStartGame = maxWaitTime;
-        notFullRoomTimer = maxWaitTime;
-        fullRoomTimer = maxFullRoomWaitTime;
+        //timerToStartGame = maxWaitTime;
+        //notFullRoomTimer = maxWaitTime;
+        //fullRoomTimer = maxFullRoomWaitTime;
     }
 
     void StartGame()

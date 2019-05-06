@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonMulitplayer : MonoBehaviour
 {
-    public GameObject joinRoom;
+    //public GameObject joinRoom;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +17,11 @@ public class ButtonMulitplayer : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("JoinRoom", 0)==1)
         {
-            joinRoom.SetActive(true);
+           // joinRoom.SetActive(true);
         }
         else if (PlayerPrefs.GetInt("JoinRoom", 0) == 0)
         {
-            joinRoom.SetActive(false);
+           // joinRoom.SetActive(false);
         }
 
     }

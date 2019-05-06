@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165, y: -157.77}
+  m_AnchoredPosition: {x: -184, y: -157.77}
   m_SizeDelta: {x: 131.3, y: 56.848}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24785027
@@ -528,7 +528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165, y: -157.77}
+  m_AnchoredPosition: {x: -160.9, y: -157.77}
   m_SizeDelta: {x: 131.3, y: 56.848}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163046844
@@ -819,7 +819,7 @@ PrefabInstance:
     - target: {fileID: 7357232192152601440, guid: 3f5625bbfc27e734b8dfe57daee40304,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.03
       objectReference: {fileID: 0}
     - target: {fileID: 1960603223, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
       propertyPath: m_LocalPosition.z
@@ -827,7 +827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1960603223, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.94
+      value: 8.68
       objectReference: {fileID: 0}
     - target: {fileID: 1960603222, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
       propertyPath: m_IsActive
@@ -2068,6 +2068,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DashBoardSinglePlayer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3549345388097500373, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3549345388097500969, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2173,6 +2178,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3549345388097500968, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 473455955, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b, type: 3}
       propertyPath: gradeEffectLocation
       value: 
@@ -2185,6 +2195,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1334011969}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1334011972 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3549345387721759890, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1334011969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1400468827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,15 +2987,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e321dc6d1236b46bb742330741d979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hr: 2
+  minutes: 59
+  second: 0
   multiplayerSceneIndex: 0
   menuSceneIndex: 0
   minPlayersToStart: 2
-  playerCountDisplay: {fileID: 163046844}
-  timerToStartDisplay: {fileID: 464189422}
+  playerCountDisplay: {fileID: 24785027}
+  timerToStartDisplay: {fileID: 1334011972}
   timerToStartGame: 0
-  fullRoomTimer: 0
-  maxWaitTime: 1000
-  maxFullRoomWaitTime: 0
 --- !u!4 &1951371230
 Transform:
   m_ObjectHideFlags: 0
@@ -3298,7 +3320,7 @@ PrefabInstance:
     - target: {fileID: 3549345388097500969, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.32
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3549345388097500969, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b,
         type: 3}
@@ -3344,6 +3366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549345388097500968, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 473455955, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b, type: 3}
       propertyPath: gradeEffectLocation

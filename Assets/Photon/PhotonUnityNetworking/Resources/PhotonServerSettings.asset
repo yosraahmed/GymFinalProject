@@ -34,5 +34,7 @@ MonoBehaviour:
   - RespawnSpaceship
   - OnHitRpc
   - RPC_SyncTimer
+  - RPC_SyncTimer1
+  - RPC_SyncTimer2
   DisableAutoOpenWizard: 1
   ShowSettings: 1
