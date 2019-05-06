@@ -499,7 +499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &523919365
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1093,11 +1093,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7357232192152601440, guid: 3f5625bbfc27e734b8dfe57daee40304,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.634
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
 --- !u!1 &1941386867
@@ -1261,6 +1256,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1417178083}
     m_Modifications:
+    - target: {fileID: 914042123206155102, guid: b45762e929e763a4c9ee54720db8cc6d,
+        type: 3}
+      propertyPath: m_Name
+      value: wall (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2413652312157916669, guid: b45762e929e763a4c9ee54720db8cc6d,
         type: 3}
       propertyPath: m_RootOrder
@@ -1290,11 +1290,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.3698312
-      objectReference: {fileID: 0}
-    - target: {fileID: 914042123206155102, guid: b45762e929e763a4c9ee54720db8cc6d,
-        type: 3}
-      propertyPath: m_Name
-      value: wall (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45762e929e763a4c9ee54720db8cc6d, type: 3}

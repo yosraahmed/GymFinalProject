@@ -38,13 +38,13 @@ public class gameScript : MonoBehaviour
                 minutes--;
             }
            else if( second >= 1)
-            if (PlayerPrefs.GetInt("Timer", 0)==0)
-            {
-                //second--;
-            }
+            //if (PlayerPrefs.GetInt("Timer", 0)==0)
+            //{
+                second--;
+            //}
                 
 
-            gameTimerText.text = hr + ":" + minutes + ":" + second;
+            gameTimerText.text ="0"+ hr + ":" + minutes + ":" + second;
         
         if(hr == 0 && minutes == 0 && second == 0)
         {

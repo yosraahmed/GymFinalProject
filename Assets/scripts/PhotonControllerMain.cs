@@ -18,27 +18,27 @@ public class PhotonControllerMain : MonoBehaviourPun, IPunObservable
 
     void Start()
     {
-        //if (!photonView.IsMine /*&& GetComponent<OVRCameraRig>() != null*/)
-        //{
-            
-        //    OVRHE.enabled = (false);
-        //    //covrManager.enabled = (false);
-        //    rig.enabled = (false);
-        //    camFalse.enabled=(false);
+        if (!photonView.IsMine /*&& GetComponent<OVRCameraRig>() != null*/)
+        {
 
-        //    Destroy(GetComponent<OVRPlayerController>());
-        //    Destroy(GetComponent<OVRDebugInfo>());
-        //    Destroy(GetComponent<OVRSceneSampleController>());
-        //    Destroy(GetComponent<CharacterController>());
-            
+            OVRHE.enabled = (false);
+            //covrManager.enabled = (false);
+            rig.enabled = (false);
+            camFalse.enabled = (false);
 
-            
-        //}
-        //if (photonView.IsMine)
-        //{
-        //    myCC = GetComponent<CharacterController>();
-        //}
-        
+            Destroy(GetComponent<OVRPlayerController>());
+            Destroy(GetComponent<OVRDebugInfo>());
+            Destroy(GetComponent<OVRSceneSampleController>());
+            Destroy(GetComponent<CharacterController>());
+
+
+
+        }
+        if (photonView.IsMine)
+        {
+            myCC = GetComponent<CharacterController>();
+        }
+
     }
    
     // Update is called once per frame

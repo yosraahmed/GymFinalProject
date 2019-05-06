@@ -108,7 +108,6 @@ MonoBehaviour:
   particleColor: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
   wrongCubeEffect: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
   wrongCubeEffectTransform: {fileID: 5051991361435384333}
-  ScourText: {fileID: 0}
 --- !u!54 &1251687883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -373,7 +372,6 @@ GameObject:
   - component: {fileID: 971549246500901779}
   - component: {fileID: 971549246501000909}
   - component: {fileID: 8243114643932382492}
-  - component: {fileID: 4529717850356141154}
   m_Layer: 0
   m_Name: GamePlayVrCam
   m_TagString: Untagged
@@ -489,28 +487,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 0
---- !u!114 &4529717850356141154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971549246506627635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 0
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  viewIdField: 0
-  InstantiationId: 1
-  isRuntimeInstantiated: 0
 --- !u!1 &971549246506627637
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,11 +881,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PR_VRInputModule
       objectReference: {fileID: 0}
-    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 4960997540745970444}
     - target: {fileID: 82390747759672476, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -965,6 +936,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 4960997540745970444}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1a30d1e8ae0bfe44ab6bbca57b326be, type: 3}
 --- !u!1 &4209505098956851060 stripped
@@ -1003,26 +979,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right hand (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: particleRed
-      value: 
-      objectReference: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
-    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: particleColor
-      value: 
-      objectReference: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
-    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: wrongCubeEffect
-      value: 
-      objectReference: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
-    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: wrongCubeEffectTransform
-      value: 
-      objectReference: {fileID: 971549246506724887}
     - target: {fileID: 1621712627733142465, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1093,16 +1049,36 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1606308
       objectReference: {fileID: 0}
-    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: particleRed
+      value: 
+      objectReference: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: particleColor
+      value: 
+      objectReference: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: wrongCubeEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: wrongCubeEffectTransform
+      value: 
+      objectReference: {fileID: 971549246506724887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e, type: 3}
 --- !u!4 &233706234144685303 stripped
@@ -1260,6 +1236,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 971549246506771223}
     m_Modifications:
+    - target: {fileID: 3764461215632319371, guid: 811133dcb8c22394284d70c9db67943d,
+        type: 3}
+      propertyPath: m_Name
+      value: PR_Pointer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764461215632319371, guid: 811133dcb8c22394284d70c9db67943d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1244624635758264828, guid: 811133dcb8c22394284d70c9db67943d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1315,16 +1301,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3764461215632319371, guid: 811133dcb8c22394284d70c9db67943d,
-        type: 3}
-      propertyPath: m_Name
-      value: PR_Pointer
-      objectReference: {fileID: 0}
-    - target: {fileID: 3764461215632319371, guid: 811133dcb8c22394284d70c9db67943d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5297402960265930476, guid: 811133dcb8c22394284d70c9db67943d,
         type: 3}
       propertyPath: m_DefaultLength
@@ -1347,12 +1323,6 @@ PrefabInstance:
       objectReference: {fileID: 4223184305397338265}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 811133dcb8c22394284d70c9db67943d, type: 3}
---- !u!1 &2414276955556505490 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3764461215632319371, guid: 811133dcb8c22394284d70c9db67943d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1567025751585489945}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &4960997540745970444 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5865429873734223637, guid: 811133dcb8c22394284d70c9db67943d,
@@ -1362,6 +1332,12 @@ Camera:
 --- !u!1 &4223184305397338265 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3397106505643857024, guid: 811133dcb8c22394284d70c9db67943d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1567025751585489945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2414276955556505490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3764461215632319371, guid: 811133dcb8c22394284d70c9db67943d,
     type: 3}
   m_PrefabInstance: {fileID: 1567025751585489945}
   m_PrefabAsset: {fileID: 0}
@@ -1458,26 +1434,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left hand (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: particleRed
-      value: 
-      objectReference: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
-    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: particleColor
-      value: 
-      objectReference: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
-    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: wrongCubeEffect
-      value: 
-      objectReference: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
-    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: wrongCubeEffectTransform
-      value: 
-      objectReference: {fileID: 971549246506724887}
     - target: {fileID: 1621712627733142465, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1548,16 +1504,36 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1606308
       objectReference: {fileID: 0}
-    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2097456546565883061, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 1621712627733142467, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: particleRed
+      value: 
+      objectReference: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: particleColor
+      value: 
+      objectReference: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: wrongCubeEffect
+      value: 
+      objectReference: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
+    - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: wrongCubeEffectTransform
+      value: 
+      objectReference: {fileID: 971549246506724887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e, type: 3}
 --- !u!4 &6408194275762339923 stripped

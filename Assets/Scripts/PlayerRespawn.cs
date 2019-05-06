@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    public GameObject player1;
+    //public GameObject player1;
     public GameObject oculusPlayer;
     public GameObject vivePlayer;
     public Transform player1Location;

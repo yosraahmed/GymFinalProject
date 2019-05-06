@@ -15,6 +15,7 @@ public class Scores : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScourText.text = PlayerPrefs.GetInt("scorText", 0).ToString();
+        string tempTimer = string.Format("{0:D3}", PlayerPrefs.GetInt("scorText", 0));
+        ScourText.text = tempTimer;
     }
 }

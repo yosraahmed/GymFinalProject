@@ -21,6 +21,9 @@ public class GreatEffect : MonoBehaviour
     {
         PlayerPrefs.SetInt("Grade", 0);
         PlayerPrefs.SetInt("GradeEffect1", 0);
+        PlayerPrefs.SetInt("GradeEffect2", 0);
+        PlayerPrefs.SetInt("GradeEffect3", 0);
+        PlayerPrefs.SetInt("GradeEffect4", 0);
     }
 
     // Update is called once per frame
