@@ -20,6 +20,7 @@ public class playerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("clr", 0);
         PlayerPrefs.SetInt("scorText", zero);
     }
 
@@ -33,6 +34,11 @@ public class playerController : MonoBehaviour
     {
         if (other.tag == "BlueHit")
         {
+            int crl = Random.Range(1, 3);
+            if (crl==2)
+            {
+                PlayerPrefs.SetInt("clr", PlayerPrefs.GetInt("clr", 0) + 1);
+            }
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.boxEffect();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
@@ -41,6 +47,11 @@ public class playerController : MonoBehaviour
         }
         if (other.tag == "RedHit")
         {
+            int crl = Random.Range(1, 3);
+            if (crl == 2)
+            {
+                PlayerPrefs.SetInt("clr", PlayerPrefs.GetInt("clr", 0) + 1);
+            }
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0)+1);
@@ -49,6 +60,11 @@ public class playerController : MonoBehaviour
         }
         if (other.tag == "ColorHit")
         {
+            int crl = Random.Range(1, 3);
+            if (crl == 2)
+            {
+                PlayerPrefs.SetInt("clr", PlayerPrefs.GetInt("clr", 0) + 2);
+            }
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);

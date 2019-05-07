@@ -50,6 +50,8 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     public float second = 0;
     public Text player1ScoreText;
     public Text player2ScoreText;
+    public Text calP1;
+    public Text calP2;
     Text gameTimerText;
     private PhotonView myPhotonView;
 
@@ -188,7 +190,9 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
 
         player1ScoreText.text = PlayerPrefs.GetInt("player1Score", 0).ToString();
         player2ScoreText.text = PlayerPrefs.GetInt("player2Score", 0).ToString();
-
+        string tempTimer2 = string.Format("{0:D3}", PlayerPrefs.GetInt("clr", 0));
+        calP1.text = tempTimer2;
+        calP2.text = tempTimer2;
     }
 
     void WaitingForMorePlayers()
