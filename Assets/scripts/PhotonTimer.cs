@@ -47,8 +47,10 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     // photon view for sending rpc that updates the timer
     public int hr = 2;
     public int minutes=59;
-    public int second = 0;
-     Text gameTimerText;
+    public float second = 0;
+    public Text player1ScoreText;
+    public Text player2ScoreText;
+    Text gameTimerText;
     private PhotonView myPhotonView;
 
     // scene navigation indexes
@@ -67,7 +69,8 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     private Text playerCountDisplay;
     [SerializeField]
     private Text timerToStartDisplay;
-
+    [SerializeField]
+    private Text timerToStartDisplay2;
     // bool values for if the timer can count down
     private bool readyToCountDown;
     //private bool readyToStart;
@@ -143,38 +146,32 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     [PunRPC]
     private void RPC_SyncTimer(int timeIn)
     {
-        //RPC for syncing the countdown timer to those that join after it has started the countdown
-        hr = timeIn;
-        //timerToStartGame = timeIn;
-        //notFullRoomTimer = timeIn;
-        //if (timeIn < fullRoomTimer)
-        //{
-        //    fullRoomTimer = timeIn;
-        //}
+         hr = timeIn;
+ 
     }
     [PunRPC]
     private void RPC_SyncTimer1(int timeIn1)
     {
-        //RPC for syncing the countdown timer to those that join after it has started the countdown
+       
         minutes = timeIn1;
-        //timerToStartGame = timeIn;
-        //notFullRoomTimer = timeIn;
-        //if (timeIn < fullRoomTimer)
-        //{
-        //    fullRoomTimer = timeIn;
-        //}
+
     }
     [PunRPC]
-    private void RPC_SyncTimer2(int timeIn2)
+    private void RPC_SyncTimer2(float timeIn2)
     {
-        //RPC for syncing the countdown timer to those that join after it has started the countdown
-        second = timeIn2;
-        //timerToStartGame = timeIn;
-        //notFullRoomTimer = timeIn;
-        //if (timeIn < fullRoomTimer)
-        //{
-        //    fullRoomTimer = timeIn;
-        //}
+         second = timeIn2;
+    }
+    [PunRPC]
+    private void RPC_player1Score(int Score1)
+    {
+        PlayerPrefs.SetInt("player1Score", Score1);
+        
+    }
+    [PunRPC]
+    private void RPC_player2Score(int Score2)
+    {
+        PlayerPrefs.SetInt("player2Score", Score2);
+
     }
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
@@ -185,6 +182,13 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     private void Update()
     {
         WaitingForMorePlayers();
+        string tempTimer = string.Format("{0:00}", second);
+        timerToStartDisplay.text = "0" + hr + ":" + minutes + ":" + tempTimer;
+        timerToStartDisplay2.text = "0" + hr + ":" + minutes + ":" + tempTimer;
+
+        player1ScoreText.text = PlayerPrefs.GetInt("player1Score", 0).ToString();
+        player2ScoreText.text = PlayerPrefs.GetInt("player2Score", 0).ToString();
+
     }
 
     void WaitingForMorePlayers()
@@ -194,8 +198,13 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
             myPhotonView.RPC("RPC_SyncTimer", RpcTarget.Others, hr);
             myPhotonView.RPC("RPC_SyncTimer1", RpcTarget.Others, minutes);
             myPhotonView.RPC("RPC_SyncTimer2", RpcTarget.Others, second);
-
-            // myPhotonView.RPC("RPC_SyncTimer", RpcTarget.Others, timerToStartGame);
+            myPhotonView.RPC("RPC_player1Score", RpcTarget.Others, PlayerPrefs.GetInt("scorText", 0));
+            PlayerPrefs.SetInt("player1Score", PlayerPrefs.GetInt("scorText", 0));
+        }
+        if (!PhotonNetwork.IsMasterClient)
+        {
+              myPhotonView.RPC("RPC_player2Score", RpcTarget.Others, PlayerPrefs.GetInt("scorText", 0));
+            PlayerPrefs.SetInt("player2Score", PlayerPrefs.GetInt("scorText", 0));
         }
 
         //If there is only one player in the room the timer will stop and reset
@@ -217,19 +226,19 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
 
                 if (minutes == 0 && hr >= 1)
                 {
-                    hr--;
+                    hr-=1;
                     minutes = 59;
                 }
 
-                if (second == 0 && minutes >= 1)
+                if (second <= 0 && minutes >= 1)
                 {
                     second = 59;
-                    minutes--;
+                    minutes-=1;
                 }
-                else if (second >= 1)
+                else if (second >= 0)
                     //if (PlayerPrefs.GetInt("Timer", 0)==0)
                     //{
-                    second--;
+                    second-=Time.deltaTime;
                 //}
                 
 
@@ -238,12 +247,13 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
                 //timerToStartGame = notFullRoomTimer;
             }
         }
-        timerToStartDisplay.text = "0" + hr + ":" + minutes + ":" + second;
+        
+       
         // format and display countdown timer
         //string tempTimer = string.Format("{0:00}", timerToStartGame);
         //timerToStartDisplay.text = gameTimerText.text;
         // if the countdown timer reaches 0 the game will then start
-        if (/*timerToStartGame <= 0f*/hr == 0 && minutes == 0 && second == 0)
+        if (/*timerToStartGame <= 0f*/hr == 0 && minutes == 0 && second <= 0)
         {
 
             if (startingGame)

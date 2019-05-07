@@ -36,5 +36,7 @@ MonoBehaviour:
   - RPC_SyncTimer
   - RPC_SyncTimer1
   - RPC_SyncTimer2
+  - RPC_player1Score
+  - RPC_player2Score
   DisableAutoOpenWizard: 1
   ShowSettings: 1

@@ -9,7 +9,7 @@ public class gameScript : MonoBehaviour
    
     public int hr = 1;
     public int minutes;
-    public int second = 0;
+    public float second = 0;
     public Text gameTimerText;
 
     // Start is called before the first frame update
@@ -28,20 +28,20 @@ public class gameScript : MonoBehaviour
 
         if (minutes == 0 && hr >= 1)
             {
-                hr--;
+                hr-=1;
                 minutes = 59;
             }
 
-            if (second == 0 && minutes >= 1)
-            {
-                second = 59;
-                minutes--;
-            }
-           else if( second >= 1)
-            //if (PlayerPrefs.GetInt("Timer", 0)==0)
-            //{
-                second--;
-            //}
+        if (second == 0 && minutes >= 1)
+        {
+            second = 59;
+            minutes-=1;
+        }
+        else if (second >= 1)
+        {
+            second-=Time.deltaTime;
+        }
+
                 
 
             gameTimerText.text ="0"+ hr + ":" + minutes + ":" + second;
