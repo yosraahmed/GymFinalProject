@@ -75,7 +75,7 @@ public class uiManager : MonoBehaviour
             timeCounter -= Time.deltaTime;
             if (timeCounter <= 0 && PlayerPrefs.GetInt("isSquats", 0) == 1)
             {
-                SceneManager.LoadScene("gameScene2");
+                SceneManager.LoadScene("SinglePlayer");
                 timeCounter = 1;
             }
             else if (timeCounter <= 0 && PlayerPrefs.GetInt("isBoxing", 0) == 3)
@@ -135,7 +135,7 @@ public class uiManager : MonoBehaviour
         mainmenu.SetActive(false);
         levelMenuBoxing.SetActive(false);
         levelMenuSquats.SetActive(false);
-        startMenu.SetActive(true);
+        //startMenu.SetActive(true);
     }
 
     public void startGame() 

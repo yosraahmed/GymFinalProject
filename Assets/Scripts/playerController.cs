@@ -22,6 +22,7 @@ public class playerController : MonoBehaviour
     {
         PlayerPrefs.SetInt("clr", 0);
         PlayerPrefs.SetInt("scorText", zero);
+        PlayerPrefs.SetInt("Grade", 0);
     }
 
     // Update is called once per frame

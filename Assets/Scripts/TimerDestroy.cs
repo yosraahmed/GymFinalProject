@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimerDestroy : MonoBehaviour
 {
-    float timer = 5;
+    //float timer = 5;
+    float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = RespawnBoxing.instance.TimeDestroy;
     }
 
     // Update is called once per frame
