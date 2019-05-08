@@ -15,8 +15,8 @@ public class gameScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hr = 1;
-        minutes = 59;
+        
+        minutes = 5;
         second = 59;
     }
 
@@ -26,11 +26,7 @@ public class gameScript : MonoBehaviour
 
      
 
-        if (minutes == 0 && hr >= 1)
-            {
-                hr-=1;
-                minutes = 59;
-            }
+       
 
         if (second == 0 && minutes >= 1)
         {
@@ -42,9 +38,10 @@ public class gameScript : MonoBehaviour
             second-=Time.deltaTime;
         }
 
-                
 
-            gameTimerText.text ="0"+ hr + ":" + minutes + ":" + second;
+        string tempTimerSecond = string.Format("{0:00}", second);
+        string tempTimerMinutes = string.Format("{0:00}", minutes);
+        gameTimerText.text = tempTimerMinutes + ":" + tempTimerSecond;
         
         if(hr == 0 && minutes == 0 && second == 0)
         {

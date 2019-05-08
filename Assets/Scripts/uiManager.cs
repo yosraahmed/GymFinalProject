@@ -177,6 +177,7 @@ public class uiManager : MonoBehaviour
         PlayerPrefs.SetInt("EasySquat", 1);
         PlayerPrefs.SetInt("NormalSquat", 0);
         PlayerPrefs.SetInt("HardSquat", 0);
+        startGame();
     }
     public void levelButtonsSquatNormal()
     {
@@ -184,6 +185,7 @@ public class uiManager : MonoBehaviour
         PlayerPrefs.SetInt("EasySquat", 0);
         PlayerPrefs.SetInt("NormalSquat", 1);
         PlayerPrefs.SetInt("HardSquat", 0);
+        startGame();
     }
     public void levelButtonsSquatHard()
     {
@@ -191,6 +193,7 @@ public class uiManager : MonoBehaviour
         PlayerPrefs.SetInt("EasySquat", 0);
         PlayerPrefs.SetInt("NormalSquat", 0);
         PlayerPrefs.SetInt("HardSquat", 1);
+        startGame();
     }
     public void levelButtonsBoxingEasy()
     {
@@ -198,6 +201,7 @@ public class uiManager : MonoBehaviour
         PlayerPrefs.SetInt("EasyBoxing", 1);
         PlayerPrefs.SetInt("NormalBoxing", 0);
         PlayerPrefs.SetInt("HardBoxing", 0);
+        startGame();
     }
     public void levelButtonsBoxingNormal()
     {
@@ -205,6 +209,7 @@ public class uiManager : MonoBehaviour
         PlayerPrefs.SetInt("EasyBoxing", 0);
         PlayerPrefs.SetInt("NormalBoxing", 1);
         PlayerPrefs.SetInt("HardBoxing", 0);
+        startGame();
     }
     public void levelButtonsBoxingHard()
     {
@@ -212,5 +217,6 @@ public class uiManager : MonoBehaviour
         PlayerPrefs.SetInt("EasyBoxing", 0);
         PlayerPrefs.SetInt("NormalBoxing", 0);
         PlayerPrefs.SetInt("HardBoxing", 1);
+        startGame();
     }
 }
