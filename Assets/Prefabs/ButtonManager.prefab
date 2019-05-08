@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b24a6eb38ce5a4aa5a7a9c667469e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joinRoom: {fileID: 0}
+  disconnect: {fileID: 0}

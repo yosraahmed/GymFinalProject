@@ -142,8 +142,13 @@ public class playerControllerBoxing : MonoBehaviour
             {
                 foreach (var e in RespawnBoxing.instance.allBullet)
                 {
-                    Destroy(e);
-                    //Instantiate(particleBlue, e.transform.position, e.transform.rotation);
+                    if (e != null)
+                    {
+                        Instantiate(particleBlue, e.transform.position, e.transform.rotation);
+                        Destroy(e);
+                    }
+                    
+                    
                 }
                 i = 0;
                 RespawnBoxing.instance.allBullet.Clear();
