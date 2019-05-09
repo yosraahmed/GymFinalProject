@@ -79,9 +79,18 @@ public class soundManager : MonoBehaviour
                 startManuMusic.Play();
             }
         }
-        else if (sceneName == "gameScene2" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
+        else if (sceneName == "SinglePlayer" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
             if (!gamePlayMusicSquat.isPlaying )
+            {
+                gamePlayMusicBoxing.Stop();
+                startManuMusic.Stop();
+                gamePlayMusicSquat.Play();
+            }
+        }
+        else if (sceneName == "Multiplayer" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
+        {
+            if (!gamePlayMusicSquat.isPlaying)
             {
                 gamePlayMusicBoxing.Stop();
                 startManuMusic.Stop();
