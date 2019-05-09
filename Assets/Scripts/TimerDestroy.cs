@@ -8,6 +8,7 @@ public class TimerDestroy : MonoBehaviour
     //float timer = 5;
     float timer = 0;
     // Start is called before the first frame update
+
     void Start()
     {
         timer = RespawnBoxing.instance.TimeDestroy;
@@ -20,6 +21,11 @@ public class TimerDestroy : MonoBehaviour
         if (timer <=0)
         {
             Destroy(this.gameObject);
+            playerControllerBoxing.instance.i=0;
+            PlayerPrefs.SetInt("Box1Type", 0);
+            PlayerPrefs.SetInt("Box2Type", 0);
+            PlayerPrefs.SetInt("Box3Type", 0);
+            PlayerPrefs.SetInt("Box4Type", 0);
         }
     }
 }

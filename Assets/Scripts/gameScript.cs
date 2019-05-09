@@ -28,12 +28,12 @@ public class gameScript : MonoBehaviour
 
        
 
-        if (second == 0 && minutes >= 1)
+        if (second <= 0 && minutes >= 1)
         {
-            second = 59;
+            second = 60;
             minutes-=1;
         }
-        else if (second >= 1)
+        else if (second >= 0)
         {
             second-=Time.deltaTime;
         }

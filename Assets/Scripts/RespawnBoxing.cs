@@ -41,9 +41,9 @@ public class RespawnBoxing : MonoBehaviour
     void Update()
     {
         ScourText.text = PlayerPrefs.GetInt("boxingscorText", 0).ToString();
-        JLOOP = 4;
-        speed = 50f;
-        TimeDestroy = 50;
+        //JLOOP = 4;
+        //speed = 50f;
+        //TimeDestroy = 4.7f;
         //if (playerControllerBoxing.instance.ddd == true)
         //{
 
@@ -57,7 +57,7 @@ public class RespawnBoxing : MonoBehaviour
         {
             speed = 4.7f;
             JLOOP =2;
-            TimeDestroy = 4.7f;
+           TimeDestroy = 4.7f;
         }
         else if (PlayerPrefs.GetInt("NormalBoxing", 0) == 1)
         {

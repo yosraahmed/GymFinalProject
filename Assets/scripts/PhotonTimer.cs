@@ -45,7 +45,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
      / in the waiting room scene of your project.*/
 
     // photon view for sending rpc that updates the timer
-    public int hr = 2;
+    public int hr = 0;
     public int minutes=59;
     public float second = 0;
     public Text player1ScoreText;
@@ -93,7 +93,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     {
         if (!PhotonNetwork.IsMasterClient)
         {
-            hr = 2;
+            hr = 0;
             minutes = 59;
             second = 0;
             //timerToStartGame = 90;
@@ -102,7 +102,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
             myPhotonView = GetComponent<PhotonView>();
         if (PhotonNetwork.IsMasterClient)
         {
-            hr = 2;
+            hr = 0;
             minutes = 59;
             second = 0;
             //fullRoomTimer = maxFullRoomWaitTime;
@@ -184,15 +184,16 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     private void Update()
     {
         WaitingForMorePlayers();
-        string tempTimer = string.Format("{0:00}", second);
-        timerToStartDisplay.text = "0" + hr + ":" + minutes + ":" + tempTimer;
-        timerToStartDisplay2.text = "0" + hr + ":" + minutes + ":" + tempTimer;
+        string tempTimerSecond = string.Format("{0:00}", second);
+        string tempTimerMinutes = string.Format("{0:00}", minutes);
+        timerToStartDisplay.text = tempTimerMinutes + ":" + tempTimerSecond;
+        timerToStartDisplay2.text = tempTimerMinutes + ":" + tempTimerSecond;
 
         player1ScoreText.text = PlayerPrefs.GetInt("player1Score", 0).ToString();
         player2ScoreText.text = PlayerPrefs.GetInt("player2Score", 0).ToString();
-        string tempTimer2 = string.Format("{0:D3}", PlayerPrefs.GetInt("clr", 0));
-        calP1.text = tempTimer2;
-        calP2.text = tempTimer2;
+        string tempTimerClr = string.Format("{0:D3}", PlayerPrefs.GetInt("clr", 0));
+        calP1.text = tempTimerClr;
+        calP2.text = tempTimerClr;
     }
 
     void WaitingForMorePlayers()

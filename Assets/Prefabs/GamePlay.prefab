@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035089774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.84, z: 0}
+  m_LocalPosition: {x: -0.068, y: 0.229, z: -16.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1931709074678069630}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960603222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -2.4}
+  m_LocalPosition: {x: 8.68, y: 1, z: -1.276}
   m_LocalScale: {x: 1, y: 1, z: 0.16666667}
   m_Children: []
   m_Father: {fileID: 1931709073854050417}
@@ -179,8 +179,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931709073854050701}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.250074, z: -88.6}
-  m_LocalScale: {x: 1, y: 1, z: 6}
+  m_LocalPosition: {x: 1.53, y: -2.250074, z: -88.6}
+  m_LocalScale: {x: 1.31, y: 1, z: 6}
   m_Children:
   - {fileID: 7357232192152601440}
   - {fileID: 1960603223}
@@ -765,7 +765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9111651078742597234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -1.634}
+  m_LocalPosition: {x: -1.03, y: 1, z: -1.276}
   m_LocalScale: {x: 1, y: 1, z: 0.16666667}
   m_Children: []
   m_Father: {fileID: 1931709073854050417}
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oculusPlayer: {fileID: 1851283384992557984, guid: 1813859387ffdfe4b9ff270fc76ec63b,
     type: 3}
-  vivePlayer: {fileID: 1963134934774477997, guid: c1ce31f7f49f08943a0550a2a7f3f37a,
+  vivePlayer: {fileID: 9022720203985691636, guid: 74deecca14294334697f22dbaafb0c11,
     type: 3}
   player1Location: {fileID: 7357232192152601440}
   player2Location: {fileID: 1960603223}
@@ -796,11 +796,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1931709074544506434}
     m_Modifications:
-    - target: {fileID: 1621712627733142470, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
-        type: 3}
-      propertyPath: m_Name
-      value: 'Right hand '
-      objectReference: {fileID: 0}
     - target: {fileID: 1621712627733142465, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -855,6 +850,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1621712627733142470, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Right hand '
       objectReference: {fileID: 0}
     - target: {fileID: 1621712627733142469, guid: 9f5b3ea1ba5b9334f96abfbe62149a3e,
         type: 3}

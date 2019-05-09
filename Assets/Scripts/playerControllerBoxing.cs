@@ -12,7 +12,7 @@ public class playerControllerBoxing : MonoBehaviour
     public Transform wrongCubeEffectTransform;
     public Text text1;
     public int textt;
-    int i;
+    public int i;
     
 
 
