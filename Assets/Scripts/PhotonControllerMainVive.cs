@@ -2,15 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
 {
     
     private CharacterController myCC;
     public Camera camFalse;
-    //public OVRCameraRig rig;
-    //public OVRManager covrManager;
-    //public OVRHeadsetEmulator OVRHE;
+    public GameObject pause, exit, modelR, modelL, headCollider, pointer, inputmodule;
+    
+    public SteamVR_Behaviour_Pose steamvrBahaviorL;
+    public SteamVR_Behaviour_Pose steamvrBahaviorR;
+    
     public float speeds;
     Vector3 latestPos;
     Quaternion latestRot;
@@ -21,16 +24,18 @@ public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
         if (!photonView.IsMine /*&& GetComponent<OVRCameraRig>() != null*/)
         {
 
-            //OVRHE.enabled = (false);
-            //covrManager.enabled = (false);
-            //rig.enabled = (false);
+            steamvrBahaviorL.enabled = (false);
+            steamvrBahaviorR.enabled = (false);
             camFalse.enabled = (false);
 
-            Destroy(GetComponent<OVRPlayerController>());
-            Destroy(GetComponent<OVRDebugInfo>());
-            Destroy(GetComponent<OVRSceneSampleController>());
+            Destroy(GetComponent<SteamVR_PlayArea>());
             Destroy(GetComponent<CharacterController>());
-
+            pause.SetActive(false);
+            exit.SetActive(false);
+            modelR.SetActive(false);
+            modelL.SetActive(false);
+            headCollider.SetActive(false);
+            
 
 
         }

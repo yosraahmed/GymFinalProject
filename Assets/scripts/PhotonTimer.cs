@@ -118,7 +118,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         // displays player count
         // triggers countdown timer
         playerCount = PhotonNetwork.PlayerList.Length;
-        roomSize = PhotonNetwork.CurrentRoom.MaxPlayers;
+        roomSize =2 /*PhotonNetwork.CurrentRoom.MaxPlayers*/;
         playerCountDisplay.text = playerCount + ":" + roomSize;
 
         //if (playerCount == roomSize)

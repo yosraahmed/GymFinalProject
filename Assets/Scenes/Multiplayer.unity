@@ -5329,6 +5329,16 @@ PrefabInstance:
       propertyPath: wrongCubeEffectTransform
       value: 
       objectReference: {fileID: 1126926492615748595}
+    - target: {fileID: 1733979667080962608, guid: 74deecca14294334697f22dbaafb0c11,
+        type: 3}
+      propertyPath: viewIdField
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733979667080962608, guid: 74deecca14294334697f22dbaafb0c11,
+        type: 3}
+      propertyPath: InstantiationId
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74deecca14294334697f22dbaafb0c11, type: 3}
 --- !u!1001 &6967324130055408081

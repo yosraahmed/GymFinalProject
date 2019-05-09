@@ -10202,6 +10202,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 9043538253746055196}
   inputOnOff: {fileID: 7380006350034503930}
+  m_TargetSouce: 0
+  m_ClickAction:
+    actionPath: 
+    needsReinit: 0
 --- !u!1 &6629340678968111689
 GameObject:
   m_ObjectHideFlags: 0
@@ -10664,6 +10668,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TargetSouce: 0
+  m_ClickAction:
+    actionPath: 
+    needsReinit: 0
   pausePanel: {fileID: 6629340678274227507}
 --- !u!1 &6863042376363357054
 GameObject:
@@ -11197,6 +11205,8 @@ GameObject:
   - component: {fileID: 9022720203988863190}
   - component: {fileID: 9022720203995468214}
   - component: {fileID: 9022720203985691637}
+  - component: {fileID: 1733979667080962608}
+  - component: {fileID: 746655849153480489}
   m_Layer: 0
   m_Name: ViveMultiplayer
   m_TagString: Untagged
@@ -11306,11 +11316,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 9022720203985691636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 936ec911b2d28504ca43f051e7d7487a, type: 3}
+  m_Script: {fileID: 11500000, guid: 84e7f155fea73c14097e8a5c3adfe86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   camFalse: {fileID: 9038770428576446028}
+  pause: {fileID: 6629340679780397248}
+  exit: {fileID: 6629340678910184270}
+  modelR: {fileID: 9022720203985678224}
+  modelL: {fileID: 9022720203985690824}
+  headCollider: {fileID: 6629340678968111689}
+  pointer: {fileID: 9043538253746055196}
+  inputmodule: {fileID: 7380006350034503930}
+  steamvrBahaviorL: {fileID: 8980782798323078008}
+  steamvrBahaviorR: {fileID: 8980782796952521968}
   speeds: 0
+--- !u!114 &1733979667080962608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022720203985691636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 9022720203985691637}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!143 &746655849153480489
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022720203985691636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0.02
+  m_Radius: 1.65
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9022720203985711236
 GameObject:
   m_ObjectHideFlags: 0

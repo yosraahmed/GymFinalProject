@@ -10415,7 +10415,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6722026808915980882}
   - component: {fileID: 6722026808915980880}
-  - component: {fileID: 6722026808915980883}
   - component: {fileID: 6722026808915980881}
   m_Layer: 0
   m_Name: HeadCollider
@@ -10451,23 +10450,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.08
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6722026808915980883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6722026808915980893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37ee647f858521d4897be11fc48ba745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleBlue: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
-  particleRed: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
-  particleColor: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
-  wrongCubeEffect: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
-  wrongCubeEffectTransform: {fileID: 1969525099908265367}
 --- !u!54 &6722026808915980881
 Rigidbody:
   m_ObjectHideFlags: 0
