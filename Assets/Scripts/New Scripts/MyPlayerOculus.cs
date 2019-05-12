@@ -22,16 +22,17 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class MyPlayerOculus : MonoBehaviourPun, IPunObservable
 {
+    
     public CharacterController MyCharacterController { get; set; }
     /// <summary>
     /// The rate acceleration during movement.
     /// </summary>
     public float Acceleration = 0.1f;
-
-	/// <summary>
-	/// The rate of damping on movement.
-	/// </summary>
-	public float Damping = 0.3f;
+    public float speeds;
+    /// <summary>
+    /// The rate of damping on movement.
+    /// </summary>
+    public float Damping = 0.3f;
 
 	/// <summary>
 	/// The rate of additional damping when moving sideways or backwards.

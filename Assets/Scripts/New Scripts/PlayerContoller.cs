@@ -23,30 +23,16 @@ public class PlayerContoller : MonoBehaviourPun
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            if (PlayerPrefs.GetInt("VRType", 0) == 1)
-            {
-                PhotonNetwork.Instantiate("OculusMultiplayer2", GameObject.Find("PlayerOneLocation").transform.position, Quaternion.identity, 0);
-               
-            }
-            else if (PlayerPrefs.GetInt("VRType", 0) == 2)
-            {
+          
                 PhotonNetwork.Instantiate("VivePlayer2", GameObject.Find("PlayerOneLocation").transform.position, Quaternion.identity, 0);
                
-            }
+  
         }
-        if (!PhotonNetwork.IsMasterClient)
+
+        else
         {
-            if (PlayerPrefs.GetInt("VRType", 0) == 1)
-            {
+
                 PhotonNetwork.Instantiate("OculusMultiplayer2", GameObject.Find("PlayerTwoLocation").transform.position, Quaternion.identity, 0);
-
-            }
-            else if (PlayerPrefs.GetInt("VRType", 0) == 2)
-            {
-                PhotonNetwork.Instantiate("VivePlayer2", GameObject.Find("PlayerTwoLocation").transform.position, Quaternion.identity, 0);
-
-            }
-         
 
         }
 
@@ -56,7 +42,8 @@ public class PlayerContoller : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-
+        if (PhotonNetwork.IsMasterClient)
+        {
             if (Input.GetKey(KeyCode.W))
             {
                 LocalVivePlayerInstance.MyCharacterController.Move(LocalVivePlayerInstance.transform.forward * Time.deltaTime *
@@ -77,6 +64,30 @@ public class PlayerContoller : MonoBehaviourPun
                 LocalVivePlayerInstance.MyCharacterController.Move(LocalVivePlayerInstance.transform.right * Time.deltaTime *
                     LocalVivePlayerInstance.speeds);
             }
+        }
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                LocalOculusPLayerInstance.MyCharacterController.Move(LocalOculusPLayerInstance.transform.forward * Time.deltaTime *
+                    LocalOculusPLayerInstance.speeds);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                LocalOculusPLayerInstance.MyCharacterController.Move(-LocalOculusPLayerInstance.transform.forward * Time.deltaTime *
+                    LocalOculusPLayerInstance.speeds);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                LocalOculusPLayerInstance.MyCharacterController.Move(-LocalOculusPLayerInstance.transform.right * Time.deltaTime *
+                    LocalOculusPLayerInstance.speeds);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                LocalOculusPLayerInstance.MyCharacterController.Move(LocalOculusPLayerInstance.transform.right * Time.deltaTime *
+                    LocalOculusPLayerInstance.speeds);
+            }
+        }
 
     }
 }

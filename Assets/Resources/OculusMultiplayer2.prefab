@@ -11674,6 +11674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Acceleration: 0.1
+  speeds: 10
   Damping: 0.3
   BackAndSideDampen: 0.5
   JumpForce: 0.3
