@@ -9,12 +9,6 @@ public class MyPlayer : MonoBehaviourPun, IPunObservable
 
     public CharacterController MyCharacterController { get; set; }
 
-    public Camera camFalse;
-    public GameObject pause, exit, modelR, modelL, headCollider, pointer, inputmodule;
-
-    public SteamVR_Behaviour_Pose steamvrBahaviorL;
-    public SteamVR_Behaviour_Pose steamvrBahaviorR;
-
     public float speeds;
     Vector3 latestPos;
     Quaternion latestRot;
@@ -22,9 +16,9 @@ public class MyPlayer : MonoBehaviourPun, IPunObservable
 
     void Start()
     {
-        if (photonView.IsMine)
+        if (photonView.IsMine )
         {
-            PlayerContoller.Instance.LocalPlayerInstance = this;
+            PlayerContoller.Instance.LocalVivePlayerInstance = this;
             MyCharacterController = GetComponent<CharacterController>();
         }
     }
