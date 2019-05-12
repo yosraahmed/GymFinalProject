@@ -9,7 +9,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     #region Vars
     string gameVersion = "1";
-    const int MAXPLAYERCOUNT = 1;
+    const int MAXPLAYERCOUNT = 2;
     #endregion
 
     #region Properties
