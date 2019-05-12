@@ -8,17 +8,9 @@ using UnityEngine.SceneManagement;
 public class soundManager : MonoBehaviour
 {
     public static soundManager instance;
+
     public AudioSource MusicAudioSource;
     public AudioSource SoundEffectAudioSource;
-
-    public AudioSource effect;
-    public AudioSource gamePlayMusicSquat;
-    public AudioSource gamePlayMusicBoxing;
-    public AudioSource startManuMusic;
-    public AudioSource cubeSound;
-    public AudioSource ballSound;
-    public AudioSource boxingEffect;
-    public AudioSource wrongballSound;
 
     public AudioClip SquatsMusic;
     public AudioClip BoxingMusic;
@@ -76,39 +68,6 @@ public class soundManager : MonoBehaviour
         }
         
         SoundEffectAudioSource.Play();
-    }
-
-    public void effectSound()
-    {
-        effect.Play();
-    }
-
-
-    public void boxEffect()
-    {
-        boxingEffect.Play();
-    }
-
-    public void gameSound()
-    {
-        gamePlayMusicSquat.Play();
-    }
-
-    public void startSound()
-    {
-        startManuMusic.Play();
-    }
-    public void CubeCrashSound()
-    {
-        cubeSound.Play();
-    }
-    public void BallCrashSound()
-    {
-        ballSound.Play();
-    }
-    public void wrongBallCrashSound()
-    {
-        wrongballSound.Play();
     }
 
     void OnLevelWasLoaded(int level)
