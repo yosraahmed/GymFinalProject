@@ -66,7 +66,7 @@ public class soundManager : MonoBehaviour
             default:
                 break;
         }
-        
+
         SoundEffectAudioSource.Play();
     }
 
@@ -79,31 +79,19 @@ public class soundManager : MonoBehaviour
 
         if (sceneName == "MainMenuTestWithOculus" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
-            if (!startManuMusic.isPlaying)
-            {
-                PlayMusic(MenuMusic);
-            }
+            PlayMusic(MenuMusic);
         }
         else if (sceneName == "SinglePlayer" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
-            if (!gamePlayMusicSquat.isPlaying)
-            {
-                PlayMusic(SquatsMusic);
-            }
+            PlayMusic(SquatsMusic);
         }
         else if (sceneName == "Multiplayer" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
-            if (!gamePlayMusicSquat.isPlaying)
-            {
-                PlayMusic(SquatsMusic);
-            }
+            PlayMusic(SquatsMusic);
         }
         else if (sceneName == "boxingScene" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
-            if (!gamePlayMusicBoxing.isPlaying)
-            {
-                PlayMusic(BoxingMusic);
-            }
+            PlayMusic(BoxingMusic);
         }
     }
 

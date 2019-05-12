@@ -7,16 +7,13 @@ using TMPro;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
-
     #region Vars
     string gameVersion = "1";
-    const int MAXPLAYERCOUNT = 2;
+    const int MAXPLAYERCOUNT = 1;
     #endregion
 
     #region Properties
     public static NetworkManager Instance { get; set; }
-
-    public bool ConnectedToMaster { get; set; }
     #endregion
 
     #region Methods
@@ -31,11 +28,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         PhotonNetwork.AutomaticallySyncScene = true;
     }
-    private void Start()
-    {
 
-        
-    }
     public override void OnEnable()
     {
         PhotonNetwork.AddCallbackTarget(this);
@@ -54,9 +47,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        PlayerPrefs.SetInt("JoinRoom", 1);
-        print("Connected To Master");
-        ConnectedToMaster = true;
+        print("Connected");
+        JoinRoom();
     }
 
     public void Disconnect()
@@ -84,17 +76,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        print("Joined Room");
-
+        print("JoinedRoom");
         if (PhotonNetwork.CurrentRoom.PlayerCount >= MAXPLAYERCOUNT)
             Invoke("StartGame", 3);
     }
 
-    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
+    public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        PlayerPrefs.SetInt("Master", 1);
-        print("Player Joined");
-
         if (PhotonNetwork.CurrentRoom.PlayerCount >= MAXPLAYERCOUNT)
             Invoke("StartGame", 3);
 
@@ -103,9 +91,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void StartGame()
     {
-        print("playing");
-        PhotonNetwork.LoadLevel("Multiplayer");
-        //Start Game
+        PhotonNetwork.LoadLevel("TestTest");
     }
     #endregion
 }

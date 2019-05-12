@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PhotonTimer : MonoBehaviourPunCallbacks
+public class PhotonTimer : MonoBehaviourPunCallbacks, IPunObservable
 {
     //bool startTimer = false;
     //double timerIncrementValue;
@@ -91,6 +91,8 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        myPhotonView = GetComponent<PhotonView>();
+
         if (!PhotonNetwork.IsMasterClient)
         {
             hr = 0;
@@ -98,8 +100,6 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
             second = 0;
             //timerToStartGame = 90;
         }
-            //initialize variables
-            myPhotonView = GetComponent<PhotonView>();
         if (PhotonNetwork.IsMasterClient)
         {
             hr = 0;
@@ -151,6 +151,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
          hr = timeIn;
  
     }
+
     [PunRPC]
     private void RPC_SyncTimer1(int timeIn1)
     {
@@ -158,23 +159,27 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         minutes = timeIn1;
 
     }
+
     [PunRPC]
     private void RPC_SyncTimer2(float timeIn2)
     {
          second = timeIn2;
     }
+
     [PunRPC]
     private void RPC_player1Score(int Score1)
     {
         PlayerPrefs.SetInt("player1Score", Score1);
         
     }
+
     [PunRPC]
     private void RPC_player2Score(int Score2)
     {
         PlayerPrefs.SetInt("player2Score", Score2);
 
     }
+
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         //called whenever a player leaves the room
@@ -293,6 +298,19 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         //public function paired to cancel button in waiting room scene
         PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene(menuSceneIndex);
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            //if(PhotonNetwork.IsMasterClient)
+            //stream.SendNext(time);
+        }
+        else
+        {
+            
+        }
     }
 }
 
