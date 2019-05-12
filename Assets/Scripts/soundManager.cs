@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class soundManager : MonoBehaviour
 {
     public static soundManager instance;
+    public AudioSource MusicAudioSource;
+    public AudioSource SoundEffectAudioSource;
+
     public AudioSource effect;
     public AudioSource gamePlayMusicSquat;
     public AudioSource gamePlayMusicBoxing;
@@ -16,6 +19,15 @@ public class soundManager : MonoBehaviour
     public AudioSource ballSound;
     public AudioSource boxingEffect;
     public AudioSource wrongballSound;
+
+    public AudioClip SquatsMusic;
+    public AudioClip BoxingMusic;
+    public AudioClip MenuMusic;
+    public AudioClip BoxingEffect;
+    public AudioClip WrongBallEffect;
+    public AudioClip BallEffect;
+    public AudioClip CubeEffect;
+    public AudioClip ButtonEffect;
 
     // Start is called before the first frame update
 
@@ -28,9 +40,42 @@ public class soundManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
+
     void Start()
     {
         PlayerPrefs.SetInt("SoundMusic", 1);
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        MusicAudioSource.clip = clip;
+        MusicAudioSource.Play();
+    }
+
+    public void PlaySoundEffect(string clipName)
+    {
+        switch (clipName)
+        {
+            case "BoxingEffect":
+                SoundEffectAudioSource.clip = BoxingEffect;
+                break;
+            case "WrongBallEffect":
+                SoundEffectAudioSource.clip = WrongBallEffect;
+                break;
+            case "BallEffect":
+                SoundEffectAudioSource.clip = BallEffect;
+                break;
+            case "CubeEffect":
+                SoundEffectAudioSource.clip = CubeEffect;
+                break;
+            case "ButtonEffect":
+                SoundEffectAudioSource.clip = ButtonEffect;
+                break;
+            default:
+                break;
+        }
+        
+        SoundEffectAudioSource.Play();
     }
 
     public void effectSound()
@@ -65,8 +110,11 @@ public class soundManager : MonoBehaviour
     {
         wrongballSound.Play();
     }
-    void Update()
+
+    void OnLevelWasLoaded(int level)
     {
+        MusicAudioSource.Stop();
+
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
@@ -74,50 +122,35 @@ public class soundManager : MonoBehaviour
         {
             if (!startManuMusic.isPlaying)
             {
-                gamePlayMusicBoxing.Stop();
-                gamePlayMusicSquat.Stop();
-                startManuMusic.Play();
+                PlayMusic(MenuMusic);
             }
         }
         else if (sceneName == "SinglePlayer" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
-            if (!gamePlayMusicSquat.isPlaying )
+            if (!gamePlayMusicSquat.isPlaying)
             {
-                gamePlayMusicBoxing.Stop();
-                startManuMusic.Stop();
-                gamePlayMusicSquat.Play();
+                PlayMusic(SquatsMusic);
             }
         }
         else if (sceneName == "Multiplayer" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
             if (!gamePlayMusicSquat.isPlaying)
             {
-                gamePlayMusicBoxing.Stop();
-                startManuMusic.Stop();
-                gamePlayMusicSquat.Play();
+                PlayMusic(SquatsMusic);
             }
         }
         else if (sceneName == "boxingScene" && PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
             if (!gamePlayMusicBoxing.isPlaying)
             {
-                startManuMusic.Stop();
-                gamePlayMusicSquat.Stop();
-                gamePlayMusicBoxing.Play();
+                PlayMusic(BoxingMusic);
             }
-
         }
-        else if (PlayerPrefs.GetInt("SoundMusic", 0) == 0)
-        {
-            startManuMusic.Stop();
-            gamePlayMusicSquat.Stop();
-            gamePlayMusicBoxing.Stop();
-        }
-
     }
+
     public void soundMute()
     {
-        if (PlayerPrefs.GetInt("SoundMusic",0)==1)
+        if (PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
             PlayerPrefs.SetInt("SoundMusic", 0);
         }

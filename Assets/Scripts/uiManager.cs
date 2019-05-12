@@ -145,7 +145,7 @@ public class uiManager : MonoBehaviour
 
     public void backToMain()
     {
-        soundManager.instance.effectSound();
+        soundManager.instance.PlaySoundEffect("ButtonEffect");
         mainmenu.SetActive(true);
         levelMenuSquats.SetActive(false);
         levelMenuBoxing.SetActive(false);
@@ -153,7 +153,7 @@ public class uiManager : MonoBehaviour
 
     public void backToMainFirst()
     {
-        soundManager.instance.effectSound();
+        soundManager.instance.PlaySoundEffect("ButtonEffect");
         startMenu.SetActive(false);
         mainmenu.SetActive(true);
         levelMenuSquats.SetActive(false);

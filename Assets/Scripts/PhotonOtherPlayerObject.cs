@@ -24,6 +24,8 @@ public class PhotonOtherPlayerObject : MonoBehaviourPun, IPunObservable
     // Update is called once per frame
     void Update()
     {
+        transform.Rotate(0, 0, 4);
+        transform.position -= transform.forward * gameManager.instance.BulletSpeed * Time.deltaTime;
         if (!photonView.IsMine)
         {
             //Update remote player (smooth this, this looks good, at the cost of some accuracy)

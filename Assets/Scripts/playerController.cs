@@ -41,7 +41,7 @@ public class playerController : MonoBehaviour
                 PlayerPrefs.SetInt("clr", PlayerPrefs.GetInt("clr", 0) + 1);
             }
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
-            soundManager.instance.boxEffect();
+            soundManager.instance.PlaySoundEffect("BoxingEffect");
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
             Instantiate(particleBlue, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
@@ -54,7 +54,7 @@ public class playerController : MonoBehaviour
                 PlayerPrefs.SetInt("clr", PlayerPrefs.GetInt("clr", 0) + 1);
             }
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
-            soundManager.instance.CubeCrashSound();
+            soundManager.instance.PlaySoundEffect("CubeEffect");
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0)+1);
             Instantiate(particleRed, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
@@ -67,14 +67,14 @@ public class playerController : MonoBehaviour
                 PlayerPrefs.SetInt("clr", PlayerPrefs.GetInt("clr", 0) + 2);
             }
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
-            soundManager.instance.CubeCrashSound();
+            soundManager.instance.PlaySoundEffect("CubeEffect");
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
             Instantiate(particleColor, other.transform.position, other.transform.rotation);
             Destroy(other.gameObject);
         }
         if (other.tag == "Squat1Hit")
         {
-            soundManager.instance.wrongBallCrashSound();
+            soundManager.instance.PlaySoundEffect("WrongBallEffect");
             Instantiate(wrongCubeEffect, wrongCubeEffectTransform.transform.position, wrongCubeEffectTransform.transform.rotation);
             PlayerPrefs.SetInt("Grade", 0);
             PlayerPrefs.SetInt("GradeEffect1", 0);
