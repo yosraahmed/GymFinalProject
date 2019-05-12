@@ -91,7 +91,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void StartGame()
     {
-        PhotonNetwork.LoadLevel("TestTest");
+        PhotonNetwork.LoadLevel("Multiplayer2");
     }
     #endregion
 }

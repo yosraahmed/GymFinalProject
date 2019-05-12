@@ -17,30 +17,33 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestMenu.unity
     guid: 25cd387e72594b24dbae5ce77ea676a8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestTest.unity
     guid: 9f4e7f55644729c47a7072e3a2751ec4
   - enabled: 0
     path: Assets/Scenes/Multiplayer.unity
     guid: 10a3ecdbcc508544dbdae82dd3316316
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer2.unity
+    guid: 172e28b8f6f8b4949ad19e16f08313dd
   - enabled: 0
     path: Assets/InfoGamerPhoton/Scenes/Demos/DelayStartMenuDemo.unity
     guid: 803bb693d43ee714db113261fd82e181
   - enabled: 0
-    path: Assets/Scenes/multiplayerGame.unity
-    guid: 5a2eb8fb7bcce984f8b94318c9ed26ab
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/gameScene2MultiplayerForTest.unity
-    guid: 386a426d097ac954eb27c935a174aff7
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/gameScene2.unity
-    guid: b6a357b9999da754c98c2842c21e0594
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/gameScene2Multiplayer.unity
-    guid: 1cee65fd822cc124f9f53ec1a2adbf8a
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/MainMenuTestWithOculusMultiplayer.unity
-    guid: bfed1b3fb755e684b84d09df2237c4bb
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/InfoGamerPhoton/Scenes/Demos/DelayStartWaitingRoomDemo.unity
     guid: 9cf14526ac2f5ea48aa2393755a654d2
