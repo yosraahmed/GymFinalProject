@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/testMultiplayer.unity
+    guid: 9f4e7f55644729c47a7072e3a2751ec4
+  - enabled: 1
     path: Assets/Scenes/MainMenuTestWithOculus.unity
     guid: da765896cca75994786ea5c2c1655779
   - enabled: 1
@@ -17,9 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/boxingScene.unity
     guid: 35e14528c048cdd43b6cb5a1adb9a2cf
-  - enabled: 1
-    path: Assets/Scenes/testMultiplayer.unity
-    guid: 9f4e7f55644729c47a7072e3a2751ec4
   - enabled: 1
     path: Assets/InfoGamerPhoton/Scenes/Demos/DelayStartMenuDemo.unity
     guid: 803bb693d43ee714db113261fd82e181
