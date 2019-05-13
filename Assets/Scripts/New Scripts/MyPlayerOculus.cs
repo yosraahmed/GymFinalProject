@@ -218,8 +218,14 @@ public class MyPlayerOculus : MonoBehaviourPun, IPunObservable
 
 	void Update()
 	{
-		//Use keys to ratchet rotation
-		if (Input.GetKeyDown(KeyCode.Q))
+        if (!photonView.IsMine)
+        {
+            //Update remote player (smooth this, this looks good, at the cost of some accuracy)
+            transform.position = Vector3.Lerp(transform.position, latestPos, Time.deltaTime * 5);
+            transform.rotation = Quaternion.Lerp(transform.rotation, latestRot, Time.deltaTime * 5);
+        }
+        //Use keys to ratchet rotation
+        if (Input.GetKeyDown(KeyCode.Q))
 			buttonRotation -= RotationRatchet;
 
 		if (Input.GetKeyDown(KeyCode.E))
@@ -615,17 +621,17 @@ public class MyPlayerOculus : MonoBehaviourPun, IPunObservable
 	}
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        //if (stream.IsWriting)
-        //{
-        //    //We own this player: send the others our data
-        //    stream.SendNext(transform.position);
-        //    stream.SendNext(transform.rotation);
-        //}
-        //else
-        //{
-        //    //Network player, receive data
-        //    latestPos = (Vector3)stream.ReceiveNext();
-        //    latestRot = (Quaternion)stream.ReceiveNext();
-        //}
+        if (stream.IsWriting)
+        {
+            //We own this player: send the others our data
+            stream.SendNext(transform.position);
+            stream.SendNext(transform.rotation);
+        }
+        else
+        {
+            //Network player, receive data
+            latestPos = (Vector3)stream.ReceiveNext();
+            latestRot = (Quaternion)stream.ReceiveNext();
+        }
     }
 }
