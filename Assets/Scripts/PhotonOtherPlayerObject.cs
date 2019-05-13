@@ -24,12 +24,12 @@ public class PhotonOtherPlayerObject : MonoBehaviourPun, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        if (!photonView.IsMine)
-        {
-            //Update remote player (smooth this, this looks good, at the cost of some accuracy)
-            transform.position = Vector3.Lerp(transform.position, latestPosR, Time.deltaTime * 5);
-            transform.rotation = Quaternion.Lerp(transform.rotation, latestRotR, Time.deltaTime * 5);
-        }
+        //if (!photonView.IsMine)
+        //{
+        //    //Update remote player (smooth this, this looks good, at the cost of some accuracy)
+        //    transform.position = Vector3.Lerp(transform.position, latestPosR, Time.deltaTime * 5);
+        //    transform.rotation = Quaternion.Lerp(transform.rotation, latestRotR, Time.deltaTime * 5);
+        //}
 
         //if (PV.IsMine)
         //{

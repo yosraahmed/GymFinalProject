@@ -129,7 +129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &24785026
 RectTransform:
   m_ObjectHideFlags: 0
@@ -198,6 +198,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1899606843}
     m_Modifications:
+    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+        type: 3}
+      propertyPath: m_Name
+      value: GamePlay Score Screen (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 8250668701035971866, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -303,14 +308,9 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
-        type: 3}
-      propertyPath: m_Name
-      value: GamePlay Score Screen (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1318195248, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1588664947, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e, type: 3}
       propertyPath: m_IsActive
@@ -355,6 +355,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250668701512540869, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e, type: 3}
@@ -661,6 +666,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1159015412300718021}
     m_Modifications:
+    - target: {fileID: 914042123206155102, guid: b45762e929e763a4c9ee54720db8cc6d,
+        type: 3}
+      propertyPath: m_Name
+      value: wall (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 2413652312157916669, guid: b45762e929e763a4c9ee54720db8cc6d,
         type: 3}
       propertyPath: m_RootOrder
@@ -715,11 +725,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 2.434192
-      objectReference: {fileID: 0}
-    - target: {fileID: 914042123206155102, guid: b45762e929e763a4c9ee54720db8cc6d,
-        type: 3}
-      propertyPath: m_Name
-      value: wall (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45762e929e763a4c9ee54720db8cc6d, type: 3}
@@ -1083,10 +1088,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.634
       objectReference: {fileID: 0}
-    - target: {fileID: 1960603222, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1035089775, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
       propertyPath: m_LocalPosition.z
       value: -16.08
@@ -1098,6 +1099,10 @@ PrefabInstance:
     - target: {fileID: 1035089775, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960603222, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9111651078742597234, guid: 3f5625bbfc27e734b8dfe57daee40304,
         type: 3}
@@ -1734,7 +1739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &974113804
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2172,6 +2177,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1857376600}
     m_Modifications:
+    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+        type: 3}
+      propertyPath: m_Name
+      value: GamePlay Score Screen (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 8250668701035971866, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2277,14 +2287,9 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
-        type: 3}
-      propertyPath: m_Name
-      value: GamePlay Score Screen (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1318195248, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1588664947, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e, type: 3}
       propertyPath: m_IsActive
@@ -2329,6 +2334,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250668701512540869, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e, type: 3}
@@ -2835,7 +2845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1734124292
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2914,7 +2924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1772604721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3133,10 +3143,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.634
       objectReference: {fileID: 0}
-    - target: {fileID: 1960603222, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1035089775, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
       propertyPath: m_LocalPosition.z
       value: -16.08
@@ -3148,6 +3154,10 @@ PrefabInstance:
     - target: {fileID: 1035089775, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960603222, guid: 3f5625bbfc27e734b8dfe57daee40304, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9111651078742597234, guid: 3f5625bbfc27e734b8dfe57daee40304,
         type: 3}
@@ -3497,7 +3507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1975596459
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3566,6 +3576,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1417178083}
     m_Modifications:
+    - target: {fileID: 914042123206155102, guid: b45762e929e763a4c9ee54720db8cc6d,
+        type: 3}
+      propertyPath: m_Name
+      value: wall (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2413652312157916669, guid: b45762e929e763a4c9ee54720db8cc6d,
         type: 3}
       propertyPath: m_RootOrder
@@ -3595,11 +3610,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.3698312
-      objectReference: {fileID: 0}
-    - target: {fileID: 914042123206155102, guid: b45762e929e763a4c9ee54720db8cc6d,
-        type: 3}
-      propertyPath: m_Name
-      value: wall (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45762e929e763a4c9ee54720db8cc6d, type: 3}
@@ -5621,6 +5631,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+        type: 3}
+      propertyPath: m_Name
+      value: GamePlay Score Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8250668701035971866, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5725,16 +5745,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
-        type: 3}
-      propertyPath: m_Name
-      value: GamePlay Score Screen
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250668701035971942, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1318195248, guid: 6b9ae77dea89a4a429ed4cd92bbf6d9e, type: 3}
       propertyPath: m_IsActive
