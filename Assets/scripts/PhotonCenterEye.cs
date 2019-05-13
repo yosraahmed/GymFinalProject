@@ -8,15 +8,19 @@ public class PhotonCenterEye : MonoBehaviourPun, IPunObservable
    
     Vector3 latestPosC;
     Quaternion latestRotC;
+    
     // Start is called before the first frame update
     void Start()
     {
         if (!photonView.IsMine /*&& GetComponent<OVRCameraRig>() != null*/)
         {
+           
+            //m_MainCamera = GetComponent<Camera>();
+            //m_MainCamera.enabled = (false);
             //Destroy(GetComponent<OVRCameraRig>());
             //Destroy(GetComponent<OVRManager>());
             //Destroy(GetComponent<OVRHeadsetEmulator>());
-            
+
         }
       
     }

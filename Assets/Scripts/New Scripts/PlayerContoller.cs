@@ -23,17 +23,12 @@ public class PlayerContoller : MonoBehaviourPun
     {
         if (PhotonNetwork.IsMasterClient)
         {
-          
                 PhotonNetwork.Instantiate("VivePlayer2", GameObject.Find("PlayerOneLocation").transform.position, Quaternion.identity, 0);
-               
-  
         }
 
         else
         {
-
                 PhotonNetwork.Instantiate("OculusMultiplayer2", GameObject.Find("PlayerTwoLocation").transform.position, Quaternion.identity, 0);
-
         }
 
 
