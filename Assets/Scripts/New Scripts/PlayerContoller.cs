@@ -21,6 +21,7 @@ public class PlayerContoller : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
+
         if (PhotonNetwork.IsMasterClient)
         {
                 PhotonNetwork.Instantiate("VivePlayer2", GameObject.Find("PlayerOneLocation").transform.position, Quaternion.identity, 0);

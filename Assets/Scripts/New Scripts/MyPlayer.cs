@@ -23,6 +23,7 @@ public class MyPlayer : MonoBehaviourPun, IPunObservable
         }
         else
         {
+
             camra.SetActive(false);
         }
     }
