@@ -11673,6 +11673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd17ff65303e8140b6805d2e505e8eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camra: {fileID: 9148276363737072641}
   Acceleration: 0.1
   speeds: 10
   Damping: 0.3

@@ -6075,6 +6075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a2914336d78614889e13e3208c184d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camra: {fileID: 7990049321528069076}
   speeds: 10
 --- !u!114 &7990049321538416680
 MonoBehaviour:

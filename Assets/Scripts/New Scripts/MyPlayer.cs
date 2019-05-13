@@ -8,7 +8,7 @@ public class MyPlayer : MonoBehaviourPun, IPunObservable
 {
 
     public CharacterController MyCharacterController { get; set; }
-
+    public GameObject camra;
     public float speeds;
     Vector3 latestPos;
     Quaternion latestRot;
@@ -20,6 +20,10 @@ public class MyPlayer : MonoBehaviourPun, IPunObservable
         {
             PlayerContoller.Instance.LocalVivePlayerInstance = this;
             MyCharacterController = GetComponent<CharacterController>();
+        }
+        else
+        {
+            camra.SetActive(false);
         }
     }
 

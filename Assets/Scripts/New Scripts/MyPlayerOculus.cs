@@ -24,6 +24,7 @@ public class MyPlayerOculus : MonoBehaviourPun, IPunObservable
 {
     
     public CharacterController MyCharacterController { get; set; }
+    public GameObject camra;
     /// <summary>
     /// The rate acceleration during movement.
     /// </summary>
@@ -160,6 +161,10 @@ public class MyPlayerOculus : MonoBehaviourPun, IPunObservable
         {
             PlayerContoller.Instance.LocalOculusPLayerInstance = this;
             MyCharacterController = GetComponent<CharacterController>();
+        }
+        else
+        {
+            camra.SetActive(false);
         }
         // Add eye-depth as a camera offset from the player controller
         var p = CameraRig.transform.localPosition;
