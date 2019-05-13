@@ -55,15 +55,15 @@ public class RespawnBoxing : MonoBehaviour
 
         if (PlayerPrefs.GetInt("EasyBoxing", 0) == 1)
         {
-            speed = 4.7f;
+            speed = 3.1f;
             JLOOP =2;
-           TimeDestroy = 4.7f;
+           TimeDestroy = 3.1f;
         }
         else if (PlayerPrefs.GetInt("NormalBoxing", 0) == 1)
         {
-            speed = 3.7f;
+            speed = 2.9f;
             JLOOP = 3;
-            TimeDestroy = 3.7f;
+            TimeDestroy = 2.9f;
         }
         else if (PlayerPrefs.GetInt("HardBoxing", 0) == 1)
         {

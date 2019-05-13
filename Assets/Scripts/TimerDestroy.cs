@@ -20,12 +20,13 @@ public class TimerDestroy : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <=0)
         {
-            Destroy(this.gameObject);
+            
             playerControllerBoxing.instance.i=0;
             PlayerPrefs.SetInt("Box1Type", 0);
             PlayerPrefs.SetInt("Box2Type", 0);
             PlayerPrefs.SetInt("Box3Type", 0);
             PlayerPrefs.SetInt("Box4Type", 0);
+            Destroy(this.gameObject);
         }
     }
 }

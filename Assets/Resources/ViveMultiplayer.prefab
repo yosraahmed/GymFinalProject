@@ -107,8 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ee647f858521d4897be11fc48ba745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleBlue: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
-  particleRed: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
+  particleBlue: {fileID: 6959860512433033100, guid: 7d88a6b4aa77c3a489d35a8b74980587,
+    type: 3}
+  particleRed: {fileID: 6959860512433033100, guid: 7d88a6b4aa77c3a489d35a8b74980587,
+    type: 3}
   particleColor: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
   wrongCubeEffect: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
   wrongCubeEffectTransform: {fileID: 0}
@@ -10264,8 +10266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ee647f858521d4897be11fc48ba745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleBlue: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
-  particleRed: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
+  particleBlue: {fileID: 6959860512433033100, guid: 7d88a6b4aa77c3a489d35a8b74980587,
+    type: 3}
+  particleRed: {fileID: 6959860512433033100, guid: 7d88a6b4aa77c3a489d35a8b74980587,
+    type: 3}
   particleColor: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
   wrongCubeEffect: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
   wrongCubeEffectTransform: {fileID: 1881485780973090179}
@@ -10781,8 +10785,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ee647f858521d4897be11fc48ba745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleBlue: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
-  particleRed: {fileID: 100004, guid: c90b9e303067c434493d070ae94bb92a, type: 3}
+  particleBlue: {fileID: 6959860512433033100, guid: 7d88a6b4aa77c3a489d35a8b74980587,
+    type: 3}
+  particleRed: {fileID: 6959860512433033100, guid: 7d88a6b4aa77c3a489d35a8b74980587,
+    type: 3}
   particleColor: {fileID: 100002, guid: d7cb76074b5f1de4b9a6d9dcbaa63897, type: 3}
   wrongCubeEffect: {fileID: 100000, guid: 67d0b53b552ef9446932c218759602e7, type: 3}
   wrongCubeEffectTransform: {fileID: 0}
