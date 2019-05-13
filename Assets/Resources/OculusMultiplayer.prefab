@@ -1149,6 +1149,9 @@ MonoBehaviour:
   RightHand: {fileID: 1726281765405844833}
   LefttHand: {fileID: 5486734785193875909}
   Head: {fileID: 1498210530686936153}
+  RightHandScript: {fileID: 1726281765405844832}
+  LeftHandScript: {fileID: 5486734785193875908}
+  HeadScript: {fileID: 1498210530686936154}
   speeds: 10
 --- !u!1 &1851283384992557986
 GameObject:

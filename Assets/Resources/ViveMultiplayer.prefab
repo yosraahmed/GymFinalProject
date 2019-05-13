@@ -11404,6 +11404,9 @@ MonoBehaviour:
   RightHand: {fileID: 6863042376363357052}
   LefttHand: {fileID: 355323146387738584}
   Head: {fileID: 6629340678968111684}
+  RightHandScript: {fileID: 0}
+  LeftHandScript: {fileID: 0}
+  HeadScript: {fileID: 0}
   speeds: 0
 --- !u!114 &1733979667080962608
 MonoBehaviour:

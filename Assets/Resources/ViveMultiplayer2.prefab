@@ -506,6 +506,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 4018594257587429644}
   inputOnOff: {fileID: 3183759766580347370}
+  m_TargetSouce: 0
+  m_ClickAction:
+    actionPath: 
+    needsReinit: 0
 --- !u!1 &1604924371152618009
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +762,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TargetSouce: 0
+  m_ClickAction:
+    actionPath: 
+    needsReinit: 0
   pausePanel: {fileID: 1604924369833415715}
 --- !u!1 &1604924371489372748
 GameObject:
@@ -1404,7 +1412,7 @@ GameObject:
   - component: {fileID: 2925400583236897532}
   - component: {fileID: 2781621302612214027}
   m_Layer: 0
-  m_Name: ViveMultiplayer
+  m_Name: ViveMultiplayer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1557,6 +1565,12 @@ MonoBehaviour:
   rig: {fileID: 1963134934781002065}
   covrManager: {fileID: 1963134934781002055}
   OVRHE: {fileID: 1921227356611548385}
+  RightHand: {fileID: 1548003120780147308}
+  LefttHand: {fileID: 5668814273073546952}
+  Head: {fileID: 1604924371190430548}
+  RightHandScript: {fileID: 1548003120780147309}
+  LeftHandScript: {fileID: 5668814273073546953}
+  HeadScript: {fileID: 1604924371190430551}
   speeds: 10
 --- !u!1 &1963134934774477999
 GameObject:
@@ -6681,6 +6695,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 5952868981377795474}
+  m_TargetSouce: 0
+  m_ClickAction:
+    actionPath: 
+    needsReinit: 0
 --- !u!1 &3233045729048106503
 GameObject:
   m_ObjectHideFlags: 0
