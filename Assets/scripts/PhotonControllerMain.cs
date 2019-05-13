@@ -11,6 +11,9 @@ public class PhotonControllerMain : MonoBehaviourPun, IPunObservable
     public OVRCameraRig rig;
     public OVRManager covrManager;
     public OVRHeadsetEmulator OVRHE;
+    public BoxCollider RightHand;
+    public BoxCollider LefttHand;
+    public SphereCollider Head;
     public float speeds;
     Vector3 latestPos;
     Quaternion latestRot;
@@ -25,7 +28,9 @@ public class PhotonControllerMain : MonoBehaviourPun, IPunObservable
             //covrManager.enabled = (false);
             rig.enabled = (false);
             camFalse.enabled = (false);
-
+            RightHand.enabled = (false);
+            LefttHand.enabled = (false);
+            Head.enabled = (false);
             Destroy(GetComponent<OVRPlayerController>());
             Destroy(GetComponent<OVRDebugInfo>());
             Destroy(GetComponent<OVRSceneSampleController>());

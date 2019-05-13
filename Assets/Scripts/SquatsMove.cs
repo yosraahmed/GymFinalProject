@@ -11,7 +11,7 @@ public class SquatsMove : MonoBehaviour
 
     void Update()
     {
-        transform.position -= transform.forward * gameManager.instance.BulletSpeed * Time.deltaTime;
+        transform.position -= transform.forward * gameManagerPhoton.instance.BulletSpeed * Time.deltaTime;
     }
 
     void DestroyBullet()

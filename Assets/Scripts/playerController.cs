@@ -35,6 +35,8 @@ public class playerController : MonoBehaviour
     {
         if (other.tag == "BlueHit")
         {
+            Instantiate(particleBlue, other.transform.position, other.transform.rotation);
+            Destroy(other.gameObject);
             int crl = Random.Range(1, 3);
             if (crl==2)
             {
@@ -43,11 +45,12 @@ public class playerController : MonoBehaviour
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.boxEffect();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
-            Instantiate(particleBlue, other.transform.position, other.transform.rotation);
-            Destroy(other.gameObject);
+            
         }
         if (other.tag == "RedHit")
         {
+            Instantiate(particleRed, other.transform.position, other.transform.rotation);
+            Destroy(other.gameObject);
             int crl = Random.Range(1, 3);
             if (crl == 2)
             {
@@ -56,11 +59,12 @@ public class playerController : MonoBehaviour
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0)+1);
-            Instantiate(particleRed, other.transform.position, other.transform.rotation);
-            Destroy(other.gameObject);
+            
         }
         if (other.tag == "ColorHit")
         {
+            Instantiate(particleColor, other.transform.position, other.transform.rotation);
+            Destroy(other.gameObject);
             int crl = Random.Range(1, 3);
             if (crl == 2)
             {
@@ -69,20 +73,20 @@ public class playerController : MonoBehaviour
             PlayerPrefs.SetInt("Grade", PlayerPrefs.GetInt("Grade", 0) + 1);
             soundManager.instance.CubeCrashSound();
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) + 1);
-            Instantiate(particleColor, other.transform.position, other.transform.rotation);
-            Destroy(other.gameObject);
+            
         }
         if (other.tag == "Squat1Hit")
         {
             soundManager.instance.wrongBallCrashSound();
             Instantiate(wrongCubeEffect, wrongCubeEffectTransform.transform.position, wrongCubeEffectTransform.transform.rotation);
+            Destroy(other.gameObject);
             PlayerPrefs.SetInt("Grade", 0);
             PlayerPrefs.SetInt("GradeEffect1", 0);
             PlayerPrefs.SetInt("GradeEffect2", 0);
             PlayerPrefs.SetInt("GradeEffect3", 0);
             PlayerPrefs.SetInt("GradeEffect4", 0);
             PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) - 1);
-            Destroy(other.gameObject);
+            
         }
 
     }

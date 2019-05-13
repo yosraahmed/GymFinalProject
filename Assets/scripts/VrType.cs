@@ -11,7 +11,7 @@ public class VrType : MonoBehaviourPun
     {
         myPhotonView = GetComponent<PhotonView>();
         // VrType for Oculus=1 & for Vive=2
-        PlayerPrefs.SetInt("VRType", 1);
+        PlayerPrefs.SetInt("VRType", 2);
     }
 
     // Update is called once per frame
@@ -23,6 +23,6 @@ public class VrType : MonoBehaviourPun
             
         //}
         // VrType for Oculus=1 & for Vive=2
-        PlayerPrefs.SetInt("VRType", 1);
+        PlayerPrefs.SetInt("VRType", 2);
     }
 }

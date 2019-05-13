@@ -1146,6 +1146,9 @@ MonoBehaviour:
   rig: {fileID: 1851283385003810396}
   covrManager: {fileID: 1851283385003810378}
   OVRHE: {fileID: 1740345102547291116}
+  RightHand: {fileID: 1726281765405844833}
+  LefttHand: {fileID: 5486734785193875909}
+  Head: {fileID: 1498210530686936153}
   speeds: 10
 --- !u!1 &1851283384992557986
 GameObject:

@@ -11401,6 +11401,9 @@ MonoBehaviour:
   inputmodule: {fileID: 7380006350034503930}
   steamvrBahaviorL: {fileID: 8980782798323078008}
   steamvrBahaviorR: {fileID: 8980782796952521968}
+  RightHand: {fileID: 6863042376363357052}
+  LefttHand: {fileID: 355323146387738584}
+  Head: {fileID: 6629340678968111684}
   speeds: 0
 --- !u!114 &1733979667080962608
 MonoBehaviour:

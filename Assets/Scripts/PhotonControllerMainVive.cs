@@ -13,7 +13,9 @@ public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
     
     public SteamVR_Behaviour_Pose steamvrBahaviorL;
     public SteamVR_Behaviour_Pose steamvrBahaviorR;
-    
+    public BoxCollider RightHand;
+    public BoxCollider LefttHand;
+    public SphereCollider Head;
     public float speeds;
     Vector3 latestPos;
     Quaternion latestRot;
@@ -27,6 +29,9 @@ public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
             steamvrBahaviorL.enabled = (false);
             steamvrBahaviorR.enabled = (false);
             camFalse.enabled = (false);
+            RightHand.enabled = (false);
+            LefttHand.enabled = (false);
+            Head.enabled = (false);
 
             Destroy(GetComponent<SteamVR_PlayArea>());
             Destroy(GetComponent<CharacterController>());
