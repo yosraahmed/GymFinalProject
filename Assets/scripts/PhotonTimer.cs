@@ -94,7 +94,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsMasterClient)
         {
             hr = 0;
-            minutes = 59;
+            minutes = 5;
             second = 0;
             //timerToStartGame = 90;
         }
@@ -103,7 +103,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {
             hr = 0;
-            minutes = 59;
+            minutes = 5;
             second = 0;
             //fullRoomTimer = maxFullRoomWaitTime;
             //notFullRoomTimer = maxWaitTime;
@@ -181,8 +181,9 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         PlayerCountUpdate();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        
         WaitingForMorePlayers();
         string tempTimerSecond = string.Format("{0:00}", second);
         string tempTimerMinutes = string.Format("{0:00}", minutes);
