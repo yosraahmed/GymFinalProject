@@ -10,7 +10,7 @@ public class RespawnBoxing : MonoBehaviour
     public GameObject randomBullet1;
     public float randomtimer;
     public GameObject Newobject;
-    public float radius = 0.1f;
+    public float radius = 0.15f;
     public float speed;
     public float TimeDestroy =5 ;
     public List<GameObject> allBullet;
@@ -40,10 +40,11 @@ public class RespawnBoxing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         ScourText.text = PlayerPrefs.GetInt("boxingscorText", 0).ToString();
-        //JLOOP = 4;
-        //speed = 50f;
-        //TimeDestroy = 4.7f;
+        JLOOP = 4;
+        speed = 50f;
+        TimeDestroy = 50f;
         //if (playerControllerBoxing.instance.ddd == true)
         //{
 
@@ -87,9 +88,9 @@ public class RespawnBoxing : MonoBehaviour
                             Random.Range((transform.position.y + (transform.localScale.y - .5f)),
                             (transform.position.y - (transform.localScale.y - .5f))),
                             transform.position.z);
-                    var vector2 = Random.insideUnitCircle.normalized * ((transform.localScale.y / 2) - 0);
+                    var vector2 = Random.insideUnitCircle.normalized * ((transform.localScale.y / 2.5f) - 0);
                     Vector3 position1 = new Vector3((position.x + vector2.x), (position.y + 0), (position.z + vector2.y));
-                        if (position1.z < -4.5f)
+                        if (position1.z < -4.7f)
                         {
                             test = ExplosionDamage(position1, radius);
                         }
