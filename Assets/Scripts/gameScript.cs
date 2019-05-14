@@ -11,6 +11,7 @@ public class gameScript : MonoBehaviour
     public int minutes;
     public float second = 0;
     public Text gameTimerText;
+     
 
     // Start is called before the first frame update
     void Start()

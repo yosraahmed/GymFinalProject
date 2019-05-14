@@ -85,7 +85,8 @@ public class playerController : MonoBehaviour
             PlayerPrefs.SetInt("GradeEffect2", 0);
             PlayerPrefs.SetInt("GradeEffect3", 0);
             PlayerPrefs.SetInt("GradeEffect4", 0);
-            PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) - 1);
+
+            //PlayerPrefs.SetInt("scorText", PlayerPrefs.GetInt("scorText", 0) - 1);
             
         }
 

@@ -37,7 +37,7 @@ public class playerControllerBoxing : MonoBehaviour
         PlayerPrefs.SetInt("Box3Type", 0);
         PlayerPrefs.SetInt("Box4Type", 0);
         PlayerPrefs.SetInt("clr", 0);
-        PlayerPrefs.SetInt("scorText", zero);
+        PlayerPrefs.SetInt("scorText", 0);
     }
 
     // Update is called once per frame
