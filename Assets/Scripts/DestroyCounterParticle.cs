@@ -8,7 +8,12 @@ public class DestroyCounterParticle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (RespawnBoxing.instance == null)
+        {
+            timer = 3;
+        }
        // timer = 3;
+       else
         timer = RespawnBoxing.instance.TimeDestroy;
     }
 
