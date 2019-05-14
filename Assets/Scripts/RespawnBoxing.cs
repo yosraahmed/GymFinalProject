@@ -10,7 +10,7 @@ public class RespawnBoxing : MonoBehaviour
     public GameObject randomBullet1;
     public float randomtimer;
     public GameObject Newobject;
-    public float radius = 0.15f;
+    public float radius = 0.07f;
     public float speed;
     public float TimeDestroy =5 ;
     public List<GameObject> allBullet;
