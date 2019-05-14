@@ -639,16 +639,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5031451226747791656, guid: d39eb7c10320b9149bd3e0ee9201ff86,
-        type: 3}
-      propertyPath: m_Name
-      value: Pause Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 5031451226747791656, guid: d39eb7c10320b9149bd3e0ee9201ff86,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5031451226747791662, guid: d39eb7c10320b9149bd3e0ee9201ff86,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -704,6 +694,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5031451226747791656, guid: d39eb7c10320b9149bd3e0ee9201ff86,
+        type: 3}
+      propertyPath: m_Name
+      value: Pause Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031451226747791656, guid: d39eb7c10320b9149bd3e0ee9201ff86,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5031451226747791663, guid: d39eb7c10320b9149bd3e0ee9201ff86,
         type: 3}
       propertyPath: m_TargetSouce
@@ -742,21 +742,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 518726540}
-    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
-        type: 3}
-      propertyPath: m_TargetSouce
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
-        type: 3}
-      propertyPath: m_ClickAction.actionPath
-      value: /actions/default/in/Teleport
       objectReference: {fileID: 0}
     - target: {fileID: 82390747759672476, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
         type: 3}
@@ -813,6 +798,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 518726540}
+    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
+        type: 3}
+      propertyPath: m_TargetSouce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263961867431519199, guid: c1a30d1e8ae0bfe44ab6bbca57b326be,
+        type: 3}
+      propertyPath: m_ClickAction.actionPath
+      value: /actions/default/in/Teleport
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1a30d1e8ae0bfe44ab6bbca57b326be, type: 3}
 --- !u!114 &861638625 stripped
@@ -833,40 +833,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 861638624}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &901634516
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1136855136 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3108333153756077030, guid: 59f2982bbdb0edc4493b791f5a706743,
@@ -1440,7 +1406,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3bef56df84eea84f8a8e0b8306fb2f6, type: 3}
---- !u!43 &1876226944
+--- !u!1 &1924288807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 3021505141487929498}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924288808}
+  m_Layer: 0
+  m_Name: Boxing CameraRig (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1924288808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 3021505141487929498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924288807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 518726541}
+  - {fileID: 1563733234}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1977138020
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!43 &2066806568
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1600,38 +1632,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1924288807
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 3021505141487929498}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1924288808}
-  m_Layer: 0
-  m_Name: Boxing CameraRig (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1924288808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 3021505141487929498}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924288807}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 518726541}
-  - {fileID: 1563733234}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2086295380
 GameObject:
   m_ObjectHideFlags: 0
@@ -7820,6 +7820,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SingleplayerBoxingVIveCam
       objectReference: {fileID: 0}
+    - target: {fileID: 1938378791081008445, guid: 4cc31120505b95e47a27c70a75ce33a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1938378791081249989, guid: 4cc31120505b95e47a27c70a75ce33a8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7879,12 +7884,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 901634516}
+      objectReference: {fileID: 1977138020}
     - target: {fileID: 1938378791084193311, guid: 4cc31120505b95e47a27c70a75ce33a8,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1876226944}
+      objectReference: {fileID: 2066806568}
     - target: {fileID: 407317901742985157, guid: 4cc31120505b95e47a27c70a75ce33a8,
         type: 3}
       propertyPath: wrongCubeEffectTransform
@@ -8634,7 +8639,7 @@ PrefabInstance:
     - target: {fileID: 1158210446380937866, guid: 3560ed447fc41c344a3e471238ba91ef,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1158210446380576420, guid: 3560ed447fc41c344a3e471238ba91ef,
         type: 3}
@@ -8649,7 +8654,7 @@ PrefabInstance:
     - target: {fileID: 1158210446380576420, guid: 3560ed447fc41c344a3e471238ba91ef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.27
+      value: -5.41
       objectReference: {fileID: 0}
     - target: {fileID: 1158210446380576420, guid: 3560ed447fc41c344a3e471238ba91ef,
         type: 3}
