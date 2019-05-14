@@ -16493,6 +16493,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1226982497}
+    - target: {fileID: 1733979667080962608, guid: 74deecca14294334697f22dbaafb0c11,
+        type: 3}
+      propertyPath: viewIdField
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733979667080962608, guid: 74deecca14294334697f22dbaafb0c11,
+        type: 3}
+      propertyPath: InstantiationId
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 355323146387738585, guid: 74deecca14294334697f22dbaafb0c11,
         type: 3}
       propertyPath: wrongCubeEffectTransform
@@ -16503,25 +16513,15 @@ PrefabInstance:
       propertyPath: wrongCubeEffectTransform
       value: 
       objectReference: {fileID: 1126926492615748595}
-    - target: {fileID: 1733979667080962608, guid: 74deecca14294334697f22dbaafb0c11,
+    - target: {fileID: 4943379022204875997, guid: 74deecca14294334697f22dbaafb0c11,
         type: 3}
       propertyPath: viewIdField
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1733979667080962608, guid: 74deecca14294334697f22dbaafb0c11,
+    - target: {fileID: 4943379022204875997, guid: 74deecca14294334697f22dbaafb0c11,
         type: 3}
       propertyPath: InstantiationId
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1229854728324160401, guid: 74deecca14294334697f22dbaafb0c11,
-        type: 3}
-      propertyPath: viewIdField
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1229854728324160401, guid: 74deecca14294334697f22dbaafb0c11,
-        type: 3}
-      propertyPath: InstantiationId
-      value: 13
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4214233141131271276, guid: 74deecca14294334697f22dbaafb0c11,
         type: 3}
@@ -16533,15 +16533,15 @@ PrefabInstance:
       propertyPath: InstantiationId
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 4943379022204875997, guid: 74deecca14294334697f22dbaafb0c11,
+    - target: {fileID: 1229854728324160401, guid: 74deecca14294334697f22dbaafb0c11,
         type: 3}
       propertyPath: viewIdField
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 4943379022204875997, guid: 74deecca14294334697f22dbaafb0c11,
+    - target: {fileID: 1229854728324160401, guid: 74deecca14294334697f22dbaafb0c11,
         type: 3}
       propertyPath: InstantiationId
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74deecca14294334697f22dbaafb0c11, type: 3}
