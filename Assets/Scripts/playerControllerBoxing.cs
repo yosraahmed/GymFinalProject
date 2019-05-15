@@ -31,7 +31,7 @@ public class playerControllerBoxing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        i = 0;
+        playerControllerBoxing.instance.i = 0;
         PlayerPrefs.SetInt("Box1Type", 0);
         PlayerPrefs.SetInt("Box2Type", 0);
         PlayerPrefs.SetInt("Box3Type", 0);
@@ -53,7 +53,7 @@ public class playerControllerBoxing : MonoBehaviour
                 PlayerPrefs.SetInt("Box2Type", 0);
                 PlayerPrefs.SetInt("Box3Type", 0);
                 PlayerPrefs.SetInt("Box4Type", 0);
-                i = 0;
+                playerControllerBoxing.instance.i = 0;
             }
         }
         else if (PlayerPrefs.GetInt("NormalBoxing", 0) == 1)
@@ -65,7 +65,7 @@ public class playerControllerBoxing : MonoBehaviour
                 PlayerPrefs.SetInt("Box2Type", 0);
                 PlayerPrefs.SetInt("Box3Type", 0);
                 PlayerPrefs.SetInt("Box4Type", 0);
-                i = 0;
+                playerControllerBoxing.instance.i = 0;
             }
         }
         else if (PlayerPrefs.GetInt("HardBoxing", 0) == 1)
@@ -77,7 +77,7 @@ public class playerControllerBoxing : MonoBehaviour
                 PlayerPrefs.SetInt("Box2Type", 0);
                 PlayerPrefs.SetInt("Box3Type", 0);
                 PlayerPrefs.SetInt("Box4Type", 0);
-                i = 0;
+                playerControllerBoxing.instance.i = 0;
             }
         }
 
@@ -103,24 +103,24 @@ public class playerControllerBoxing : MonoBehaviour
         {
             text1.text = other.GetComponentInChildren<TextString>().myText.text.ToString();
             int textt = int.Parse(text1.text);
-            i += 1;
-            if (textt == i )
+            playerControllerBoxing.instance.i += 1;
+            if (textt == playerControllerBoxing.instance.i )
             {
                 Destroy(other.gameObject);
                 Instantiate(particleBlue, other.transform.position, other.transform.rotation);
-                if (i == 1)
+                if (playerControllerBoxing.instance.i == 1)
                 {
                     PlayerPrefs.SetInt("Box1Type", 1);
                 }
-                if (i == 2)
+                if (playerControllerBoxing.instance.i == 2)
                 {
                     PlayerPrefs.SetInt("Box2Type", 1);
                 }
-                if (i == 3)
+                if (playerControllerBoxing.instance.i == 3)
                 {
                     PlayerPrefs.SetInt("Box3Type", 1);
                 }
-                if (i == 4)
+                if (playerControllerBoxing.instance.i == 4)
                 {
                     PlayerPrefs.SetInt("Box4Type", 1);
                 }
@@ -150,7 +150,7 @@ public class playerControllerBoxing : MonoBehaviour
                     
                     
                 }
-                i = 0;
+                playerControllerBoxing.instance.i = 0;
                 RespawnBoxing.instance.allBullet.Clear();
                 PlayerPrefs.SetInt("Box1Type", 0);
                 PlayerPrefs.SetInt("Box2Type", 0);
