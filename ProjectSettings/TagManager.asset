@@ -13,6 +13,7 @@ TagManager:
   - Moves
   - Squat1Hit
   - buttonss
+  - PunchingBag
   layers:
   - Default
   - TransparentFX
