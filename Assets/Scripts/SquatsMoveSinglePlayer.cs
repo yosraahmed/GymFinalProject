@@ -11,6 +11,7 @@ public class SquatsMoveSinglePlayer : MonoBehaviour
 
     void Update()
     {
+        
         transform.position -= transform.forward * gameManager.instance.BulletSpeed * Time.deltaTime;
     }
 
