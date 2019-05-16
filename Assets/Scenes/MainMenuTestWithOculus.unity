@@ -48075,7 +48075,7 @@ RectTransform:
   m_GameObject: {fileID: 1102356737211518600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.028329, y: 2.028329, z: 2.028329}
+  m_LocalScale: {x: 1.7922314, y: 1.7922314, z: 1.7922314}
   m_Children:
   - {fileID: 1102356738457304889}
   - {fileID: 1102356737319426387}
@@ -48088,7 +48088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23, y: -90}
+  m_AnchoredPosition: {x: 23, y: -49.901}
   m_SizeDelta: {x: 480, y: 370}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1102356737211518837
@@ -117142,7 +117142,7 @@ GameObject:
   - component: {fileID: 1102356738545684830}
   - component: {fileID: 1102356738545684831}
   m_Layer: 5
-  m_Name: ready
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117178,11 +117178,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ed25f370b5d725d45b2f85dfef7cc4f1, type: 3}
-    m_FontSize: 30
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
