@@ -6,6 +6,7 @@ public class BoxingTestBack : MonoBehaviour
 {
     public bool activeAttachment;
     Rigidbody rb;
+    public Transform scaleSet;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class BoxingTestBack : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        scaleSet.transform.localScale = new Vector3(1.76475f, 0, 0);
          //rb.constraints = RigidbodyConstraints.FreezeAll;
 
         if (activeAttachment == true)

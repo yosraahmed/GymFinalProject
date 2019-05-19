@@ -14,6 +14,8 @@ public class uiManager : MonoBehaviour
     public GameObject setting;
     public GameObject musicOn;
     public GameObject musicOff;
+    public GameObject musicOnButton;
+    public GameObject musicOffButton;
     public int counter = 4;
     public float timeCounter = 1;
     public Text counterText;
@@ -93,12 +95,16 @@ public class uiManager : MonoBehaviour
             PlayerPrefs.SetInt("SoundMusic", 1);
             musicOn.SetActive(true);
             musicOff.SetActive(false);
+            musicOnButton.SetActive(true);
+            musicOffButton.SetActive(false);
         }
         else if (PlayerPrefs.GetInt("SoundMusic", 0) == 1)
         {
             PlayerPrefs.SetInt("SoundMusic", 0);
             musicOn.SetActive(false);
             musicOff.SetActive(true);
+            musicOnButton.SetActive(false);
+            musicOffButton.SetActive(true);
         }
     }
  
