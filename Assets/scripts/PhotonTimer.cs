@@ -46,7 +46,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
 
     // photon view for sending rpc that updates the timer
     public int hr = 0;
-    public int minutes=59;
+    public int minutes=2;
     public float second = 0;
     public Text player1ScoreText;
     public Text player2ScoreText;
@@ -94,7 +94,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsMasterClient)
         {
             hr = 0;
-            minutes = 5;
+            minutes = 2;
             second = 0;
             //timerToStartGame = 90;
         }
@@ -103,7 +103,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {
             hr = 0;
-            minutes = 5;
+            minutes = 2;
             second = 0;
             //fullRoomTimer = maxFullRoomWaitTime;
             //notFullRoomTimer = maxWaitTime;

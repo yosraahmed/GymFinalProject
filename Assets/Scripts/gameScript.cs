@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class gameScript : MonoBehaviour
 {
    
-    public int hr = 1;
-    public int minutes;
+    public int hr = 0;
+    public int minutes=2;
     public float second = 0;
     public Text gameTimerText;
      
@@ -17,8 +17,8 @@ public class gameScript : MonoBehaviour
     void Start()
     {
         
-        minutes = 5;
-        second = 59;
+        minutes = 2;
+        second = 0;
     }
 
     // Update is called once per frame
