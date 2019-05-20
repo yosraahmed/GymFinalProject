@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenuTestWithOculus.unity
-    guid: da765896cca75994786ea5c2c1655779
-  - enabled: 1
     path: Assets/Scenes/testMultiplayer.unity
     guid: 9f4e7f55644729c47a7072e3a2751ec4
+  - enabled: 1
+    path: Assets/Scenes/MainMenuTestWithOculus.unity
+    guid: da765896cca75994786ea5c2c1655779
   - enabled: 1
     path: Assets/Scenes/Multiplayer.unity
     guid: 10a3ecdbcc508544dbdae82dd3316316

@@ -227,8 +227,8 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         /*else */
         if (PhotonNetwork.IsMasterClient)
         {
-            if (readyToCountDown)
-            {
+            //if (readyToCountDown)
+            //{
 
                 if (minutes == 0 && hr >= 1)
                 {
@@ -251,7 +251,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
 
                 //notFullRoomTimer -= Time.deltaTime;
                 //timerToStartGame = notFullRoomTimer;
-            }
+            //}
         }
         
        
