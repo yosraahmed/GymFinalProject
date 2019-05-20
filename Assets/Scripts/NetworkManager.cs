@@ -4,6 +4,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
@@ -99,6 +100,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             Invoke("StartGame", 3);
 
         base.OnPlayerEnteredRoom(newPlayer);
+    }
+    public void DelayCancelExit()
+    {
+        //public function paired to cancel button in waiting room scene
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene("MainMenuTestWithOculus");
     }
 
     void StartGame()

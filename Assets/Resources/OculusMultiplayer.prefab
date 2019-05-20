@@ -260,7 +260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498210529908598493}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.5, y: 2.23, z: 6.299}
+  m_LocalPosition: {x: 1.66, y: 0.95, z: 6.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1498210531607956266}
@@ -611,7 +611,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1498210529908598490}
-        m_MethodName: ExitButton
+        m_MethodName: ExitButtonMultiplayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -779,7 +779,7 @@ RectTransform:
   m_GameObject: {fileID: 1498210531607956270}
   m_LocalRotation: {x: -0, y: 0.30070576, z: -0, w: 0.953717}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.007866405, y: 0.007866405, z: 0.007866405}
+  m_LocalScale: {x: 0.005251376, y: 0.005251376, z: 0.005251376}
   m_Children:
   - {fileID: 1498210530265768764}
   - {fileID: 1498210530775489813}
@@ -801,7 +801,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 5770156143653624479}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -6776,9 +6776,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 5770156143653624479}
-  m_TargetSouce: 0
+  m_TargetSouce: 2
   m_ClickAction:
-    actionPath: 
+    actionPath: /actions/default/in/Click002
     needsReinit: 0
 --- !u!1 &3840315475516489217
 GameObject:

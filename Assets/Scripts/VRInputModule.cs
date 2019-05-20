@@ -37,13 +37,13 @@ public class VRInputModule : BaseInputModule
         //Hover
         HandlePointerExitAndEnter(m_Data, m_CurrentObject);
         //Press
-        if (m_ClickAction.GetStateDown(m_TargetSouce) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || OVRInput.GetDown(OVRInput.Button.One))
+        if (Input.GetMouseButtonDown(0) || m_ClickAction.GetStateDown(m_TargetSouce) || Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.Button.One))
         {
             print("Downnn");
             ProcessPress(m_Data);
         }
         //Release
-        if (m_ClickAction.GetStateUp(m_TargetSouce) || Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0) || OVRInput.GetUp(OVRInput.Button.One))
+        if (Input.GetMouseButtonUp(0) || m_ClickAction.GetStateUp(m_TargetSouce) || Input.GetKeyUp(KeyCode.Space) || OVRInput.GetUp(OVRInput.Button.One))
         {
             print("Upppppppp");
             ProcessRelease(m_Data);

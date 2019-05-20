@@ -15,7 +15,7 @@ public class Pause : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y) || m_ClickAction.GetStateDown(m_TargetSouce) || OVRInput.GetDown(OVRInput.Button.Two))
+        if (Input.GetKeyDown(KeyCode.Y) || m_ClickAction.GetStateDown(m_TargetSouce) || OVRInput.GetDown(OVRInput.Button.Two) /*|| Input.GetMouseButtonUp(0)*/)
         {
             if (!pausePanel.activeInHierarchy)
             {
@@ -42,10 +42,19 @@ public class Pause : MonoBehaviour
         pausePanel.SetActive(false);
         //enable the scripts again
     }
+
     public void ExitButton()
     {
         Time.timeScale = 1;
         PlayerPrefs.SetInt("Timer", 0);
+        SceneManager.LoadScene("MainMenuTestWithOculus");
+    }
+    public void ExitButtonMultiplayer()
+    {
+        Time.timeScale = 1;
+        PlayerPrefs.SetInt("Timer", 0);
+        NetworkManager.Instance.Disconnect();
+        NetworkManager.Instance.DelayCancelExit();
         SceneManager.LoadScene("MainMenuTestWithOculus");
     }
     public void ResumeButton()
