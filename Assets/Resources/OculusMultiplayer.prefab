@@ -3946,6 +3946,7 @@ GameObject:
   - component: {fileID: 1851283385004048698}
   - component: {fileID: 806104298660632424}
   - component: {fileID: 1991010349859703889}
+  - component: {fileID: 93043076828816656}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -4012,7 +4013,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -4069,6 +4070,19 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 8
   isRuntimeInstantiated: 0
+--- !u!114 &93043076828816656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851283384992557988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 5094ea4ca28029c4aa6a4efb099eea63, type: 2}
 --- !u!1 &1851283384992557990
 GameObject:
   m_ObjectHideFlags: 0
