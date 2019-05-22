@@ -1048,6 +1048,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3549345387721759890, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b,
+        type: 3}
+      propertyPath: m_Text
+      value: 02:00
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbf1bf1121bd11e4c8f44d6cadf1cc3b, type: 3}
 --- !u!224 &1334011970 stripped
@@ -15374,6 +15379,11 @@ MonoBehaviour:
   minutes: 50
   second: 0
   gameTimerText: {fileID: 3549345388362817423}
+  exitScreen: {fileID: 0}
+  yourScoreText: {fileID: 0}
+  bestScoreText: {fileID: 0}
+  pointer: {fileID: 0}
+  inputVr: {fileID: 0}
 --- !u!114 &3549345387991151670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15532,7 +15542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 59:00
+  m_Text: 02:00
 --- !u!222 &4452463394418858319
 CanvasRenderer:
   m_ObjectHideFlags: 0
