@@ -13281,9 +13281,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 2
+  m_TargetSouce: 0
   m_ClickAction:
-    actionPath: /actions/default/in/Click002
+    actionPath: 
     needsReinit: 0
   pausePanel: {fileID: 6629340678274227507}
 --- !u!1 &6863042376363357054
@@ -13477,9 +13477,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 1790504948260916354}
-  m_TargetSouce: 2
+  m_TargetSouce: 0
   m_ClickAction:
-    actionPath: /actions/default/in/Click002
+    actionPath: 
     needsReinit: 0
 --- !u!1 &7393756071310745367
 GameObject:
@@ -13719,7 +13719,7 @@ MonoBehaviour:
   poseAction:
     actionPath: /actions/default/in/Pose
     needsReinit: 0
-  inputSource: 1
+  inputSource: 0
   origin: {fileID: 0}
   onTransformUpdated:
     m_PersistentCalls:
@@ -13826,7 +13826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  shader: {fileID: 0}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -13875,7 +13875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  shader: {fileID: 0}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -13982,18 +13982,10 @@ MonoBehaviour:
   borderThickness: 0.15
   wireframeHeight: 2
   drawWireframeWhenSelectedOnly: 0
-  drawInGame: 0
-  size: 2
+  drawInGame: 1
+  size: 0
   color: {r: 0, g: 1, b: 1, a: 1}
-  vertices:
-  - {x: 1.5, y: 0.01, z: -1.125}
-  - {x: -1.5, y: 0.01, z: -1.125}
-  - {x: -1.5, y: 0.01, z: 1.125}
-  - {x: 1.5, y: 0.01, z: 1.125}
-  - {x: 1.65, y: 0.01, z: -1.275}
-  - {x: -1.65, y: 0.01, z: -1.275}
-  - {x: -1.65, y: 0.01, z: 1.275}
-  - {x: 1.65, y: 0.01, z: 1.275}
+  vertices: []
 --- !u!114 &9022720203985691637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14113,7 +14105,7 @@ MonoBehaviour:
   poseAction:
     actionPath: /actions/default/in/Pose
     needsReinit: 0
-  inputSource: 2
+  inputSource: 0
   origin: {fileID: 0}
   onTransformUpdated:
     m_PersistentCalls:

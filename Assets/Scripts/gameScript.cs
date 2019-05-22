@@ -11,11 +11,11 @@ public class gameScript : MonoBehaviour
     public int minutes=2;
     public float second = 0;
     public Text gameTimerText;
-    public GameObject exitScreen;
-    public Text yourScoreText;
-    public Text bestScoreText;
-    public GameObject pointer;
-    public GameObject inputVr;
+    //public GameObject exitScreen;
+    //public Text yourScoreText;
+    //public Text bestScoreText;
+    //public GameObject pointer;
+    //public GameObject inputVr;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +29,8 @@ public class gameScript : MonoBehaviour
     void Update()
     {
 
-        yourScoreText.text = PlayerPrefs.GetInt("boxingscorText", 0).ToString();
-        bestScoreText.text = PlayerPrefs.GetInt("BestboxingscorText", 0).ToString();
+        //yourScoreText.text = PlayerPrefs.GetInt("boxingscorText", 0).ToString();
+        //bestScoreText.text = PlayerPrefs.GetInt("BestboxingscorText", 0).ToString();
         if (PlayerPrefs.GetInt("BestboxingscorText", 0)< PlayerPrefs.GetInt("boxingscorText", 0))
         {
             PlayerPrefs.SetInt("BestboxingscorText", PlayerPrefs.GetInt("boxingscorText", 0));
