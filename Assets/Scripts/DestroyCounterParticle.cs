@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class DestroyCounterParticle : MonoBehaviour
 {
-    float timer =3;
+    float timer =2;
     // Start is called before the first frame update
     void Start()
     {
         if (RespawnBoxing.instance == null)
         {
-            timer = 3;
+            timer = 2;
         }
        // timer = 3;
        else

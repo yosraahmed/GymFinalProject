@@ -6089,10 +6089,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 4013894165099696732}
   inputOnOff: {fileID: 3197030126564438714}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!135 &1600197765836015620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6474,10 +6470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
   pausePanel: {fileID: 1600197765053441907}
 --- !u!222 &1600197766638078225
 CanvasRenderer:
@@ -7289,7 +7281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967696488357152765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.20759, y: 73.024506, z: -187.06488}
+  m_LocalPosition: {x: -30.20759, y: 72.98, z: -187.06488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1967696488356666327}
@@ -7596,7 +7588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1967696488357152767
 GameObject:
   m_ObjectHideFlags: 0
@@ -8610,10 +8602,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 2025831624216052669}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Teleport
-    needsReinit: 0
 --- !u!1 &2025831624387247783
 GameObject:
   m_ObjectHideFlags: 0
@@ -16635,7 +16623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2025831624653343293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16879,10 +16867,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 2025831624216052670}
   inputOnOff: {fileID: 2025831624387247783}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!4 &2025831624665975227
 Transform:
   m_ObjectHideFlags: 0
@@ -17503,10 +17487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
   pausePanel: {fileID: 2025831626175836889}
 --- !u!4 &2025831624941390123
 Transform:
@@ -18135,7 +18115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -30198,10 +30178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 5975163557679773378}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!4 &3268766646542304032
 Transform:
   m_ObjectHideFlags: 0
