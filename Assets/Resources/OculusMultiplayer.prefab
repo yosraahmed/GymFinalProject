@@ -832,7 +832,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483279059359262260}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -0.859, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -846,7 +846,7 @@ Transform:
   - {fileID: 483279059358972426}
   m_Father: {fileID: 1851283384993052558}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &483279059359262262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,10 +2980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 0
-  m_ClickAction:
-    actionPath: 
-    needsReinit: 0
   pausePanel: {fileID: 1498210531607956270}
 --- !u!1 &1498210530265768767
 GameObject:
@@ -3369,10 +3365,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 3840315475516489217}
   inputOnOff: {fileID: 3360138457665494759}
-  m_TargetSouce: 0
-  m_ClickAction:
-    actionPath: 
-    needsReinit: 0
 --- !u!1 &1498210531518876854
 GameObject:
   m_ObjectHideFlags: 0
@@ -9491,10 +9483,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 5770156143653624479}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!1 &3840315475516489217
 GameObject:
   m_ObjectHideFlags: 0
