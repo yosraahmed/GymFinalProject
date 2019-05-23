@@ -41,18 +41,18 @@ public class gameManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("EasySquat", 0)==1)
         {
-            BulletSpeed = 20;
+            BulletSpeed = 19;
             Bullettimer = 2;
         }
         else if (PlayerPrefs.GetInt("NormalSquat", 0) == 1)
         {
-            BulletSpeed = 30;
-            Bullettimer = 1.2f;
+            BulletSpeed = 19;
+            Bullettimer = 1.4f;
         }
         else if (PlayerPrefs.GetInt("HardSquat", 0) == 1)
         {
-            BulletSpeed = 30;
-            Bullettimer = 0.7f;
+            BulletSpeed = 20;
+            Bullettimer = 1.1f;
         }
 
         if (timer < 0)
