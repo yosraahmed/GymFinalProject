@@ -16,12 +16,12 @@ public class PlayerRespawn : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("VRType", 0) == 1)
             {
-                PhotonNetwork.Instantiate(this.oculusPlayer.name, player1Location.transform.position, Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.oculusPlayer.name, player1Location.transform.position, player1Location.transform.rotation, 0);
                 PlayerPrefs.SetInt("Master", 0);
             }
             else if (PlayerPrefs.GetInt("VRType", 0) == 2)
             {
-                PhotonNetwork.Instantiate(this.vivePlayer.name, player1Location.transform.position, Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.vivePlayer.name, player1Location.transform.position, player1Location.transform.rotation, 0);
                 PlayerPrefs.SetInt("Master", 0);
             }
             //PlayerPrefs.SetInt("Playerlocation", 1);
@@ -32,12 +32,12 @@ public class PlayerRespawn : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("VRType", 0) == 1)
             {
-                PhotonNetwork.Instantiate(this.oculusPlayer.name, player2Location.transform.position, Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.oculusPlayer.name, player2Location.transform.position, player2Location.transform.rotation, 0);
                 PlayerPrefs.SetInt("Master", 0);
             }
             else if (PlayerPrefs.GetInt("VRType", 0) == 2)
             {
-                PhotonNetwork.Instantiate(this.vivePlayer.name, player2Location.transform.position, Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.vivePlayer.name, player2Location.transform.position, player2Location.transform.rotation, 0);
                 PlayerPrefs.SetInt("Master", 0);
             }
            // PhotonNetwork.Instantiate(this.player1.name, player2Location.transform.position, Quaternion.identity, 0);

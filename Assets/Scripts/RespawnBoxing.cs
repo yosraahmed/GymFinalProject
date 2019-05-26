@@ -74,7 +74,7 @@ public class RespawnBoxing : MonoBehaviour
         }
 
 
-        if (randomtimer < 0)
+        if (randomtimer < 0 && gameScriptBoxing.instance.second > 0)
         {
             Itxt = 0;
             for (int J = 0; J < JLOOP; J++)
@@ -98,8 +98,11 @@ public class RespawnBoxing : MonoBehaviour
                 }
 
         }
-
-        randomtimer -= Time.deltaTime;
+        if (gameScriptBoxing.instance.second > 0)
+        {
+            randomtimer -= Time.deltaTime;
+        }
+        
     }
 
 

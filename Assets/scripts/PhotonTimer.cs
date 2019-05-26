@@ -50,6 +50,13 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
     public float second = 0;
     public Text player1ScoreText;
     public Text player2ScoreText;
+ 
+    public GameObject exitScreenP1;
+    public GameObject pointerP1;
+    public GameObject inputVrP1;
+    public GameObject exitScreenP2;
+    public GameObject pointerP2;
+    public GameObject inputVrP2;
     public Text calP1;
     public Text calP2;
     Text gameTimerText;
@@ -110,6 +117,8 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
             //timerToStartGame = maxWaitTime;
         }
         PlayerCountUpdate();
+        PlayerPrefs.SetInt("player2Score", 0);
+        PlayerPrefs.SetInt("player1Score", 0);
     }
 
     void PlayerCountUpdate()
@@ -195,6 +204,7 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         string tempTimerClr = string.Format("{0:D3}", PlayerPrefs.GetInt("clr", 0));
         calP1.text = tempTimerClr;
         calP2.text = tempTimerClr;
+
     }
 
     void WaitingForMorePlayers()
@@ -259,13 +269,15 @@ public class PhotonTimer : MonoBehaviourPunCallbacks
         //string tempTimer = string.Format("{0:00}", timerToStartGame);
         //timerToStartDisplay.text = gameTimerText.text;
         // if the countdown timer reaches 0 the game will then start
-        if (/*timerToStartGame <= 0f*/hr == 0 && minutes == 0 && second <= 0)
+        if (/*timerToStartGame <= 0f*/ hr == 0 && minutes == 0 && second <= 0)
         {
-
-            if (startingGame)
-                return;
-            StartGame();
+            PlayerPrefs.SetInt("PointerP1", 1);
         }
+        else 
+        {
+            PlayerPrefs.SetInt("PointerP1", 0);
+        }
+
     }
 
     void ResetTimer()

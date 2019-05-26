@@ -34,8 +34,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
     private void Start()
     {
-
         
+
     }
     public override void OnEnable()
     {
@@ -107,7 +107,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene("MainMenuTestWithOculus");
     }
-
+    public void DelayCancelExit2()
+    {
+        //public function paired to cancel button in waiting room scene
+        //PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LoadLevel("MainMenuTestWithOculus");
+        //SceneManager.LoadScene("MainMenuTestWithOculus");
+    }
     void StartGame()
     {
         print("playing");

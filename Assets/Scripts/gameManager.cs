@@ -103,6 +103,9 @@ public class gameManager : MonoBehaviour
             timer = Bullettimer;
             BulletsNum += 1;
         }
-        timer -= Time.deltaTime;
+        if (gameScript.instance.second > 0)
+        {
+            timer -= Time.deltaTime;
+        }
     }
 }

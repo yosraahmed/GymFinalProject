@@ -53,9 +53,18 @@ public class Pause : MonoBehaviour
     {
         Time.timeScale = 1;
         PlayerPrefs.SetInt("Timer", 0);
-        NetworkManager.Instance.Disconnect();
-        NetworkManager.Instance.DelayCancelExit();
-        SceneManager.LoadScene("MainMenuTestWithOculus");
+        //NetworkManager.Instance.Disconnect();
+        //NetworkManager.Instance.DelayCancelExit();
+        NetworkManager.Instance.DelayCancelExit2();
+        //SceneManager.LoadScene("MainMenuTestWithOculus");
+    }
+    public void ExitButtonMultiplayerFinishGame()
+    {
+        PlayerPrefs.SetInt("Timer", 0);
+        //NetworkManager.Instance.Disconnect();
+        //NetworkManager.Instance.DelayCancelExit();
+        NetworkManager.Instance.DelayCancelExit2();
+        //SceneManager.LoadScene("MainMenuTestWithOculus");
     }
     public void ResumeButton()
     {
