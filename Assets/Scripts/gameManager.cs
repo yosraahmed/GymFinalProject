@@ -55,7 +55,7 @@ public class gameManager : MonoBehaviour
             Bullettimer = 1.1f;
         }
 
-        if (timer < 0)
+        if (timer < 0 && gameScript.instance.second > 0)
         {
             Vector3 position = new Vector3(
                 Random.Range(transform.position.x + Width, transform.position.x - Width),

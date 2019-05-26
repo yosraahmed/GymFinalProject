@@ -11,12 +11,19 @@ public class gameScript : MonoBehaviour
     public int minutes=2;
     public float second = 0;
     public Text gameTimerText;
-    //public GameObject exitScreen;
-    //public Text yourScoreText;
-    //public Text bestScoreText;
-    //public GameObject pointer;
-    //public GameObject inputVr;
+    public GameObject exitScreen;
+    public Text yourScoreText;
+    public Text bestScoreText;
+    public GameObject pointer;
+    public GameObject inputVr;
 
+    public static gameScript instance;
+  
+
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +38,19 @@ public class gameScript : MonoBehaviour
 
         //yourScoreText.text = PlayerPrefs.GetInt("boxingscorText", 0).ToString();
         //bestScoreText.text = PlayerPrefs.GetInt("BestboxingscorText", 0).ToString();
-        if (PlayerPrefs.GetInt("BestboxingscorText", 0)< PlayerPrefs.GetInt("boxingscorText", 0))
+
+
+        //if (PlayerPrefs.GetInt("BestboxingscorText", 0)< PlayerPrefs.GetInt("boxingscorText", 0))
+        //{
+        //    PlayerPrefs.SetInt("BestboxingscorText", PlayerPrefs.GetInt("boxingscorText", 0));
+        //}
+        yourScoreText.text = PlayerPrefs.GetInt("scorText", 0).ToString();
+        bestScoreText.text = PlayerPrefs.GetInt("BestscorText", 0).ToString();
+
+
+        if (PlayerPrefs.GetInt("BestscorText", 0) < PlayerPrefs.GetInt("scorText", 0))
         {
-            PlayerPrefs.SetInt("BestboxingscorText", PlayerPrefs.GetInt("boxingscorText", 0));
+            PlayerPrefs.SetInt("BestscorText", PlayerPrefs.GetInt("scorText", 0));
         }
 
         if (second <= 0 && minutes >= 1)
@@ -41,7 +58,7 @@ public class gameScript : MonoBehaviour
             second = 60;
             minutes-=1;
         }
-        else if (second >= 0)
+        else if (second > 0)
         {
             second-=Time.deltaTime;
         }
@@ -53,17 +70,17 @@ public class gameScript : MonoBehaviour
         
         if(hr == 0 && minutes == 0 && second <= 0)
         {
-            SceneManager.LoadScene("MainMenuTestWithOculus");
-            //exitScreen.SetActive(true);
-            //pointer.SetActive(true);
-            //inputVr.SetActive(true);
+           // SceneManager.LoadScene("MainMenuTestWithOculus");
+            exitScreen.SetActive(true);
+            pointer.SetActive(true);
+            inputVr.SetActive(true);
         }
-        //else
-        //{
-        //    exitScreen.SetActive(false);
-        //    pointer.SetActive(false);
-        //    inputVr.SetActive(false);
-        //}
+        else
+        {
+            exitScreen.SetActive(false);
+            pointer.SetActive(false);
+            inputVr.SetActive(false);
+        }
 
     }
     public void ExitGameScene()
