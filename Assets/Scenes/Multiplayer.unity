@@ -17361,7 +17361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8331637281201208884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28, z: 0.563444}
+  m_LocalPosition: {x: 0, y: 0.352, z: 0.563444}
   m_LocalScale: {x: 1, y: 0.18890893, z: 4.9100337}
   m_Children:
   - {fileID: 2896407036372851159}
@@ -17376,7 +17376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8331637280996902442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28, z: 0.563444}
+  m_LocalPosition: {x: 0, y: 0.37, z: 0.563444}
   m_LocalScale: {x: 1, y: 0.18890893, z: 4.9100337}
   m_Children:
   - {fileID: 2896407036166988233}
@@ -47438,10 +47438,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SquatsPoint1: {fileID: 3388530539353197146}
   SquatsPoint11: {fileID: 7683327977231641965}
-  Squat1: {fileID: 939855950654161268, guid: e68b85a423779a14dbc4bc623ce4b941, type: 3}
+  Squat1: {fileID: 939855950654161268, guid: e9a644b2f462fbd48b326047fe253877, type: 3}
   SquatsPoint2: {fileID: 3923777769030016742}
   SquatsPoint22: {fileID: 2896407036372851159}
-  Squat2: {fileID: 3978426730765813437, guid: 5602670b47849e945b612020007821e4, type: 3}
+  Squat2: {fileID: 939855950654161268, guid: e9a644b2f462fbd48b326047fe253877, type: 3}
   SquatsPoint3: {fileID: 3185444313011169204}
   SquatsPoint33: {fileID: 5721552431017982666}
   Bullet1: {fileID: 100004, guid: 10f424bb44ce7b04da04108b2a884922, type: 3}
@@ -47482,10 +47482,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SquatsPoint1: {fileID: 3388530539423806020}
   SquatsPoint11: {fileID: 7683327977302037875}
-  Squat1: {fileID: 939855950654161268, guid: e68b85a423779a14dbc4bc623ce4b941, type: 3}
+  Squat1: {fileID: 939855950654161268, guid: e9a644b2f462fbd48b326047fe253877, type: 3}
   SquatsPoint2: {fileID: 3923777769099831032}
   SquatsPoint22: {fileID: 2896407036166988233}
-  Squat2: {fileID: 3978426730765813437, guid: 5602670b47849e945b612020007821e4, type: 3}
+  Squat2: {fileID: 939855950654161268, guid: e9a644b2f462fbd48b326047fe253877, type: 3}
   SquatsPoint3: {fileID: 3185444312939716522}
   SquatsPoint33: {fileID: 5721552431088108244}
   Bullet1: {fileID: 100004, guid: 10f424bb44ce7b04da04108b2a884922, type: 3}

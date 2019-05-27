@@ -81,21 +81,21 @@ public class gameManagerPhoton : MonoBehaviour
             else if (Bullettype == 4)
             {
                 PhotonNetwork.Instantiate(this.Squat1.name, SquatsPoint1.transform.position, SquatsPoint1.transform.rotation, 0);
-                PhotonNetwork.Instantiate(this.Bullet2.name, SquatsPoint11.transform.position, Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.Bullet2.name, SquatsPoint11.transform.position, SquatsPoint11.transform.rotation, 0);
                 //Instantiate(Squat1, SquatsPoint1.transform.position, SquatsPoint1.transform.rotation);
                 //Instantiate(Bullet2, SquatsPoint11.transform.position, SquatsPoint11.transform.rotation);
             }
             else if (Bullettype == 5)
             {
                 PhotonNetwork.Instantiate(this.Squat2.name, SquatsPoint2.transform.position, SquatsPoint2.transform.rotation, 0);
-                PhotonNetwork.Instantiate(this.Bullet3.name, SquatsPoint22.transform.position, Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.Bullet3.name, SquatsPoint22.transform.position, SquatsPoint22.transform.rotation, 0);
                 //Instantiate(Squat2, SquatsPoint2.transform.position, SquatsPoint2.transform.rotation);
                 //Instantiate(Bullet3, SquatsPoint22.transform.position, SquatsPoint22.transform.rotation);
             }
             else if (Bullettype == 6)
             {
                 PhotonNetwork.Instantiate(this.Squat1.name, SquatsPoint3.transform.position, SquatsPoint3.transform.rotation, 0);
-                PhotonNetwork.Instantiate(this.Bullet1.name, SquatsPoint33.transform.position, Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.Bullet1.name, SquatsPoint33.transform.position, SquatsPoint33.transform.rotation, 0);
                 //Instantiate(Squat1, SquatsPoint3.transform.position, SquatsPoint3.transform.rotation);
                 //Instantiate(Bullet1, SquatsPoint33.transform.position, SquatsPoint33.transform.rotation);
             }
