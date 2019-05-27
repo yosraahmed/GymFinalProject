@@ -42,9 +42,9 @@ public class RespawnBoxing : MonoBehaviour
     {
         
         ScourText.text = PlayerPrefs.GetInt("boxingscorText", 0).ToString();
-        //JLOOP = 4;
-        //speed = 3f;
-        //TimeDestroy = 2f;
+        JLOOP = 4;
+        speed = 3f;
+        TimeDestroy = 2f;
         //if (playerControllerBoxing.instance.ddd == true)
         //{
 
@@ -90,7 +90,7 @@ public class RespawnBoxing : MonoBehaviour
                             transform.position.z);
                     var vector2 = Random.insideUnitCircle.normalized * ((transform.localScale.y / 2.5f) - 0);
                     Vector3 position1 = new Vector3((position.x + vector2.x), (position.y + 0), (position.z + vector2.y));
-                        if (position1.z < -4.7f)
+                        if (position1.z < -4.63f)
                         {
                             test = ExplosionDamage(position1, radius);
                         }
