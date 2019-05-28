@@ -3189,10 +3189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
   pausePanel: {fileID: 1498210531607956270}
 --- !u!114 &7278600165812333122
 MonoBehaviour:
@@ -3607,10 +3603,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 3840315475516489217}
   inputOnOff: {fileID: 3360138457665494759}
-  m_TargetSouce: 0
-  m_ClickAction:
-    actionPath: 
-    needsReinit: 0
 --- !u!1 &1498210531518876854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3819,7 +3811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726281765405844835}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.293}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.18057796, y: 0.16723944, z: 0.1606308}
   m_Children:
   - {fileID: 2048626048695403067}
@@ -3954,7 +3946,7 @@ Transform:
   m_GameObject: {fileID: 1851283384992557984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.21, z: -21.569}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8388, y: 0.8388, z: 0.8388}
   m_Children:
   - {fileID: 1851283384993052554}
   - {fileID: 1851283384993052544}
@@ -4490,7 +4482,7 @@ MonoBehaviour:
   virtualGreenScreenBottomY: -10
   virtualGreenScreenApplyDepthCulling: 0
   virtualGreenScreenDepthTolerance: 0.2
-  _trackingOriginType: 0
+  _trackingOriginType: 2
   usePositionTracking: 1
   useRotationTracking: 1
   useIPDInPositionTracking: 1
@@ -10387,10 +10379,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 5770156143653624479}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Teleport
-    needsReinit: 0
 --- !u!1 &3840315475516489217
 GameObject:
   m_ObjectHideFlags: 0
@@ -15729,7 +15717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5486734785193875911}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.27400059}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.18057796, y: 0.16723944, z: 0.1606308}
   m_Children:
   - {fileID: 5169603097217433247}
@@ -15979,10 +15967,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 5946319025955656722}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Teleport
-    needsReinit: 0
 --- !u!1 &6775666836802053379
 GameObject:
   m_ObjectHideFlags: 0
