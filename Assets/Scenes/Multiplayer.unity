@@ -24306,7 +24306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &4244380746626066377
 GameObject:
   m_ObjectHideFlags: 0
@@ -28255,6 +28255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45b20b0bae03f044bc218f86d68d5de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundtest: 0
   effect: {fileID: 6935940925986165857}
   gamePlayMusicSquat: {fileID: 6935940926784768726}
   gamePlayMusicBoxing: {fileID: 452614896410703377}

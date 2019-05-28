@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class soundManager : MonoBehaviour
 {
+    public int soundtest;
     public static soundManager instance;
     public AudioSource effect;
     public AudioSource gamePlayMusicSquat;
@@ -17,19 +18,21 @@ public class soundManager : MonoBehaviour
     public AudioSource boxingEffect;
     public AudioSource wrongballSound;
 
-    // Start is called before the first frame update
+   
 
-    private void Awake()
+    void Awake()
     {
         if (instance == null) instance = this;
         else
         {
             Destroy(this);
         }
+       
         DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
+
         PlayerPrefs.SetInt("SoundMusic", 1);
     }
 
@@ -67,6 +70,7 @@ public class soundManager : MonoBehaviour
     }
     void Update()
     {
+        soundtest = PlayerPrefs.GetInt("SoundMusic", 0);
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
