@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Valve.VR;
+//using Valve.VR;
 
 public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
 {
@@ -11,8 +11,8 @@ public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
     public Camera camFalse;
     public GameObject pause, exit, modelR, modelL, headCollider, pointer, inputmodule;
     
-    public SteamVR_Behaviour_Pose steamvrBahaviorL;
-    public SteamVR_Behaviour_Pose steamvrBahaviorR;
+    //public SteamVR_Behaviour_Pose steamvrBahaviorL;
+    //public SteamVR_Behaviour_Pose steamvrBahaviorR;
     public BoxCollider RightHand;
     public BoxCollider LefttHand;
     public SphereCollider Head;
@@ -29,8 +29,8 @@ public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
         if (!photonView.IsMine /*&& GetComponent<OVRCameraRig>() != null*/)
         {
 
-            steamvrBahaviorL.enabled = (false);
-            steamvrBahaviorR.enabled = (false);
+            //steamvrBahaviorL.enabled = (false);
+            //steamvrBahaviorR.enabled = (false);
             camFalse.enabled = (false);
             RightHand.enabled = (false);
             LefttHand.enabled = (false);
@@ -39,7 +39,7 @@ public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
             LeftHandScript.enabled = (false);
             HeadScript.enabled = (false);
 
-            Destroy(GetComponent<SteamVR_PlayArea>());
+            //Destroy(GetComponent<SteamVR_PlayArea>());
             Destroy(GetComponent<CharacterController>());
             pause.SetActive(false);
             exit.SetActive(false);

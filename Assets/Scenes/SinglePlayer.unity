@@ -2797,11 +2797,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818736680}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 13.909}
+  m_LocalPosition: {x: 0, y: -1.0200043, z: 13.908997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2025831624623746011}
-  m_RootOrder: 7
+  m_Father: {fileID: 1967696488356714201}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &818736682
 MonoBehaviour:
@@ -2816,10 +2816,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 1068520178}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Teleport
-    needsReinit: 0
 --- !u!114 &818736683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3760,11 +3756,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068520177}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.0200043, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1180423862}
-  m_Father: {fileID: 2025831625859646908}
+  m_Father: {fileID: 1967696488356714201}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180423859
@@ -7002,10 +6998,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 4013894165099696732}
   inputOnOff: {fileID: 3197030126564438714}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!135 &1600197765836015620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7387,10 +7379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
   pausePanel: {fileID: 1600197765053441907}
 --- !u!222 &1600197766638078225
 CanvasRenderer:
@@ -8333,6 +8321,8 @@ Transform:
   - {fileID: 1963933854647882783}
   - {fileID: 1516378230437726521}
   - {fileID: 1355567539847589931}
+  - {fileID: 1068520181}
+  - {fileID: 818736681}
   m_Father: {fileID: 1967696488356728231}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8539,7 +8529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1967696488357152767
 GameObject:
   m_ObjectHideFlags: 0
@@ -9553,10 +9543,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 2025831624216052669}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Teleport
-    needsReinit: 0
 --- !u!1 &2025831624387247783
 GameObject:
   m_ObjectHideFlags: 0
@@ -17485,7 +17471,6 @@ Transform:
   - {fileID: 2025831624941390123}
   - {fileID: 2025831624665975227}
   - {fileID: 2025831625855160826}
-  - {fileID: 818736681}
   m_Father: {fileID: 7448068652751669745}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17579,7 +17564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2025831624653343293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17714,7 +17699,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 1068520178}
+  m_Camera: {fileID: 5975163557679773378}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -17829,10 +17814,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 2025831624216052670}
   inputOnOff: {fileID: 2025831624387247783}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!4 &2025831624665975227
 Transform:
   m_ObjectHideFlags: 0
@@ -18453,10 +18434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
   pausePanel: {fileID: 2025831626175836889}
 --- !u!4 &2025831624941390123
 Transform:
@@ -19085,7 +19062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -24897,7 +24874,6 @@ Transform:
   - {fileID: 2025831625310813053}
   - {fileID: 2025831625379487042}
   - {fileID: 2025831624216052666}
-  - {fileID: 1068520181}
   m_Father: {fileID: 2025831624623746011}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31341,10 +31317,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 5975163557679773378}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!4 &3268766646542304032
 Transform:
   m_ObjectHideFlags: 0
