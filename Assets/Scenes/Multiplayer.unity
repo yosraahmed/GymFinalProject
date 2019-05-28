@@ -12743,7 +12743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oculusPlayer: {fileID: 1851283384992557984, guid: 1813859387ffdfe4b9ff270fc76ec63b,
     type: 3}
-  vivePlayer: {fileID: 9022720203985691636, guid: 74deecca14294334697f22dbaafb0c11,
+  vivePlayer: {fileID: 4648188063632816792, guid: 9a3cb20a443d549448f0716c0f492858,
     type: 3}
   player1Location: {fileID: 917196815044907434}
   player2Location: {fileID: 7683327977745054877}
