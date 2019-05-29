@@ -94,10 +94,6 @@
     {
       "name": "/actions/mixedreality",
       "usage": "single"
-    },
-    {
-      "name": "/actions/NewSet",
-      "usage": "single"
     }
   ],
   "default_bindings": [
@@ -136,10 +132,6 @@
     {
       "controller_type": "vive_tracker_camera",
       "binding_url": "binding_vive_tracker_camera.json"
-    },
-    {
-      "controller_type": "liv_virtualcamera",
-      "binding_url": "application_generated_unity_gymproject_exe_binding_liv_virtualcamera.json"
     }
   ],
   "localization": [

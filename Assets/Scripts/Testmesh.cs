@@ -28,7 +28,7 @@ void OnDrawGizmosSelected()
     for (int i = 0; i < meshrenderer.bones.Length; i++)
     {
         Gizmos.DrawLine(meshrenderer.bones[i].position, before);
-        UnityEditor.Handles.Label(meshrenderer.bones[i].transform.position, i.ToString());
+        //UnityEditor.Handles.Label(meshrenderer.bones[i].transform.position, i.ToString());
         before = meshrenderer.bones[i].position;
     }
 }
