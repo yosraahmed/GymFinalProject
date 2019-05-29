@@ -17,31 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/boxingScene.unity
     guid: 35e14528c048cdd43b6cb5a1adb9a2cf
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/InfoGamerPhoton/Scenes/Demos/DelayStartMenuDemo.unity
-    guid: 803bb693d43ee714db113261fd82e181
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/InfoGamerPhoton/Scenes/Demos/DelayStartWaitingRoomDemo.unity
-    guid: 9cf14526ac2f5ea48aa2393755a654d2
-  - enabled: 1
-    path: Assets/InfoGamerPhoton/Scenes/Demos/MultiplayerSceneDemo.unity
-    guid: 6dc254e08b859be44b6f16928250a696
   m_configObjects: {}
