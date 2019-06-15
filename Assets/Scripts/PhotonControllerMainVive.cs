@@ -8,6 +8,7 @@ public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
 {
     
     private CharacterController myCC;
+    public GameObject avatar;
     public Camera camFalse;
     public GameObject pause, exit, modelR, modelL, headCollider, pointer, inputmodule;
     
@@ -53,6 +54,7 @@ public class PhotonControllerMainVive : MonoBehaviourPun, IPunObservable
         if (photonView.IsMine)
         {
             myCC = GetComponent<CharacterController>();
+            avatar.SetActive(false);
         }
 
     }

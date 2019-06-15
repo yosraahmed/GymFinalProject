@@ -7,6 +7,7 @@ public class PhotonControllerMain : MonoBehaviourPun, IPunObservable
 {
     
     private CharacterController myCC;
+    public GameObject avatar;
     public Camera camFalse;
     public OVRCameraRig rig;
     public OVRManager covrManager;
@@ -49,6 +50,7 @@ public class PhotonControllerMain : MonoBehaviourPun, IPunObservable
         if (photonView.IsMine)
         {
             myCC = GetComponent<CharacterController>();
+            avatar.SetActive(false);
         }
 
     }
