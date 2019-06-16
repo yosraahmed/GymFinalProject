@@ -1626,10 +1626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
   pausePanel: {fileID: 2051145859}
 --- !u!1 &652584069
 GameObject:
@@ -2392,10 +2388,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 672575956}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Teleport
-    needsReinit: 0
 --- !u!114 &900956485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3805,10 +3797,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 1087123692}
   inputOnOff: {fileID: 1851824665}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!224 &1612569966 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5826249106284805044, guid: 50b064084df1e4944a24fa4d38790ccb,
@@ -13704,10 +13692,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 1087123693}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!114 &1851824667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19608,10 +19592,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 7252544269259049858}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Teleport
-    needsReinit: 0
 --- !u!224 &2025609124521721316
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19767,10 +19747,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 143563736829947676}
   inputOnOff: {fileID: 1879158801949511674}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!224 &2341650171062340616
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20134,10 +20110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
   pausePanel: {fileID: 2341650172377160243}
 --- !u!222 &2341650171935437905
 CanvasRenderer:
@@ -25994,7 +25966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -26191,7 +26163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3091805236758527148
 GameObject:
   m_ObjectHideFlags: 0
@@ -44053,10 +44025,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 2999013040510858321}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Teleport
-    needsReinit: 0
 --- !u!1 &6240409169366670268
 GameObject:
   m_ObjectHideFlags: 0
@@ -44661,10 +44629,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 2357541824419184739}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Teleport
-    needsReinit: 0
 --- !u!222 &6891661788419011527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44986,10 +44950,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 0
-  m_ClickAction:
-    actionPath: 
-    needsReinit: 0
   pausePanel: {fileID: 7236909903499956690}
 --- !u!4 &7236909901850704935
 Transform:
@@ -45371,10 +45331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 5039412738271126781}
   inputOnOff: {fileID: 6774963753137275931}
-  m_TargetSouce: 0
-  m_ClickAction:
-    actionPath: 
-    needsReinit: 0
 --- !u!1 &7236909902859798447
 GameObject:
   m_ObjectHideFlags: 0
@@ -51228,7 +51184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -51700,7 +51656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &7571969148720427358
 GameObject:
   m_ObjectHideFlags: 0
@@ -51793,8 +51749,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7571969148720427356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: -6.27}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.78, z: -5.14}
+  m_LocalScale: {x: 0.92764, y: 0.92764, z: 0.92764}
   m_Children:
   - {fileID: 7571969148720590198}
   - {fileID: 7571969148720590204}
@@ -57380,10 +57336,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerOnOff: {fileID: 5532283583427940559}
   inputOnOff: {fileID: 6281545215730593833}
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
 --- !u!1 &7874441154198975389
 GameObject:
   m_ObjectHideFlags: 0
@@ -57444,10 +57396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f5e87e432dd9c4d865c4abb5ae23a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TargetSouce: 2
-  m_ClickAction:
-    actionPath: /actions/default/in/Click002
-    needsReinit: 0
   pausePanel: {fileID: 7874441152749315552}
 --- !u!4 &7874441154397816853
 Transform:

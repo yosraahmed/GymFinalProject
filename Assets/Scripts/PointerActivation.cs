@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Valve.VR;
+//using Valve.VR;
 
 public class PointerActivation : MonoBehaviour
 {
     public GameObject pointerOnOff;
     public GameObject inputOnOff;
-    public SteamVR_Input_Sources m_TargetSouce;
-    public SteamVR_Action_Boolean m_ClickAction;
+    //public SteamVR_Input_Sources m_TargetSouce;
+    //public SteamVR_Action_Boolean m_ClickAction;
     // Start is called before the first frame update
     void Start()
     {
